@@ -7,7 +7,9 @@ $navStyle = ""; ?>
 <head>
   <?php include __DIR__ . '/../includes/head.php'; ?>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-</head><body>
+</head>
+
+<body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
   <section class="hero">
     <div class="hero-bg" style="background-image:url('../assets/images/noma/noma-hero.webp')"></div>
@@ -206,7 +208,7 @@ $navStyle = ""; ?>
           <div class="swiper-slide">
             <a href="activities.php#land-adventures" class="acco-card reveal">
               <img src="../assets/images/activity-trekking.png" alt="Trekking" class="acco-card__img">
-              <div class="acco-card__content">
+              <div class="acco-card__content" style="padding-bottom:1rem;">
                 <h3 class="acco-card__title">Trekking</h3>
               </div>
             </a>
@@ -214,7 +216,7 @@ $navStyle = ""; ?>
           <div class="swiper-slide">
             <a href="activities.php#land-adventures" class="acco-card reveal reveal-delay-1">
               <img src="../assets/images/hero-campsite.png" alt="Hiking" class="acco-card__img">
-              <div class="acco-card__content">
+              <div class="acco-card__content" style="padding-bottom:1rem;">
                 <h3 class="acco-card__title">Hiking</h3>
               </div>
             </a>
@@ -222,7 +224,7 @@ $navStyle = ""; ?>
           <div class="swiper-slide">
             <a href="activities.php#wildlife-carousel" class="acco-card reveal reveal-delay-2">
               <img src="../assets/images/wildlife/Tarsius.webp" alt="Wildlife Encounter" class="acco-card__img">
-              <div class="acco-card__content">
+              <div class="acco-card__content" style="padding-bottom:1rem;">
                 <h3 class="acco-card__title">Wildlife Encounter</h3>
               </div>
             </a>

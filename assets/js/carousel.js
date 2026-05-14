@@ -107,12 +107,12 @@ document.addEventListener("DOMContentLoaded", () => {
   if (nomaSwiperElement) {
     const nomaSwiper = new Swiper(".noma-around-swiper", {
       slidesPerView: 1, // 1 on mobile
-      spaceBetween: 24, // Matches typical gap
+      spaceBetween: 24,
       grabCursor: true,
       loop: false,
       breakpoints: {
         768: {
-          slidesPerView: 2, // 2 slides per view as requested
+          slidesPerView: 2, // 2 when above 768px
           spaceBetween: 32,
         },
       },

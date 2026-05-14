@@ -453,3 +453,27 @@
 .noma-around-swiper .acco-card {
   aspect-ratio: 16 / 10;
 }
+
+.noma-around-pagination {
+  position: static !important;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.noma-around-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+  border: 1px solid var(--charcoal);
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.noma-around-pagination .swiper-pagination-bullet-active {
+  width: 20px;
+  border-radius: 4px;
+  background: var(--charcoal);
+}
+
