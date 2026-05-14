@@ -1,0 +1,151 @@
+/* =============================================
+   LAYOUT SYSTEM
+   =============================================
+   Section spacing, containers, grid systems,
+   and responsive breakpoints for page structure.
+   ============================================= */
+
+/* --- Section Spacing --- */
+.section {
+  padding: 6rem 3rem;
+}
+.section-lg {
+  padding: 8rem 3rem;
+}
+
+/* --- Containers ---
+   Max-width wrappers to center content.
+   container-sm is used for narrower content like videos. */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container-sm {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* --- Section Headers ---
+   Centered title + subtitle pattern used across all sections. */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.section-header h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+}
+.section-header p {
+  color: var(--slate);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- Section Label ---
+   Small uppercase label that appears above section headings
+   (e.g., "Regenerative Tourism", "Our Foundation"). */
+.section-label {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--oceanic-turquoise);
+  margin-bottom: 0.75rem;
+}
+
+/* --- Section Background Variants --- */
+.section-bg-sand {
+  background: var(--earthy-sand);
+}
+.section-bg-white {
+  background: var(--white);
+}
+.section-bg-dark {
+  background: var(--deep-sea-dark);
+  color: var(--white);
+}
+.section-bg-dark h2,
+.section-bg-dark h3 {
+  color: var(--white);
+}
+.section-bg-dark p {
+  color: rgba(255, 255, 255, 0.8);
+}
+.section-bg-dark .section-label {
+  color: var(--savanna-gold);
+}
+
+/* ===== GRID LAYOUTS =====
+   Reusable grid classes for 2, 3, and 4 column layouts.
+   split-section is a special 50/50 layout for text+image pairs. */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.split-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* --- Tablet Breakpoint (≤1024px) --- */
+@media (max-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-4.grid-4-dense {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .split-section {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  /* Enforce Text > Image order on mobile/tablet */
+  .split-section > * {
+    order: 1 !important;
+  }
+  .split-section > *:has(.section-img),
+  .split-section > *:has(.img-rounded),
+  .split-section > *:has(img.img-cover),
+  .split-section > *:has(.video-wrapper),
+  .split-section > *:has(iframe) {
+    order: 2 !important;
+  }
+}
+
+/* --- Mobile Breakpoint (≤640px) --- */
+@media (max-width: 640px) {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+  .grid-4.grid-4-dense {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .section {
+    padding: 4rem 1.25rem;
+  }
+  .section-lg {
+    padding: 5rem 1.25rem;
+  }
+}

@@ -1,0 +1,182 @@
+<?php
+$pageTitle = "The Pulisan — Luxury Accommodation | Pulisanbay";
+$pageDescription = "Discover The Pulisan's exclusive rooms and bungalows — Club Room, Lower Bungalow, Upper Bungalow, and Minahasa Suite. Luxury meets nature at Pulisanbay.";
+$navStyle = "";
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head><?php include __DIR__ . '/../includes/head.php'; ?></head>
+
+<body>
+  <?php include __DIR__ . '/../includes/navbar.php'; ?>
+
+  <section class="hero">
+    <div class="hero-bg" style="background-image: url('../assets/images/the-pulisan/main-page/the-pulisan-hero.webp')">
+    </div>
+    <div class="hero-content">
+      <h1>The Pulisan</h1>
+      <p>An exclusive collection of bungalows and suites where traditional Minahasa architecture meets modern luxury —
+        perched between emerald hills and the turquoise sea.</p>
+    </div>
+    <div class="hero-scroll-indicator"><span></span></div>
+  </section>
+
+  <!-- ROOM TYPES -->
+  <section class="section-lg section-bg-white">
+    <div class="container">
+      <div class="section-header reveal"><span class="section-label">Our Rooms</span>
+        <h2>Choose Your Sanctuary</h2>
+        <p>Each space has been thoughtfully designed to immerse you in the natural beauty of Pulisan Bay while providing
+          the comfort and luxury you deserve.</p>
+      </div>
+      <div class="grid-2">
+        <a href="club-room.php" class="card reveal" style="text-decoration:none;color:inherit;">
+          <div class="card-img-wrapper"><img src="../assets/images/the-pulisan/club-room/club-room-hero.webp"
+              alt="Club Room" class="card-img" style="height:300px;"></div>
+          <div class="card-body">
+            <h3>Club Room</h3>
+            <p>Modern elegance meets tropical warmth. Our Club Rooms offer a refined retreat with garden views, premium
+              amenities, and the gentle sounds of nature as your constant companion.</p><span class="card-link">View
+              Details <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="lower-bungalow.php" class="card reveal reveal-delay-1" style="text-decoration:none;color:inherit;">
+          <div class="card-img-wrapper"><img src="../assets/images/the-pulisan/lower-bungalow/lower-bungalow-hero.webp"
+              alt="Lower Bungalow" class="card-img" style="height:300px;"></div>
+          <div class="card-body">
+            <h3>Lower Bungalow</h3>
+            <p>Nestled among tropical gardens, our Lower Bungalows offer an intimate escape with private decks,
+              handcrafted furnishings, and seamless indoor-outdoor living.</p><span class="card-link">View Details <i
+                class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="upper-bungalow.php" class="card reveal" style="text-decoration:none;color:inherit;">
+          <div class="card-img-wrapper"><img src="../assets/images/room-upper-bungalow.png" alt="Upper Bungalow"
+              class="card-img" style="height:300px;"></div>
+          <div class="card-body">
+            <h3>Upper Bungalow</h3>
+            <p>Elevated among the hillside canopy, our Upper Bungalows command panoramic ocean views — where every
+              sunrise feels like it was painted just for you.</p><span class="card-link">View Details <i
+                class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="minahasa-suite.php" class="card reveal reveal-delay-1" style="text-decoration:none;color:inherit;">
+          <div class="card-img-wrapper"><img src="../assets/images/room-minahasa-suite.png" alt="Minahasa Suite"
+              class="card-img" style="height:300px;"></div>
+          <div class="card-body">
+            <h3>Minahasa Suite</h3>
+            <p>The pinnacle of Pulisanbay luxury. A grand suite inspired by Minahasa heritage — featuring a private
+              terrace, freestanding bathtub, and breathtaking ocean panoramas.</p><span class="card-link">View Details
+              <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AMENITIES -->
+  <section class="section-lg section-bg-sand">
+    <div class="container">
+      <div class="section-header reveal"><span class="section-label">Resort Amenities</span>
+        <h2>Everything You Need, Nothing You Don't</h2>
+      </div>
+      <div class="grid-4 grid-4-dense reveal">
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fas fa-utensils"></i></div>
+          <h3>Restaurant</h3>
+          <p>Sea-to-table dining with panoramic bay views</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fas fa-spa"></i></div>
+          <h3>Wellness</h3>
+          <p>Traditional & modern spa treatments</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fas fa-water"></i></div>
+          <h3>Infinity Pool</h3>
+          <p>Overlooking the turquoise Pulisan Bay</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fas fa-wifi"></i></div>
+          <h3>Connectivity</h3>
+          <p>High-speed WiFi throughout the resort</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fas fa-van-shuttle"></i></div>
+          <h3>Airport Transfer</h3>
+          <p>Complimentary shuttle from Sam Ratulangi Airport</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fas fa-concierge-bell"></i></div>
+          <h3>Concierge</h3>
+          <p>24/7 guest services and activity booking</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fas fa-person-hiking"></i></div>
+          <h3>Guided Tours</h3>
+          <p>Expert-led nature and cultural excursions</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fas fa-shirt"></i></div>
+          <h3>Laundry</h3>
+          <p>Same-day laundry and pressing service</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFERS -->
+  <section class="section-lg section-bg-white">
+    <div class="container">
+      <div class="split-section">
+        <div class="">
+          <span class="section-label reveal reveal-delay-1">Special Offers</span>
+          <h2 class="reveal reveal-delay-2">Enhance Your Stay</h2>
+          <p style="color:var(--slate);margin-bottom:2rem;">Make your Pulisanbay experience even more extraordinary with
+            our curated add-on packages.</p>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-champagne-glasses"></i></div>
+            <div>
+              <h4>Rent-A-Resort</h4>
+              <p>Exclusive Private Stay</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-masks-theater"></i></div>
+            <div>
+              <h4>Resort Plus</h4>
+              <p>Indulge in a delightful BBQ experience!</p>
+            </div>
+          </div>
+          <div class="feature-item" style="display:none;">
+            <div class="feature-icon"><i class="fas fa-fish"></i></div>
+            <div>
+              <h4>Marine Explorer Package</h4>
+              <p>2-dive trip, snorkeling tour, and sunset paddleboard session.</p>
+            </div>
+          </div>
+          <a href="offers.php" class="btn-cta-dark"
+            style="background: var(--oceanic-turquoise);font-size:1rem;padding:0.85rem 2.5rem;margin-top:3rem;">
+            Learn More <i class="fas fa-arrow-right" style="margin-left:4px;"></i>
+          </a>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <div class="section-img" style="box-shadow:var(--shadow-lg);"><img
+              src="../assets/images/the-pulisan/main-page/the-pulisan-offers.webp" alt="The Pulisan" class="img-cover"
+              style="height:450px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <?php $ctaTitle = "Ready to Reserve Your Sanctuary?";
+  $ctaText = "Submit an inquiry and our team will craft the perfect stay for you.";
+  $ctaLabel = "Inquire Now";
+  include __DIR__ . '/../includes/cta-banner.php'; ?>
+  <?php include __DIR__ . '/../includes/footer.php'; ?>
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

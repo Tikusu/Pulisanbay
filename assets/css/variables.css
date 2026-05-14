@@ -1,0 +1,43 @@
+/* =============================================
+   PULISANBAY DESIGN TOKENS
+   =============================================
+   All brand colors, shadows, radii, and font imports live here.
+   To update the brand palette, edit ONLY this file.
+   ============================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
+
+:root {
+  /* --- Primary Brand Colors --- */
+  --oceanic-turquoise: #0891b2;
+  --deep-sea: #0c4a6e;
+  --deep-sea-dark: #083344;
+
+  /* --- Secondary Colors --- */
+  --forest-green: #166534;
+  --forest-light: #22c55e;
+
+  /* --- Accent Colors --- */
+  --savanna-gold: #d4a843;
+  --earthy-sand: #f5f0e8;
+  --warm-cream: #faf7f2;
+
+  /* --- Typography Colors --- */
+  --charcoal: #334155;
+  --slate: #64748b;
+  --light-slate: #94a3b8;
+
+  /* --- UI Tokens --- */
+  --white: #ffffff;
+  --overlay-dark: rgba(12, 74, 110, 0.55);
+  --overlay-black: rgba(0, 0, 0, 0.45);
+
+  /* --- Shadows (sm → lg for progressive elevation) --- */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.12);
+
+  /* --- Border Radii --- */
+  --radius: 12px;
+  --radius-lg: 20px;
+}

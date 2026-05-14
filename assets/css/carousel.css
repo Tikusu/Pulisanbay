@@ -1,0 +1,455 @@
+/* =============================================
+   3D WILDLIFE CAROUSEL
+   =============================================
+   A 3D perspective carousel used on the activities
+   page to showcase endemic wildlife, powered by Swiper JS.
+   ============================================= */
+
+/* --- Section wrapper with dark gradient background --- */
+.wildlife-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 2rem 5rem;
+  background: linear-gradient(
+    160deg,
+    var(--deep-sea-dark) 0%,
+    #0a3a5c 55%,
+    var(--deep-sea) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative gradient orbs in the background */
+.wildlife-section::before,
+.wildlife-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.wildlife-section::before {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(8, 145, 178, 0.12) 0%,
+    transparent 70%
+  );
+  top: -120px;
+  left: -180px;
+}
+.wildlife-section::after {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(212, 168, 67, 0.1) 0%,
+    transparent 70%
+  );
+  bottom: -100px;
+  right: -120px;
+}
+
+/* --- Section header --- */
+.wildlife-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
+}
+.wildlife-header .section-label {
+  color: var(--savanna-gold);
+}
+.wildlife-header h2 {
+  color: var(--white);
+  font-size: clamp(1.75rem, 4vw, 2.8rem);
+  margin-bottom: 0.75rem;
+}
+.wildlife-header p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+/* --- Swiper wrapper --- */
+.carousel-3d-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  /* overflow: visible; */
+}
+
+.wildlife-swiper {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  /* Extra padding to prevent active slide border/shadow from being clipped */
+  padding: 12px 0 !important;
+}
+
+/* --- Swiper Slides --- */
+.wildlife-swiper .swiper-slide {
+  width: 300px;
+  aspect-ratio: 2 / 1;
+  overflow: hidden;
+  position: relative;
+  filter: brightness(0.6);
+}
+
+.wildlife-swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.wildlife-swiper .swiper-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 50%,
+    rgba(8, 30, 63, 0.7) 100%
+  );
+  pointer-events: none;
+}
+
+/* Active slide styles */
+.wildlife-swiper .swiper-slide-active {
+  filter: brightness(1);
+  box-shadow:
+    /* 0 0 80px rgba(0, 0, 0, 0.6), */ 0 0 0 1px
+    rgba(212, 168, 67, 0.5);
+  transition: all 0.5s ease;
+}
+.wildlife-swiper .swiper-slide-active:hover {
+  box-shadow:
+    /* 0 0 80px rgba(0, 0, 0, 0.6), */ 0 0 0 3px
+    rgba(212, 168, 67, 0.5);
+}
+.wildlife-swiper .swiper-slide-active:hover img {
+  transform: scale(1.04);
+}
+
+.wildlife-swiper .swiper-slide .card-badge {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50px;
+  padding: 0.3rem 0.9rem;
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* --- Controls --- */
+.carousel-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.carousel-arrows {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.carousel-arrow {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  padding: 0;
+  line-height: 1;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(8px);
+  color: var(--white);
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  z-index: 10;
+}
+.carousel-arrow:hover {
+  border-color: var(--savanna-gold);
+  transform: scale(1.08);
+  box-shadow: 0 4px 20px rgba(212, 168, 67, 0.4);
+}
+.carousel-dots {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  padding: 0;
+}
+.carousel-dot.carousel-dot--active {
+  width: 20px;
+  border-radius: 4px;
+  background: var(--savanna-gold);
+}
+.carousel-dot:hover:not(.carousel-dot--active) {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* --- Description panel --- */
+.carousel-description {
+  width: 100%;
+  max-width: 640px;
+  text-align: center;
+  min-height: 130px;
+  position: relative;
+  margin-top: 1rem;
+}
+.desc-panel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease;
+  pointer-events: none;
+}
+.desc-panel.swiper-desc-active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  position: relative;
+}
+.desc-panel .species-name {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--savanna-gold);
+  letter-spacing: 0.5px;
+}
+.desc-panel h3 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+  color: var(--white);
+  margin-bottom: 0.2rem;
+}
+.desc-panel p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .wildlife-swiper .swiper-slide {
+    width: 280px;
+  }
+}
+@media (max-width: 600px) {
+  .wildlife-section {
+    padding: 4rem 1rem 3rem;
+  }
+  .wildlife-swiper .swiper-slide {
+    width: 220px;
+  }
+  .carousel-description {
+    min-height: 160px;
+  }
+}
+
+/* =============================================
+   FOUR PILLARS CAROUSEL
+   ============================================= */
+.pillars-swiper-container {
+  position: relative;
+  width: 100%;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.pillars-swiper .swiper-slide.pillar-slide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  padding: 0.5rem 2rem;
+}
+
+/* Left column: image */
+.pillar-slide-img {
+  flex: 0 0 320px;
+  width: 320px;
+}
+
+.pillar-slide-img img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  box-shadow: var(--shadow-md);
+  display: block;
+}
+
+/* Right column: text content */
+.pillar-slide-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.pillar-slide-content h3 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--deep-sea-dark);
+  margin: 0;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+.pillar-slide-content p {
+  color: var(--charcoal);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  font-weight: 500;
+  text-align: left;
+  margin: 0;
+}
+
+/* Custom Navigation */
+.pillars-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  /* color: var(--charcoal); */
+  color: var(--overlay-black);
+  cursor: pointer;
+  z-index: 10;
+  transition:
+    color 0.3s,
+    transform 0.3s;
+  /* Offset inward so arrow overlaps swiper edge, not layout content */
+  padding: 0.5rem;
+}
+
+.pillars-nav:hover {
+  color: var(--deep-sea);
+  transform: translateY(-50%) /* scale(1.1) */;
+}
+
+.pillars-nav i {
+  font-size: 2rem;
+  /* color: rgb(164, 164, 164); */
+}
+
+.pillars-nav-prev {
+  left: 0.25rem;
+}
+
+.pillars-nav-next {
+  right: 0.25rem;
+}
+
+/* Custom Pagination */
+.pillars-pagination {
+  position: static !important;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.pillars-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+  border: 1px solid var(--charcoal);
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.pillars-pagination .swiper-pagination-bullet-active {
+  width: 20px;
+  border-radius: 4px;
+  background: var(--charcoal);
+}
+
+@media (max-width: 1024px) {
+  .pillars-swiper-container {
+    padding: 0 0rem;
+  }
+  .pillars-swiper .swiper-slide.pillar-slide {
+    padding-inline: 0;
+  }
+  .pillars-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .pillars-swiper-container {
+    padding: 0 1.25rem;
+  }
+  .pillars-swiper .swiper-slide.pillar-slide {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
+    padding: 1rem 0;
+  }
+  .pillars-swiper .swiper-slide.pillar-slide .pillar-slide-img {
+    flex: none;
+    width: 100%;
+    max-width: none;
+  }
+  .pillars-swiper .swiper-slide.pillar-slide .pillar-slide-content {
+    text-align: left;
+    width: 100%;
+    padding-inline-end: 0;
+  }
+}
+
+/* =============================================
+   AROUND NOMA CAROUSEL
+   ============================================= */
+.noma-around-swiper .acco-card {
+  aspect-ratio: 16 / 10;
+}

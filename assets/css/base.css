@@ -1,0 +1,72 @@
+/* =============================================
+   BASE STYLES
+   =============================================
+   Global reset, body defaults, heading typography,
+   and the scroll-reveal animation system.
+   ============================================= */
+
+/* --- CSS Reset ---
+   Ensures consistent box-sizing and removes browser
+   default margins/padding across all elements. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  color: var(--charcoal);
+  background: var(--warm-cream);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Heading Typography ---
+   All headings use the serif display font (Playfair Display)
+   for editorial elegance across the site. */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--deep-sea-dark);
+}
+
+/* ===== SCROLL REVEAL SYSTEM =====
+   Elements with class "reveal" start invisible and slide up.
+   The JS IntersectionObserver adds "revealed" when they
+   enter the viewport. Delay classes stagger sibling elements. */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 {
+  transition-delay: 0.15s;
+}
+.reveal-delay-2 {
+  transition-delay: 0.3s;
+}
+.reveal-delay-3 {
+  transition-delay: 0.45s;
+}
+.reveal-delay-4 {
+  transition-delay: 0.6s;
+}
