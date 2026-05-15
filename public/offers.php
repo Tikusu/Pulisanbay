@@ -12,7 +12,9 @@ $navStyle = "";
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
 
   <section class="hero">
-    <div class="hero-bg" style="background-image:url('../assets/images/hero-accommodation.png')"></div>
+    <div class="hero-bg"
+      style="background-image:url('../assets/images/the-pulisan/main-page/the-pulisan-offers.webp'); background-position: bottom;">
+    </div>
     <div class="hero-content">
       <h1>Special Offers</h1>
       <p>Enhance your Pulisanbay experience with our curated add-on packages and exclusive retreats.</p>
@@ -124,13 +126,6 @@ $navStyle = "";
       </div>
     </div>
   </section>
-
-  <?php
-  $ctaTitle = "Ready to Enhance Your Stay?";
-  $ctaText = "Submit an inquiry and our team will craft the perfect experience for you.";
-  $ctaLabel = "Inquire Now";
-  include __DIR__ . '/../includes/cta-banner.php';
-  ?>
   <?php include __DIR__ . '/../includes/footer.php'; ?>
   <script src="../assets/js/main.js"></script>
 </body>

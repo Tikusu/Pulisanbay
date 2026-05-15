@@ -126,14 +126,14 @@ $navStyle = "";
           <p style="color:var(--slate);margin-bottom:2rem;">Make your Pulisanbay experience even more extraordinary with
             our curated add-on packages.</p>
           <div class="feature-item">
-            <div class="feature-icon"><i class="fas fa-champagne-glasses"></i></div>
+            <div class="feature-icon"><i class="fas fa-people-roof"></i></div>
             <div>
               <h4>Rent-A-Resort</h4>
               <p>Exclusive Private Stay</p>
             </div>
           </div>
           <div class="feature-item">
-            <div class="feature-icon"><i class="fas fa-masks-theater"></i></div>
+            <div class="feature-icon"><i class="fas fa-champagne-glasses"></i></div>
             <div>
               <h4>Resort Plus</h4>
               <p>Indulge in a delightful BBQ experience!</p>
