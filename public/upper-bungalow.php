@@ -105,11 +105,12 @@ $navStyle = ""; ?>
           <h3 style="margin-bottom:1.25rem;"><i class="fas fa-file-contract"
               style="color:var(--oceanic-turquoise);margin-right:8px;"></i>Terms of Service</h3>
           <ul style="color:var(--slate);font-size:0.9rem;line-height:2;list-style:none;">
-            <li>✦ Check-in: 14:00 | Check-out: 12:00</li>
-            <li>✦ Valid government-issued ID required at check-in</li>
-            <li>✦ Maximum occupancy: 2 adults + 1 child</li>
+            <li>✦ Check-in time: 14:00 | Check-out time: 12:00</li>
+            <li>✦ Advance booking required (min. 14 days prior)</li>
+            <li>✦ Minimum stay of 3 nights during peak season</li>
+            <li>✦ Maximum 1 additional person per room (charges apply)</li>
             <li>✦ Elevated location — involves stairs and hillside walkways</li>
-            <li>✦ Rates subject to applicable taxes and service charges</li>
+            <li style="margin-top:1rem;"><a href="terms-and-conditions.php" style="color:var(--oceanic-turquoise);text-decoration:none;font-weight:600;font-size:0.85rem;">View Full Terms & Conditions →</a></li>
           </ul>
         </div>
         <div class="reveal reveal-delay-1"
@@ -117,9 +118,10 @@ $navStyle = ""; ?>
           <h3 style="margin-bottom:1.25rem;"><i class="fas fa-shield-halved"
               style="color:var(--oceanic-turquoise);margin-right:8px;"></i>Policy</h3>
           <ul style="color:var(--slate);font-size:0.9rem;line-height:2;list-style:none;">
-            <li>✦ Free cancellation up to 7 days before check-in</li>
-            <li>✦ 50% charge for cancellations within 3–7 days</li>
-            <li>✦ Full charge for cancellations within 48 hours</li>
+            <li>✦ 50% non-refundable deposit required to secure booking</li>
+            <li>✦ No cancellations accepted less than 14 days before arrival</li>
+            <li>✦ No refunds for no-shows or early check-outs</li>
+            <li>✦ Date changes permitted up to 14 days before arrival (once only)</li>
             <li>✦ Non-smoking property</li>
             <li>✦ Pets are not permitted</li>
           </ul>

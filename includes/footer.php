@@ -38,6 +38,7 @@
       <h4>Connect</h4>
       <a href="contact.php">Inquiry Form</a>
       <a href="development.php">Development</a>
+      <a href="terms-and-conditions.php">Terms & Conditions</a>
     </div>
 
   </div>
