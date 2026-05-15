@@ -31,44 +31,91 @@ $navStyle = "";
           the comfort and luxury you deserve.</p>
       </div>
       <div class="grid-2">
-        <a href="club-room.php" class="card reveal" style="text-decoration:none;color:inherit;">
-          <div class="card-img-wrapper"><img src="../assets/images/the-pulisan/club-room/club-room-hero.webp"
-              alt="Club Room" class="card-img" style="height:300px;"></div>
-          <div class="card-body">
-            <h3>Club Room</h3>
-            <p>Modern elegance meets tropical warmth. Our Club Rooms offer a refined retreat with garden views, premium
-              amenities, and the gentle sounds of nature as your constant companion.</p><span class="card-link">View
-              Details <i class="fas fa-arrow-right"></i></span>
+        <a href="club-room.php" class="room-card reveal">
+          <div class="room-card__img-wrapper">
+            <img src="../assets/images/the-pulisan/club-room/club-room-hero.webp" alt="Club Room"
+              class="room-card__img">
+          </div>
+          <div class="room-card__content">
+            <span class="room-card__tag">Club House • Shared Den</span>
+            <h3 class="room-card__title">Club Room</h3>
+            <p class="room-card__desc">Modern elegance meets tropical warmth. Our Club Rooms offer a refined retreat
+              with garden views, premium amenities, and the gentle sounds of nature as your constant companion.</p>
+            <ul class="room-card__amenities">
+              <li><i class="fas fa-bed"></i> King / Twin Bed</li>
+              <li><i class="fas fa-utensils"></i> All-Day F&amp;B</li>
+              <li><i class="fas fa-wifi"></i> WiFi</li>
+              <li><i class="fas fa-snowflake"></i> AC</li>
+            </ul>
+            <div class="room-card__footer">
+              <span class="room-card__link">View Details <i class="fas fa-arrow-right"></i></span>
+            </div>
           </div>
         </a>
-        <a href="lower-bungalow.php" class="card reveal reveal-delay-1" style="text-decoration:none;color:inherit;">
-          <div class="card-img-wrapper"><img src="../assets/images/the-pulisan/lower-bungalow/lower-bungalow-hero.webp"
-              alt="Lower Bungalow" class="card-img" style="height:300px;"></div>
-          <div class="card-body">
-            <h3>Lower Bungalow</h3>
-            <p>Nestled among tropical gardens, our Lower Bungalows offer an intimate escape with private decks,
-              handcrafted furnishings, and seamless indoor-outdoor living.</p><span class="card-link">View Details <i
-                class="fas fa-arrow-right"></i></span>
+
+        <a href="lower-bungalow.php" class="room-card reveal reveal-delay-1">
+          <div class="room-card__img-wrapper">
+            <img src="../assets/images/the-pulisan/lower-bungalow/lower-bungalow-hero.webp" alt="Lower Bungalow"
+              class="room-card__img">
+          </div>
+          <div class="room-card__content">
+            <span class="room-card__tag">Bungalow • Private Deck</span>
+            <h3 class="room-card__title">Lower Bungalow</h3>
+            <p class="room-card__desc">Nestled among tropical gardens, our Lower Bungalows offer an intimate escape with
+              private decks, handcrafted furnishings, and seamless indoor-outdoor living.</p>
+            <ul class="room-card__amenities">
+              <li><i class="fas fa-chair"></i> Private Deck</li>
+              <li><i class="fas fa-bed"></i> King / Twin Bed</li>
+              <li><i class="fas fa-utensils"></i> All-Day F&amp;B</li>
+              <li><i class="fas fa-vector-square"></i> 50 sqm</li>
+            </ul>
+            <div class="room-card__footer">
+              <span class="room-card__link">View Details <i class="fas fa-arrow-right"></i></span>
+            </div>
           </div>
         </a>
-        <a href="upper-bungalow.php" class="card reveal" style="text-decoration:none;color:inherit;">
-          <div class="card-img-wrapper"><img src="../assets/images/the-pulisan/upper-bungalow/upper-bungalow-hero.webp"
-              alt="Upper Bungalow" class="card-img" style="height:300px;"></div>
-          <div class="card-body">
-            <h3>Upper Bungalow</h3>
-            <p>Elevated among the hillside canopy, our Upper Bungalows command panoramic ocean views — where every
-              sunrise feels like it was painted just for you.</p><span class="card-link">View Details <i
-                class="fas fa-arrow-right"></i></span>
+
+        <a href="upper-bungalow.php" class="room-card reveal">
+          <div class="room-card__img-wrapper">
+            <img src="../assets/images/the-pulisan/upper-bungalow/upper-bungalow-hero.webp" alt="Upper Bungalow"
+              class="room-card__img">
+          </div>
+          <div class="room-card__content">
+            <span class="room-card__tag">Bungalow • Hillside Sanctuary</span>
+            <h3 class="room-card__title">Upper Bungalow</h3>
+            <p class="room-card__desc">Elevated among the hillside canopy, our Upper Bungalows command panoramic ocean
+              views — where every sunrise feels like it was painted just for you.</p>
+            <ul class="room-card__amenities">
+              <li><i class="fas fa-water"></i> Ocean View</li>
+              <li><i class="fas fa-door-open"></i> Private Balcony</li>
+              <li><i class="fas fa-bed"></i> King Bed</li>
+              <li><i class="fas fa-vector-square"></i> 60 sqm</li>
+            </ul>
+            <div class="room-card__footer">
+              <span class="room-card__link">View Details <i class="fas fa-arrow-right"></i></span>
+            </div>
           </div>
         </a>
-        <a href="minahasa-suite.php" class="card reveal reveal-delay-1" style="text-decoration:none;color:inherit;">
-          <div class="card-img-wrapper"><img src="../assets/images/the-pulisan/minahasa-suite/minahasa-suite-hero.webp"
-              alt="Minahasa Suite" class="card-img" style="height:300px;"></div>
-          <div class="card-body">
-            <h3>Minahasa Suite</h3>
-            <p>The pinnacle of Pulisanbay luxury. A grand suite inspired by Minahasa heritage — featuring a private
-              terrace, freestanding bathtub, and breathtaking ocean panoramas.</p><span class="card-link">View Details
-              <i class="fas fa-arrow-right"></i></span>
+
+        <a href="minahasa-suite.php" class="room-card reveal reveal-delay-1">
+          <div class="room-card__img-wrapper">
+            <img src="../assets/images/the-pulisan/minahasa-suite/minahasa-suite-hero.webp" alt="Minahasa Suite"
+              class="room-card__img">
+          </div>
+          <div class="room-card__content">
+            <span class="room-card__tag">Suite • Heritage Luxury</span>
+            <h3 class="room-card__title">Minahasa Suite</h3>
+            <p class="room-card__desc">The pinnacle of Pulisanbay luxury. A grand suite inspired by Minahasa heritage —
+              featuring a private terrace, freestanding bathtub, and breathtaking ocean panoramas.</p>
+            <ul class="room-card__amenities">
+              <li><i class="fas fa-bath"></i> Freestanding Bathtub</li>
+              <li><i class="fas fa-couch"></i> Living Room</li>
+              <li><i class="fas fa-concierge-bell"></i> In-Suite Dining</li>
+              <li><i class="fas fa-vector-square"></i> 120 sqm</li>
+            </ul>
+            <div class="room-card__footer">
+              <span class="room-card__link">View Details <i class="fas fa-arrow-right"></i></span>
+            </div>
           </div>
         </a>
       </div>

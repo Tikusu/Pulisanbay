@@ -322,6 +322,164 @@
   border-color: rgba(201, 169, 110, 0.8);
 }
 
+/* ===== LUXURIOUS ROOM CARDS ===== */
+.room-card {
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+.room-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+  border-color: rgba(8, 145, 178, 0.15);
+}
+
+.room-card__img-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 66.67%; /* 3:2 Aspect Ratio */
+  overflow: hidden;
+}
+
+.room-card__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.room-card:hover .room-card__img {
+  transform: scale(1.1);
+}
+
+.room-card__content {
+  padding: 2.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.room-card__tag {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--savanna-gold);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.room-card__title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--deep-sea);
+  margin-bottom: 1.25rem;
+  line-height: 1.1;
+}
+
+.room-card__desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--slate);
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.room-card__footer {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.room-card__link {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--oceanic-turquoise);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.room-card:hover .room-card__link {
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .room-card__content {
+    padding: 1.75rem;
+  }
+  .room-card__title {
+    font-size: 1.75rem;
+  }
+}
+
+/* ===== ROOM CARD — FEATURED AMENITIES ===== */
+.room-card__amenities {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.55rem 0.75rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  padding-top: 1.25rem;
+}
+
+.room-card__amenities li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--slate);
+  letter-spacing: 0.01em;
+  transition: color 0.3s ease;
+}
+
+.room-card__amenities li i {
+  font-size: 1.4rem;
+  margin-inline-end: 1rem;
+  color: var(--oceanic-turquoise);
+  flex-shrink: 0;
+  width: 14px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.room-card:hover .room-card__amenities li {
+  color: var(--charcoal);
+}
+
+.room-card:hover .room-card__amenities li i {
+  transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+  .room-card__amenities {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+}
+
 /* ===== SIX BIG IDEAS CARDS ===== */
 .idea-card {
   position: relative;
