@@ -34,45 +34,61 @@ $navStyle = ""; ?>
   <section class="section-lg section-bg-sand">
     <div class="container">
       <div class="split-section">
-        <div class="reveal"><span class="section-label">What's Included</span>
+        <div class="reveal inclusions--teal"><span class="section-label">What's Included</span>
           <h2>Your Stay Includes</h2>
           <p style="color:var(--slate);margin-bottom:2rem;">The Upper Bungalow offers a premium hillside experience with
             panoramic views and elevated luxury.</p>
           <div class="feature-item">
-            <div class="feature-icon"><i class="fas fa-bed"></i></div>
+            <div class="feature-icon feature-icon--hollow"><i class="fas fa-bed"></i></div>
             <div>
-              <h4>King Canopy Bed</h4>
-              <p>Luxurious king bed with white canopy, premium linens, and ocean-facing orientation.</p>
+              <h4>King Bed with Ocean View</h4>
+              <p>Luxurious king bed with premium linens and ocean-facing orientation.</p>
             </div>
           </div>
           <div class="feature-item">
-            <div class="feature-icon"><i class="fas fa-mug-hot"></i></div>
+            <div class="feature-icon feature-icon--hollow"><i class="fas fa-mountain-sun"></i></div>
             <div>
-              <h4>Daily Breakfast</h4>
-              <p>Complimentary breakfast — enjoy it on your private balcony with bay views.</p>
-            </div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-icon"><i class="fas fa-mountain-sun"></i></div>
-            <div>
-              <h4>Panoramic Balcony</h4>
+              <h4>Private Balcony</h4>
               <p>A spacious private balcony with stunning views of Pulisan Bay and the surrounding hills.</p>
             </div>
           </div>
           <div class="feature-item">
-            <div class="feature-icon"><i class="fas fa-spa"></i></div>
+            <div class="feature-icon feature-icon--hollow"><i class="fas fa-utensils"></i></div>
             <div>
-              <h4>Welcome Spa Credit</h4>
-              <p>Complimentary spa credit for one treatment during your stay.</p>
+              <h4>All-Day Meals &amp; Snacks</h4>
+              <p>Breakfast, lunch, and dinner for 2 persons; and two times snacks for 2 persons.</p>
             </div>
           </div>
           <div class="feature-item">
-            <div class="feature-icon"><i class="fas fa-van-shuttle"></i></div>
+            <div class="feature-icon feature-icon--hollow"><i class="fas fa-mug-hot"></i></div>
             <div>
-              <h4>Airport Transfer</h4>
-              <p>Round-trip shuttle from Sam Ratulangi International Airport.</p>
+              <h4>Free-Flow Refreshments</h4>
+              <p>Complimentary mineral water, house coffee, and house tea throughout your stay.</p>
             </div>
           </div>
+          <div class="feature-item">
+            <div class="feature-icon feature-icon--hollow"><i class="fas fa-car-side"></i></div>
+            <div>
+              <h4>Complimentary Airport Transfer</h4>
+              <p>Return airport transfer with minimum 8-night stay. Private car, max 4 persons.</p>
+            </div>
+          </div>
+
+          <!-- More Amenities -->
+          <div class="more-amenities" id="moreAmenitiesUpper" style="display:none;">
+            <div class="amenities-grid">
+              <div class="amenity-chip"><i class="fas fa-expand"></i><span>60 sqm</span></div>
+              <div class="amenity-chip"><i class="fas fa-snowflake"></i><span>AC</span></div>
+              <div class="amenity-chip"><i class="fas fa-wind"></i><span>Hair Dryer</span></div>
+              <div class="amenity-chip"><i class="fas fa-faucet"></i><span>Hot/Cold Water</span></div>
+              <div class="amenity-chip"><i class="fas fa-shower"></i><span>Shower</span></div>
+              <div class="amenity-chip"><i class="fas fa-tv"></i><span>Smart TV</span></div>
+              <div class="amenity-chip"><i class="fas fa-wifi"></i><span>Wifi Access</span></div>
+            </div>
+          </div>
+          <button class="btn-more-amenities" id="toggleAmenitiesUpper" onclick="toggleAmenities('moreAmenitiesUpper','toggleAmenitiesUpper')">
+            <span class="toggle-label">More...</span>
+          </button>
         </div>
         <div class="reveal reveal-delay-2">
           <div class="img-rounded" style="box-shadow:var(--shadow-lg);"><img

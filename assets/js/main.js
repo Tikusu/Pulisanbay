@@ -201,3 +201,22 @@ function initInteractiveCards(selector) {
   cards.forEach((card) => observer.observe(card));
 }
 
+
+// --- TOGGLE MORE AMENITIES ---
+// Shows/hides the hidden amenities section and animates the CSS chevron.
+function toggleAmenities(panelId, btnId) {
+  const panel = document.getElementById(panelId);
+  const btn   = document.getElementById(btnId);
+  if (!panel || !btn) return;
+
+  const isOpen = panel.style.display !== 'none';
+  if (isOpen) {
+    panel.style.display = 'none';
+    btn.classList.remove('open');
+    btn.querySelector('.toggle-label').textContent = 'More...';
+  } else {
+    panel.style.display = 'block';
+    btn.classList.add('open');
+    btn.querySelector('.toggle-label').textContent = 'Less';
+  }
+}

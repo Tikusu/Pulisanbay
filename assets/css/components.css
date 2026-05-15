@@ -564,6 +564,101 @@
   font-size: 0.9rem;
 }
 
+/* ===== FEATURE ICON HOLLOW VARIANT ===== */
+.feature-icon--hollow {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: var(--savanna-gold);
+  font-size: 1.8rem;
+  width: auto;
+  min-width: 32px;
+}
+
+/* Teal override for Club Room, Lower & Upper Bungalow */
+.inclusions--teal .feature-icon--hollow {
+  color: var(--oceanic-turquoise);
+}
+
+/* ===== MORE AMENITIES ===== */
+.more-amenities {
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  animation: fadeSlideIn 0.35s ease both;
+}
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.amenities-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.amenity-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 1rem;
+  color: var(--slate);
+  background: none;
+  border: none;
+  padding: 0;
+}
+.amenity-chip i {
+  color: var(--savanna-gold);
+  font-size: 1.5rem;
+}
+.inclusions--teal .amenity-chip i {
+  color: var(--oceanic-turquoise);
+}
+.btn-more-amenities {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 0.85rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--savanna-gold);
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s;
+}
+.inclusions--teal .btn-more-amenities {
+  color: var(--oceanic-turquoise);
+}
+.btn-more-amenities:hover {
+  opacity: 0.75;
+}
+/* CSS-only chevron arrow — no Font Awesome dependency */
+.btn-more-amenities::after {
+  content: "";
+  display: inline-block;
+  margin-left: 0.4rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+.btn-more-amenities.open::after {
+  transform: rotate(225deg) translateY(-2px);
+}
+
 /* ===== PILLAR CARDS ===== */
 .pillar-card {
   background: transparent;

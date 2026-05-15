@@ -40,53 +40,65 @@ $navStyle = ""; ?>
           <p style="color:var(--slate);margin-bottom:2rem;">The Minahasa Suite is our most prestigious accommodation —
             every detail curated for the discerning traveler.</p>
           <div class="feature-item">
-            <div class="feature-icon" style="background:linear-gradient(135deg,var(--savanna-gold),#B8860B);"><i
-                class="fas fa-crown"></i></div>
+            <div class="feature-icon feature-icon--hollow"><i class="fas fa-bed"></i></div>
             <div>
               <h4>Grand King Bed</h4>
               <p>Premium king bed with the finest linens, handcrafted headboard, and luxury pillows.</p>
             </div>
           </div>
           <div class="feature-item">
-            <div class="feature-icon" style="background:linear-gradient(135deg,var(--savanna-gold),#B8860B);"><i
-                class="fas fa-bath"></i></div>
+            <div class="feature-icon feature-icon--hollow"><i class="fas fa-bath"></i></div>
             <div>
               <h4>Freestanding Bathtub</h4>
               <p>A statement bathtub positioned to frame the ocean view through floor-to-ceiling windows.</p>
             </div>
           </div>
           <div class="feature-item">
-            <div class="feature-icon" style="background:linear-gradient(135deg,var(--savanna-gold),#B8860B);"><i
-                class="fas fa-champagne-glasses"></i></div>
+            <div class="feature-icon feature-icon--hollow"><i class="fas fa-utensils"></i></div>
             <div>
-              <h4>Welcome Champagne</h4>
-              <p>Complimentary champagne and local delicacies upon arrival.</p>
-            </div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-icon" style="background:linear-gradient(135deg,var(--savanna-gold),#B8860B);"><i
-                class="fas fa-spa"></i></div>
-            <div>
-              <h4>In-Suite Spa</h4>
-              <p>Complimentary couple's spa treatment in the privacy of your suite.</p>
-            </div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-icon" style="background:linear-gradient(135deg,var(--savanna-gold),#B8860B);"><i
-                class="fas fa-utensils"></i></div>
-            <div>
-              <h4>Private Dining</h4>
+              <h4>In-Suite Dining</h4>
               <p>In-suite dining available with our full sea-to-table menu.</p>
             </div>
           </div>
           <div class="feature-item">
-            <div class="feature-icon" style="background:linear-gradient(135deg,var(--savanna-gold),#B8860B);"><i
-                class="fas fa-van-shuttle"></i></div>
+            <div class="feature-icon feature-icon--hollow"><i class="fas fa-mug-hot"></i></div>
             <div>
-              <h4>VIP Airport Transfer</h4>
-              <p>Premium private vehicle transfer from Sam Ratulangi Airport.</p>
+              <h4>All-Day Meals &amp; Snacks</h4>
+              <p>Breakfast, lunch, and dinner for 2 persons; and two times snacks for 2 persons.</p>
             </div>
           </div>
+          <div class="feature-item">
+            <div class="feature-icon feature-icon--hollow"><i class="fas fa-droplet"></i></div>
+            <div>
+              <h4>Free-Flow Refreshments</h4>
+              <p>Complimentary mineral water, house coffee, and house tea throughout your stay.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon feature-icon--hollow"><i class="fas fa-car-side"></i></div>
+            <div>
+              <h4>Complimentary Airport Transfer</h4>
+              <p>Return airport transfer with minimum 8-night stay. Private car, max 4 persons.</p>
+            </div>
+          </div>
+
+          <!-- More Amenities -->
+          <div class="more-amenities" id="moreAmenitiesMinahasa" style="display:none;">
+            <div class="amenities-grid">
+              <div class="amenity-chip"><i class="fas fa-expand"></i><span>120 sqm</span></div>
+              <div class="amenity-chip"><i class="fas fa-snowflake"></i><span>AC</span></div>
+              <div class="amenity-chip"><i class="fas fa-wind"></i><span>Hair Dryer</span></div>
+              <div class="amenity-chip"><i class="fas fa-faucet"></i><span>Hot/Cold Water</span></div>
+              <div class="amenity-chip"><i class="fas fa-shower"></i><span>Shower</span></div>
+              <div class="amenity-chip"><i class="fas fa-tv"></i><span>Smart TV</span></div>
+              <div class="amenity-chip"><i class="fas fa-wifi"></i><span>Wifi Access</span></div>
+              <div class="amenity-chip"><i class="fas fa-door-open"></i><span>Balcony</span></div>
+              <div class="amenity-chip"><i class="fas fa-couch"></i><span>TV Area / Living Room</span></div>
+            </div>
+          </div>
+          <button class="btn-more-amenities" id="toggleAmenitiesMinahasa" onclick="toggleAmenities('moreAmenitiesMinahasa','toggleAmenitiesMinahasa')">
+            <span class="toggle-label">More...</span>
+          </button>
         </div>
         <div class="reveal reveal-delay-2">
           <div class="img-rounded" style="box-shadow:var(--shadow-lg);"><img

@@ -34,45 +34,54 @@ $navStyle = ""; ?>
   <section class="section-lg section-bg-sand">
     <div class="container">
       <div class="split-section">
-        <div class="reveal"><span class="section-label">What's Included</span>
+        <div class="reveal inclusions--teal"><span class="section-label">What's Included</span>
           <h2>Your Stay Includes</h2>
           <p style="color:var(--slate);margin-bottom:2rem;">Every Club Room reservation comes with everything you need
             for a comfortable, enriching stay at Pulisanbay.</p>
           <div class="feature-item">
-            <div class="feature-icon"><i class="fas fa-bed"></i></div>
+            <div class="feature-icon feature-icon--hollow"><i class="fas fa-bed"></i></div>
             <div>
               <h4>Premium Bedding</h4>
-              <p>King-size bed with luxury Egyptian cotton linens and plush pillows.</p>
+              <p>King-size bed or twin bed with luxurious linens and plush pillows.</p>
             </div>
           </div>
           <div class="feature-item">
-            <div class="feature-icon"><i class="fas fa-mug-hot"></i></div>
+            <div class="feature-icon feature-icon--hollow"><i class="fas fa-utensils"></i></div>
             <div>
-              <h4>Daily Breakfast</h4>
-              <p>Complimentary breakfast featuring local and international cuisine.</p>
+              <h4>All-Day Meals &amp; Snacks</h4>
+              <p>Breakfast, lunch, and dinner for 2 persons; and two times snacks for 2 persons.</p>
             </div>
           </div>
           <div class="feature-item">
-            <div class="feature-icon"><i class="fas fa-shower"></i></div>
+            <div class="feature-icon feature-icon--hollow"><i class="fas fa-mug-hot"></i></div>
             <div>
-              <h4>Premium Amenities</h4>
-              <p>Eco-friendly bath products, plush robes, and slippers.</p>
+              <h4>Free-Flow Refreshments</h4>
+              <p>Complimentary mineral water, house coffee, and house tea throughout your stay.</p>
             </div>
           </div>
           <div class="feature-item">
-            <div class="feature-icon"><i class="fas fa-wifi"></i></div>
+            <div class="feature-icon feature-icon--hollow"><i class="fas fa-car-side"></i></div>
             <div>
-              <h4>High-Speed WiFi</h4>
-              <p>Complimentary wireless internet throughout your stay.</p>
+              <h4>Complimentary Airport Transfer</h4>
+              <p>Return airport transfer with minimum 8-night stay. Private car, max 4 persons.</p>
             </div>
           </div>
-          <div class="feature-item">
-            <div class="feature-icon"><i class="fas fa-van-shuttle"></i></div>
-            <div>
-              <h4>Airport Transfer</h4>
-              <p>Round-trip shuttle from Sam Ratulangi International Airport.</p>
+
+          <!-- More Amenities -->
+          <div class="more-amenities" id="moreAmenitiesClub" style="display:none;">
+            <div class="amenities-grid">
+              <div class="amenity-chip"><i class="fas fa-expand"></i><span>27 sqm</span></div>
+              <div class="amenity-chip"><i class="fas fa-snowflake"></i><span>AC</span></div>
+              <div class="amenity-chip"><i class="fas fa-wind"></i><span>Hair Dryer</span></div>
+              <div class="amenity-chip"><i class="fas fa-faucet"></i><span>Hot/Cold Water</span></div>
+              <div class="amenity-chip"><i class="fas fa-shower"></i><span>Shower</span></div>
+              <div class="amenity-chip"><i class="fas fa-tv"></i><span>Smart TV</span></div>
+              <div class="amenity-chip"><i class="fas fa-wifi"></i><span>Wifi Access</span></div>
             </div>
           </div>
+          <button class="btn-more-amenities" id="toggleAmenitiesClub" onclick="toggleAmenities('moreAmenitiesClub','toggleAmenitiesClub')">
+            <span class="toggle-label">More...</span>
+          </button>
         </div>
         <div class="reveal reveal-delay-2">
           <div class="img-rounded" style="box-shadow:var(--shadow-lg);"><img src="../assets/images/room-club.png"
