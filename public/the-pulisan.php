@@ -81,46 +81,36 @@ $navStyle = "";
       <div class="section-header reveal"><span class="section-label">Resort Amenities</span>
         <h2>Everything You Need, Nothing You Don't</h2>
       </div>
-      <div class="grid-4 grid-4-dense reveal">
-        <div class="pillar-card">
-          <div class="pillar-icon"><i class="fas fa-utensils"></i></div>
-          <h3>Restaurant</h3>
-          <p>Sea-to-table dining with panoramic bay views</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon"><i class="fas fa-spa"></i></div>
-          <h3>Wellness</h3>
-          <p>Traditional & modern spa treatments</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon"><i class="fas fa-water"></i></div>
-          <h3>Infinity Pool</h3>
-          <p>Overlooking the turquoise Pulisan Bay</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon"><i class="fas fa-wifi"></i></div>
-          <h3>Connectivity</h3>
-          <p>High-speed WiFi throughout the resort</p>
-        </div>
+      <div class="grid-3 grid-3-dense reveal">
         <div class="pillar-card">
           <div class="pillar-icon"><i class="fas fa-van-shuttle"></i></div>
           <h3>Airport Transfer</h3>
-          <p>Complimentary shuttle from Sam Ratulangi Airport</p>
+          <p>Complimentary return airport transfer *T&C apply</p>
         </div>
         <div class="pillar-card">
           <div class="pillar-icon"><i class="fas fa-concierge-bell"></i></div>
           <h3>Concierge</h3>
-          <p>24/7 guest services and activity booking</p>
+          <p>24/7 guest services</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fas fa-wifi"></i></div>
+          <h3>Connectivity</h3>
+          <p>High-speed WiFi and Smart TV</p>
         </div>
         <div class="pillar-card">
           <div class="pillar-icon"><i class="fas fa-person-hiking"></i></div>
           <h3>Guided Tours</h3>
-          <p>Expert-led nature and cultural excursions</p>
+          <p>Guided land exploration</p>
         </div>
         <div class="pillar-card">
           <div class="pillar-icon"><i class="fas fa-shirt"></i></div>
           <h3>Laundry</h3>
-          <p>Same-day laundry and pressing service</p>
+          <p>Laundry services available</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fas fa-utensils"></i></div>
+          <h3>Restaurant</h3>
+          <p>Sea-To-Table dining with panoramic bay views</p>
         </div>
       </div>
     </div>
