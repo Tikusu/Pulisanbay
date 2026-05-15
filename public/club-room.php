@@ -79,7 +79,8 @@ $navStyle = ""; ?>
               <div class="amenity-chip"><i class="fas fa-wifi"></i><span>Wifi Access</span></div>
             </div>
           </div>
-          <button class="btn-more-amenities" id="toggleAmenitiesClub" onclick="toggleAmenities('moreAmenitiesClub','toggleAmenitiesClub')">
+          <button class="btn-more-amenities" id="toggleAmenitiesClub"
+            onclick="toggleAmenities('moreAmenitiesClub','toggleAmenitiesClub')">
             <span class="toggle-label">More...</span>
           </button>
         </div>
@@ -94,7 +95,7 @@ $navStyle = ""; ?>
   <section class="section-lg section-bg-white">
     <div class="container">
       <div class="grid-2">
-        <div class="reveal" style="padding:2.5rem;background:var(--earthy-sand);border-radius:var(--radius-lg);">
+        <div class="reveal" style="padding:2.5rem;background:var(--earthy-sand);">
           <h3 style="margin-bottom:1.25rem;"><i class="fas fa-file-contract"
               style="color:var(--oceanic-turquoise);margin-right:8px;"></i>Terms of Service</h3>
           <ul style="color:var(--slate);font-size:0.9rem;line-height:2;list-style:none;">
@@ -104,11 +105,12 @@ $navStyle = ""; ?>
             <li>✦ Maximum 1 additional person per room (charges apply)</li>
             <li>✦ Valid government-issued ID required at check-in</li>
             <li>✦ Rates are subject to applicable taxes and service charges</li>
-            <li style="margin-top:1rem;"><a href="terms-and-conditions.php" style="color:var(--oceanic-turquoise);text-decoration:none;font-weight:600;font-size:0.85rem;">View Full Terms & Conditions →</a></li>
+            <li style="margin-top:1rem;"><a href="terms-and-conditions.php"
+                style="color:var(--oceanic-turquoise);text-decoration:none;font-weight:600;font-size:0.85rem;">View Full
+                Terms & Conditions →</a></li>
           </ul>
         </div>
-        <div class="reveal reveal-delay-1"
-          style="padding:2.5rem;background:var(--earthy-sand);border-radius:var(--radius-lg);">
+        <div class="reveal reveal-delay-1" style="padding:2.5rem;background:var(--earthy-sand);">
           <h3 style="margin-bottom:1.25rem;"><i class="fas fa-shield-halved"
               style="color:var(--oceanic-turquoise);margin-right:8px;"></i>Policy</h3>
           <ul style="color:var(--slate);font-size:0.9rem;line-height:2;list-style:none;">
