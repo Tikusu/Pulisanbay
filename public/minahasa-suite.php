@@ -127,7 +127,7 @@ $navStyle = ""; ?>
       </div>
     </div>
   </section>
-  <section class="section"
+  <section class="section" style="display: none;"
     style="background:linear-gradient(135deg,var(--savanna-gold),#B8860B);text-align:center;color:var(--white);">
     <div class="container reveal">
       <h2 style="color:var(--white);margin-bottom:1rem;">Reserve the Minahasa Suite</h2>

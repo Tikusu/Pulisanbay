@@ -110,7 +110,7 @@ $navStyle = ""; ?>
       </div>
     </div>
   </section>
-  <section class="section"
+  <section class="section" style="display: none;"
     style="background:linear-gradient(135deg,var(--oceanic-turquoise),var(--deep-sea));text-align:center;color:var(--white);">
     <div class="container reveal">
       <h2 style="color:var(--white);margin-bottom:1rem;">Reserve Your Lower Bungalow</h2>
