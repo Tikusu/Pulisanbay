@@ -52,8 +52,8 @@ $navStyle = "";
           </div>
         </a>
         <a href="upper-bungalow.php" class="card reveal" style="text-decoration:none;color:inherit;">
-          <div class="card-img-wrapper"><img src="../assets/images/room-upper-bungalow.png" alt="Upper Bungalow"
-              class="card-img" style="height:300px;"></div>
+          <div class="card-img-wrapper"><img src="../assets/images/the-pulisan/upper-bungalow/upper-bungalow-hero.webp"
+              alt="Upper Bungalow" class="card-img" style="height:300px;"></div>
           <div class="card-body">
             <h3>Upper Bungalow</h3>
             <p>Elevated among the hillside canopy, our Upper Bungalows command panoramic ocean views — where every
@@ -62,8 +62,8 @@ $navStyle = "";
           </div>
         </a>
         <a href="minahasa-suite.php" class="card reveal reveal-delay-1" style="text-decoration:none;color:inherit;">
-          <div class="card-img-wrapper"><img src="../assets/images/room-minahasa-suite.png" alt="Minahasa Suite"
-              class="card-img" style="height:300px;"></div>
+          <div class="card-img-wrapper"><img src="../assets/images/the-pulisan/minahasa-suite/minahasa-suite-hero.webp"
+              alt="Minahasa Suite" class="card-img" style="height:300px;"></div>
           <div class="card-body">
             <h3>Minahasa Suite</h3>
             <p>The pinnacle of Pulisanbay luxury. A grand suite inspired by Minahasa heritage — featuring a private

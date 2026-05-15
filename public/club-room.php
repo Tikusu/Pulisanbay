@@ -7,9 +7,10 @@ $navStyle = ""; ?>
 <head><?php include __DIR__ . '/../includes/head.php'; ?></head>
 
 <body>
-    <?php include __DIR__ . '/../includes/navbar.php'; ?>
+  <?php include __DIR__ . '/../includes/navbar.php'; ?>
   <section class="hero">
-    <div class="hero-bg" style="background-image:url('../assets/images/room-club.png')"></div>
+    <div class="hero-bg" style="background-image:url('../assets/images/the-pulisan/club-room/club-room-hero.webp')">
+    </div>
     <div class="hero-content">
       <h1>Club Room</h1>
       <p>Modern elegance meets tropical warmth — a refined retreat wrapped in the gentle embrace of nature.</p>
@@ -125,7 +126,7 @@ $navStyle = ""; ?>
     </div>
   </section>
 
-    <?php include __DIR__ . '/../includes/footer.php'; ?>
+  <?php include __DIR__ . '/../includes/footer.php'; ?>
   <div class="lightbox" id="lightbox"><button class="lightbox-close">&times;</button><img src="" alt=""></div>
   <script src="../assets/js/main.js"></script>
 </body>

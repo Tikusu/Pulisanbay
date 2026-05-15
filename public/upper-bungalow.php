@@ -1,12 +1,130 @@
-<?php $pageTitle="Upper Bungalow — The Pulisan | Pulisanbay"; $pageDescription="The Upper Bungalow at The Pulisan — elevated hillside retreat with panoramic ocean views at Pulisanbay, KEK Likupang."; $navStyle=""; ?>
-<!DOCTYPE html><html lang="en"><head><?php include __DIR__.'/../includes/head.php'; ?></head><body>
-<?php include __DIR__.'/../includes/navbar.php'; ?>
-<section class="hero"><div class="hero-bg" style="background-image:url('../assets/images/room-upper-bungalow.png')"></div><div class="hero-content"><h1>Upper Bungalow</h1><p>Elevated among the hillside canopy — where every sunrise feels like it was painted just for you.</p></div><div class="hero-scroll-indicator"><span></span></div></section>
-<section class="section-lg section-bg-white"><div class="container"><div class="section-header reveal"><span class="section-label">Gallery</span><h2>Your Perch Above Paradise</h2></div><div class="gallery-grid reveal"><div class="gallery-item"><img src="../assets/images/room-upper-bungalow.png" alt="Upper Bungalow Exterior"></div><div class="gallery-item"><img src="../assets/images/room-minahasa-suite.png" alt="Upper Bungalow Interior"></div><div class="gallery-item"><img src="../assets/images/hero-accommodation.png" alt="Upper Bungalow View"></div></div></div></section>
-<section class="section-lg section-bg-sand"><div class="container"><div class="split-section"><div class="reveal"><span class="section-label">What's Included</span><h2>Your Stay Includes</h2><p style="color:var(--slate);margin-bottom:2rem;">The Upper Bungalow offers a premium hillside experience with panoramic views and elevated luxury.</p><div class="feature-item"><div class="feature-icon"><i class="fas fa-bed"></i></div><div><h4>King Canopy Bed</h4><p>Luxurious king bed with white canopy, premium linens, and ocean-facing orientation.</p></div></div><div class="feature-item"><div class="feature-icon"><i class="fas fa-mug-hot"></i></div><div><h4>Daily Breakfast</h4><p>Complimentary breakfast — enjoy it on your private balcony with bay views.</p></div></div><div class="feature-item"><div class="feature-icon"><i class="fas fa-mountain-sun"></i></div><div><h4>Panoramic Balcony</h4><p>A spacious private balcony with stunning views of Pulisan Bay and the surrounding hills.</p></div></div><div class="feature-item"><div class="feature-icon"><i class="fas fa-spa"></i></div><div><h4>Welcome Spa Credit</h4><p>Complimentary spa credit for one treatment during your stay.</p></div></div><div class="feature-item"><div class="feature-icon"><i class="fas fa-van-shuttle"></i></div><div><h4>Airport Transfer</h4><p>Round-trip shuttle from Sam Ratulangi International Airport.</p></div></div></div><div class="reveal reveal-delay-2"><div class="img-rounded" style="box-shadow:var(--shadow-lg);"><img src="../assets/images/room-upper-bungalow.png" alt="Upper Bungalow" class="img-cover" style="height:500px;"></div></div></div></div></section>
-<section class="section-lg section-bg-white"><div class="container"><div class="grid-2"><div class="reveal" style="padding:2.5rem;background:var(--earthy-sand);border-radius:var(--radius-lg);"><h3 style="margin-bottom:1.25rem;"><i class="fas fa-file-contract" style="color:var(--oceanic-turquoise);margin-right:8px;"></i>Terms of Service</h3><ul style="color:var(--slate);font-size:0.9rem;line-height:2;list-style:none;"><li>✦ Check-in: 14:00 | Check-out: 12:00</li><li>✦ Valid government-issued ID required at check-in</li><li>✦ Maximum occupancy: 2 adults + 1 child</li><li>✦ Elevated location — involves stairs and hillside walkways</li><li>✦ Rates subject to applicable taxes and service charges</li></ul></div><div class="reveal reveal-delay-1" style="padding:2.5rem;background:var(--earthy-sand);border-radius:var(--radius-lg);"><h3 style="margin-bottom:1.25rem;"><i class="fas fa-shield-halved" style="color:var(--oceanic-turquoise);margin-right:8px;"></i>Policy</h3><ul style="color:var(--slate);font-size:0.9rem;line-height:2;list-style:none;"><li>✦ Free cancellation up to 7 days before check-in</li><li>✦ 50% charge for cancellations within 3–7 days</li><li>✦ Full charge for cancellations within 48 hours</li><li>✦ Non-smoking property</li><li>✦ Pets are not permitted</li></ul></div></div></div></section>
-<section class="section" style="background:linear-gradient(135deg,var(--oceanic-turquoise),var(--deep-sea));text-align:center;color:var(--white);"><div class="container reveal"><h2 style="color:var(--white);margin-bottom:1rem;">Reserve Your Upper Bungalow</h2><p style="color:rgba(255,255,255,0.85);max-width:500px;margin:0 auto 2rem;">Ascend to where the forest canopy meets the ocean horizon.</p><div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;"><a href="contact.php" class="btn-cta-outline">Inquire Now</a><a href="the-pulisan.php" class="btn-cta-outline" style="border-color:rgba(255,255,255,0.3);">← Back to All Rooms</a></div></div></section>
-<?php include __DIR__.'/../includes/footer.php'; ?>
-<div class="lightbox" id="lightbox"><button class="lightbox-close">&times;</button><img src="" alt=""></div>
-<script src="../assets/js/main.js"></script>
-</body></html>
+<?php $pageTitle = "Upper Bungalow — The Pulisan | Pulisanbay";
+$pageDescription = "The Upper Bungalow at The Pulisan — elevated hillside retreat with panoramic ocean views at Pulisanbay, KEK Likupang.";
+$navStyle = ""; ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head><?php include __DIR__ . '/../includes/head.php'; ?></head>
+
+<body>
+  <?php include __DIR__ . '/../includes/navbar.php'; ?>
+  <section class="hero">
+    <div class="hero-bg"
+      style="background-image:url('../assets/images/the-pulisan/upper-bungalow/upper-bungalow-hero.webp')"></div>
+    <div class="hero-content">
+      <h1>Upper Bungalow</h1>
+      <p>Elevated among the hillside canopy — where every sunrise feels like it was painted just for you.</p>
+    </div>
+    <div class="hero-scroll-indicator"><span></span></div>
+  </section>
+  <section class="section-lg section-bg-white">
+    <div class="container">
+      <div class="section-header reveal"><span class="section-label">Gallery</span>
+        <h2>Your Perch Above Paradise</h2>
+      </div>
+      <div class="gallery-grid reveal">
+        <div class="gallery-item"><img src="../assets/images/room-upper-bungalow.png" alt="Upper Bungalow Exterior">
+        </div>
+        <div class="gallery-item"><img src="../assets/images/room-minahasa-suite.png" alt="Upper Bungalow Interior">
+        </div>
+        <div class="gallery-item"><img src="../assets/images/hero-accommodation.png" alt="Upper Bungalow View"></div>
+      </div>
+    </div>
+  </section>
+  <section class="section-lg section-bg-sand">
+    <div class="container">
+      <div class="split-section">
+        <div class="reveal"><span class="section-label">What's Included</span>
+          <h2>Your Stay Includes</h2>
+          <p style="color:var(--slate);margin-bottom:2rem;">The Upper Bungalow offers a premium hillside experience with
+            panoramic views and elevated luxury.</p>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-bed"></i></div>
+            <div>
+              <h4>King Canopy Bed</h4>
+              <p>Luxurious king bed with white canopy, premium linens, and ocean-facing orientation.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-mug-hot"></i></div>
+            <div>
+              <h4>Daily Breakfast</h4>
+              <p>Complimentary breakfast — enjoy it on your private balcony with bay views.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-mountain-sun"></i></div>
+            <div>
+              <h4>Panoramic Balcony</h4>
+              <p>A spacious private balcony with stunning views of Pulisan Bay and the surrounding hills.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-spa"></i></div>
+            <div>
+              <h4>Welcome Spa Credit</h4>
+              <p>Complimentary spa credit for one treatment during your stay.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-van-shuttle"></i></div>
+            <div>
+              <h4>Airport Transfer</h4>
+              <p>Round-trip shuttle from Sam Ratulangi International Airport.</p>
+            </div>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <div class="img-rounded" style="box-shadow:var(--shadow-lg);"><img
+              src="../assets/images/room-upper-bungalow.png" alt="Upper Bungalow" class="img-cover"
+              style="height:500px;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-lg section-bg-white">
+    <div class="container">
+      <div class="grid-2">
+        <div class="reveal" style="padding:2.5rem;background:var(--earthy-sand);border-radius:var(--radius-lg);">
+          <h3 style="margin-bottom:1.25rem;"><i class="fas fa-file-contract"
+              style="color:var(--oceanic-turquoise);margin-right:8px;"></i>Terms of Service</h3>
+          <ul style="color:var(--slate);font-size:0.9rem;line-height:2;list-style:none;">
+            <li>✦ Check-in: 14:00 | Check-out: 12:00</li>
+            <li>✦ Valid government-issued ID required at check-in</li>
+            <li>✦ Maximum occupancy: 2 adults + 1 child</li>
+            <li>✦ Elevated location — involves stairs and hillside walkways</li>
+            <li>✦ Rates subject to applicable taxes and service charges</li>
+          </ul>
+        </div>
+        <div class="reveal reveal-delay-1"
+          style="padding:2.5rem;background:var(--earthy-sand);border-radius:var(--radius-lg);">
+          <h3 style="margin-bottom:1.25rem;"><i class="fas fa-shield-halved"
+              style="color:var(--oceanic-turquoise);margin-right:8px;"></i>Policy</h3>
+          <ul style="color:var(--slate);font-size:0.9rem;line-height:2;list-style:none;">
+            <li>✦ Free cancellation up to 7 days before check-in</li>
+            <li>✦ 50% charge for cancellations within 3–7 days</li>
+            <li>✦ Full charge for cancellations within 48 hours</li>
+            <li>✦ Non-smoking property</li>
+            <li>✦ Pets are not permitted</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section"
+    style="background:linear-gradient(135deg,var(--oceanic-turquoise),var(--deep-sea));text-align:center;color:var(--white);">
+    <div class="container reveal">
+      <h2 style="color:var(--white);margin-bottom:1rem;">Reserve Your Upper Bungalow</h2>
+      <p style="color:rgba(255,255,255,0.85);max-width:500px;margin:0 auto 2rem;">Ascend to where the forest canopy
+        meets the ocean horizon.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;"><a href="contact.php"
+          class="btn-cta-outline">Inquire Now</a><a href="the-pulisan.php" class="btn-cta-outline"
+          style="border-color:rgba(255,255,255,0.3);">← Back to All Rooms</a></div>
+    </div>
+  </section>
+  <?php include __DIR__ . '/../includes/footer.php'; ?>
+  <div class="lightbox" id="lightbox"><button class="lightbox-close">&times;</button><img src="" alt=""></div>
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
