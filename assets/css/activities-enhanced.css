@@ -621,6 +621,7 @@
 }
 
 .act-climb__inner {
+  /* aspect-ratio: 1/1; */
   position: relative;
   z-index: 1;
   display: grid;
@@ -630,7 +631,6 @@
 
 /* Image panel — full height, vertical */
 .act-climb__img-panel {
-  /* aspect-ratio: 5/6; */
   position: relative;
   overflow: hidden;
   /* max-height: 800px; */
@@ -648,7 +648,7 @@
   transform: scale(1.04);
 }
 /* Gradient on right edge to blend into light panel */
-.act-climb__img-panel::after {
+/* .act-climb__img-panel::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -660,7 +660,7 @@
   );
   z-index: 1;
   pointer-events: none;
-}
+} */
 
 /* Big elevation number — decorative */
 .act-climb__elev {
