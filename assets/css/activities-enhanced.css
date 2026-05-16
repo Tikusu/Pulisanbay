@@ -437,7 +437,7 @@
 .act-trails__content {
 }
 .act-trails__content .section-label {
-  color: var(--savanna-gold);
+  color: var(--forest-green);
 }
 .act-trails__content h2 {
   font-size: clamp(2rem, 3.5vw, 3rem);
@@ -487,28 +487,20 @@
 .act-trails__img-stack::before {
   content: "";
   position: absolute;
-  /* top: -16px;
-  left: -16px;
-  right: 16px;
-  bottom: 16px; */
   border: 2px solid rgba(212, 168, 67, 0.4);
   z-index: 0;
   pointer-events: none;
   transition: all 0.5s ease;
 }
-/* .act-trails__img-stack:hover::before {
-  top: -20px;
-  left: -20px;
-} */
 /* Left Image */
 .left-stack::before {
-  top: -16px;
+  top: 16px;
   left: -16px;
   right: 16px;
-  bottom: 16px;
+  bottom: -16px;
 }
 .left-stack:hover::before {
-  top: -20px;
+  top: 20px;
   left: -20px;
 }
 /* Right Image */
