@@ -1,0 +1,753 @@
+/* =============================================
+   ACTIVITIES PAGE — ENHANCED LAYOUTS
+   =============================================
+   Premium, dynamic section layouts for the
+   activities.php page. Each activity section
+   has its own distinct visual language.
+   ============================================= */
+
+/* ──────────────────────────────────────────────
+   1. MARINE ADVENTURES — "The Depth" Layout
+   A large image with a floating glassmorphism
+   text card that partially overlaps it.
+────────────────────────────────────────────── */
+.act-marine {
+  position: relative;
+  overflow: hidden;
+  background: #0b2a3a;
+  padding: 0;
+}
+
+/* Animated wave pattern background */
+.act-marine::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at 80% 50%,
+      rgba(8, 145, 178, 0.15) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at 20% 80%,
+      rgba(12, 74, 110, 0.2) 0%,
+      transparent 55%
+    );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.act-marine__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 620px;
+}
+
+/* Left: Image panel */
+.act-marine__img-panel {
+  position: relative;
+  overflow: hidden;
+  max-height: 800px;
+}
+.act-marine__img-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 8s ease;
+}
+.act-marine__img-panel:hover img {
+  transform: scale(1.04);
+}
+
+/* Diagonal clip mask on image right edge */
+.act-marine__img-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(12, 74, 110, 0) 65%,
+    rgba(12, 74, 110, 0.6) 85%,
+    #0b2a3a 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Right: Text panel */
+.act-marine__text-panel {
+  display: flex;
+  align-items: center;
+  padding: 6rem 5rem 6rem 3rem;
+}
+
+.act-marine__text-panel .section-label {
+  color: var(--oceanic-turquoise);
+}
+
+.act-marine__text-panel h2 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  color: #f0ebe4;
+  margin-bottom: 1.5rem;
+}
+
+.act-marine__text-panel p {
+  color: rgba(240, 235, 228, 0.75);
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+}
+
+/* Stat pills row */
+.act-marine__stats {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+.act-marine__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1rem 1.5rem;
+  background: rgba(8, 145, 178, 0.12);
+  border: 1px solid rgba(8, 145, 178, 0.25);
+  border-radius: 4px;
+  backdrop-filter: blur(8px);
+}
+.act-marine__stat-num {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--oceanic-turquoise);
+  line-height: 1;
+}
+.act-marine__stat-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(240, 235, 228, 0.5);
+}
+
+/* Floating bubble decoration */
+.act-marine__bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(8, 145, 178, 0.06);
+  border: 1px solid rgba(8, 145, 178, 0.1);
+  animation: float-bubble 6s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+.act-marine__bubble:nth-child(1) {
+  width: 120px;
+  height: 120px;
+  top: 10%;
+  right: 5%;
+  animation-delay: 0s;
+}
+.act-marine__bubble:nth-child(2) {
+  width: 60px;
+  height: 60px;
+  bottom: 20%;
+  right: 3%;
+  animation-delay: 2s;
+}
+.act-marine__bubble:nth-child(3) {
+  width: 200px;
+  height: 200px;
+  bottom: -5%;
+  left: 48%;
+  animation-delay: 4s;
+}
+@keyframes float-bubble {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .act-marine__inner {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    max-height: auto;
+  }
+  .act-marine__img-panel {
+    height: auto;
+    max-height: 400px;
+  }
+  .act-marine__img-panel::after {
+    background: linear-gradient(to bottom, transparent 60%, #0b2a3a 100%);
+  }
+  .act-marine__text-panel {
+    padding: 3rem 2rem 4rem;
+  }
+}
+@media (max-width: 640px) {
+  .act-marine__text-panel {
+    padding: 2.5rem 1.25rem 3.5rem;
+  }
+  .act-marine__stats {
+    gap: 0.75rem;
+  }
+  .act-marine__stat {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* ──────────────────────────────────────────────
+   2. WATER SPORTS — Asymmetric Staggered Layout
+   A wide image on one side with content on the
+   other, accented by a floating tag and a
+   decorative accent line.
+────────────────────────────────────────────── */
+.act-water {
+  background: var(--earthy-sand);
+  padding: 8rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle geometric decoration */
+.act-water::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 1px solid rgba(212, 168, 67, 0.15);
+  pointer-events: none;
+}
+.act-water::after {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  right: -50px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 1px solid rgba(212, 168, 67, 0.1);
+  pointer-events: none;
+}
+
+.act-water__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 55% 1fr;
+  gap: 5rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Image container with stacked frames */
+.act-water__img-stack {
+  position: relative;
+}
+
+/* Accent frame behind the image */
+.act-water__img-stack::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  right: 16px;
+  bottom: 16px;
+  border: 2px solid rgba(212, 168, 67, 0.4);
+  z-index: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+.act-water__img-stack:hover::before {
+  top: -20px;
+  left: -20px;
+}
+
+.act-water__img-main {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  box-shadow: none;
+}
+.act-water__img-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.act-water__img-stack:hover .act-water__img-main img {
+  transform: scale(1.05);
+}
+
+/* Floating "experience" badge on image corner */
+.act-water__badge {
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1.5rem;
+  z-index: 2;
+  width: 110px;
+  height: 110px;
+  background: var(--deep-sea);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+}
+.act-water__badge-num {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--savanna-gold);
+  line-height: 1;
+}
+.act-water__badge-text {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  text-align: center;
+  padding: 0 0.5rem;
+  margin-top: 0.2rem;
+}
+
+/* Text side */
+.act-water__content {
+  padding-right: 1rem;
+}
+.act-water__content h2 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  margin-bottom: 1.5rem;
+}
+.act-water__content p {
+  color: var(--slate);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+/* Highlight feature list */
+.act-water__features {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.act-water__features li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--charcoal);
+}
+.act-water__features li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--oceanic-turquoise);
+}
+
+@media (max-width: 1024px) {
+  .act-water__inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .act-water__img-stack::before {
+    display: none;
+  }
+  .act-water__badge {
+    bottom: -1rem;
+    right: 1rem;
+  }
+  .act-water__content {
+    padding-right: 0;
+  }
+}
+@media (max-width: 640px) {
+  .act-water {
+    padding: 5rem 1.25rem;
+  }
+}
+
+/* ──────────────────────────────────────────────
+   3. ECO-TRAILS — "The Journal" Layout
+   A full-bleed background image with parallax
+   feel, text on a semi-transparent panel,
+   and organic / earthy aesthetic.
+────────────────────────────────────────────── */
+.act-trails {
+  position: relative;
+  overflow: hidden;
+  background: #f5f0e8;
+  padding: 0;
+}
+
+/* Background texture */
+.act-trails__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at 10% 60%,
+      rgba(22, 101, 52, 0.06) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 90% 20%,
+      rgba(212, 168, 67, 0.08) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.act-trails__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8rem 3rem;
+  display: grid;
+  grid-template-columns: 1fr 52%;
+  gap: 6rem;
+  align-items: center;
+}
+
+/* Text column */
+.act-trails__content {
+}
+.act-trails__content .section-label {
+  color: var(--savanna-gold);
+}
+.act-trails__content h2 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  margin-bottom: 1.5rem;
+  color: var(--deep-sea-dark);
+}
+.act-trails__content p {
+  color: var(--slate);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+
+/* Trail feature chips */
+.act-trails__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 2rem;
+}
+.act-trails__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1rem;
+  border: 1px solid rgba(22, 101, 52, 0.25);
+  background: rgba(22, 101, 52, 0.06);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--forest-green);
+  letter-spacing: 0.04em;
+  border-radius: 2px;
+}
+.act-trails__chip i {
+  font-size: 0.85rem;
+}
+
+/* Image column with "journal photo" aesthetic */
+.act-trails__img-col {
+  position: relative;
+}
+
+/* Decorative tape/pin element - removed */
+/* .act-trails__img-stack::before added On The Water frame instead */
+.act-trails__img-stack {
+  position: relative;
+}
+.act-trails__img-stack::before {
+  content: "";
+  position: absolute;
+  /* top: -16px;
+  left: -16px;
+  right: 16px;
+  bottom: 16px; */
+  border: 2px solid rgba(212, 168, 67, 0.4);
+  z-index: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+/* .act-trails__img-stack:hover::before {
+  top: -20px;
+  left: -20px;
+} */
+/* Left Image */
+.left-stack::before {
+  top: -16px;
+  left: -16px;
+  right: 16px;
+  bottom: 16px;
+}
+.left-stack:hover::before {
+  top: -20px;
+  left: -20px;
+}
+/* Right Image */
+.right-stack::before {
+  top: -16px;
+  left: 16px;
+  right: -16px;
+  bottom: 16px;
+}
+.right-stack:hover::before {
+  top: -20px;
+  left: 20px;
+}
+
+/* Single image layout inside stack */
+.act-trails__img-main {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+.act-trails__img-stack:hover .act-trails__img-main {
+  /* no hover transform on container */
+}
+.act-trails__img-main img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.act-trails__img-stack:hover .act-trails__img-main img {
+  transform: scale(1.03);
+}
+
+/* "Caption" strip below the image */
+.act-trails__img-caption {
+  text-align: center;
+  margin-top: 1.25rem;
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--light-slate);
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 1024px) {
+  .act-trails__inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 6rem 2rem;
+  }
+  .act-trails__img-main {
+    transform: none;
+    aspect-ratio: 4 / 3;
+    max-width: 100%;
+  }
+  .act-trails__img-stack::before {
+    display: none;
+  }
+  .act-trails__img-col::before {
+    display: none;
+  }
+  .act-trails__img-caption {
+    transform: none;
+  }
+}
+@media (max-width: 640px) {
+  .act-trails__inner {
+    padding: 5rem 1.25rem;
+  }
+}
+
+/* ──────────────────────────────────────────────
+   4. ROCK CLIMBING — "Vertical Power" Layout
+   Dark, dramatic section. A tall vertical
+   image dominates one side. Text is on a deep
+   dark panel with an accent line.
+────────────────────────────────────────────── */
+.act-climb {
+  background: #f5f0e8;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* Subtle rock texture overlay */
+.act-climb::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at 30% 50%,
+      rgba(8, 145, 178, 0.04) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 90% 90%,
+      rgba(212, 168, 67, 0.05) 0%,
+      transparent 45%
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Grid of micro-dots for texture */
+.act-climb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.act-climb__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 42% 1fr;
+  min-height: 680px;
+}
+
+/* Image panel — full height, vertical */
+.act-climb__img-panel {
+  /* aspect-ratio: 5/6; */
+  position: relative;
+  overflow: hidden;
+  /* max-height: 800px; */
+}
+.act-climb__img-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 8s ease;
+  filter: brightness(0.85);
+}
+.act-climb__img-panel:hover img {
+  transform: scale(1.04);
+}
+/* Gradient on right edge to blend into light panel */
+.act-climb__img-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(245, 240, 232, 0) 65%,
+    rgba(245, 240, 232, 0.6) 85%,
+    #f5f0e8 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Big elevation number — decorative */
+.act-climb__elev {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.act-climb__elev-num {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 4rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.1);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.act-climb__elev-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* Text panel */
+.act-climb__text-panel {
+  display: flex;
+  align-items: center;
+  padding: 6rem 5rem 6rem 4rem;
+}
+.act-climb__text-inner {
+  width: 100%;
+}
+
+/* Accent line above label */
+.act-climb__text-inner::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--savanna-gold);
+  margin-bottom: 1.5rem;
+}
+
+.act-climb__text-panel .section-label {
+  color: var(--savanna-gold);
+}
+.act-climb__text-panel h2 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  color: var(--deep-sea-dark);
+  margin-bottom: 1.5rem;
+}
+.act-climb__text-panel p {
+  color: var(--slate);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 1024px) {
+  .act-climb__inner {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .act-climb__img-panel {
+    height: auto;
+    max-height: 400px;
+  }
+  .act-climb__img-panel::after {
+    background: linear-gradient(to bottom, transparent 60%, #f5f0e8 100%);
+  }
+  .act-climb__text-panel {
+    padding: 3rem 2rem 4rem;
+  }
+}
+@media (max-width: 640px) {
+  .act-climb__text-panel {
+    padding: 2.5rem 1.25rem 3.5rem;
+  }
+}

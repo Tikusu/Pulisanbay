@@ -9,6 +9,7 @@ $navStyle = "";
 <head>
   <?php include __DIR__ . '/../includes/head.php'; ?>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../assets/css/activities-enhanced.css" />
 </head>
 
 <body>
@@ -24,67 +25,118 @@ $navStyle = "";
     <div class="hero-scroll-indicator"><span></span></div>
   </section>
 
-  <!-- DIVING & SNORKELING -->
-  <section class="section-lg section-bg-white">
-    <div class="container">
-      <div class="split-section">
-        <div class="reveal">
+  <!-- WATER SPORTS — Asymmetric Staggered Layout -->
+  <section class="act-water" id="water-sports">
+    <div class="act-water__inner">
+      <!-- Image side -->
+      <div class="act-water__img-stack reveal">
+        <div class="act-water__img-main">
+          <img src="../assets/images/activity-kayaking.png" alt="Kayaking at Pulisanbay">
+        </div>
+        <div class="act-water__badge">
+          <span class="act-water__badge-num">∞</span>
+          <span class="act-water__badge-text">Open Water</span>
+        </div>
+      </div>
+
+      <!-- Text side -->
+      <div class="act-water__content reveal reveal-delay-1">
+        <span class="section-label">On the Water</span>
+        <h2>Paddleboarding &amp; Kayaking</h2>
+        <p>Glide across the calm turquoise waters of Pulisan Bay at your own pace. Our stand-up paddleboards and sea
+          kayaks are the perfect way to explore hidden coves, mangrove channels, and coastline formations that are
+          inaccessible by land.</p>
+        <p>Early morning and sunset sessions are particularly magical — when the bay transforms into a mirror reflecting
+          the sky's most spectacular palette.</p>
+
+        <!-- <ul class="act-water__features">
+          <li>Equipment & safety gear included</li>
+          <li>Guided & self-guided routes available</li>
+          <li>Hidden cove & mangrove tours</li>
+          <li>Sunset paddling sessions</li>
+        </ul> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVING & SNORKELING — "The Depth" Layout -->
+  <section class="act-marine" id="marine-adventures">
+    <!-- Floating bubble decorations -->
+    <div class="act-marine__bubble"></div>
+    <div class="act-marine__bubble"></div>
+    <div class="act-marine__bubble"></div>
+
+    <div class="act-marine__inner reveal">
+      <!-- Left: Image -->
+      <div class="act-marine__img-panel">
+        <img src="../assets/images/activities/diving.webp" alt="Scuba Diving at Pulisanbay">
+      </div>
+
+      <!-- Right: Text -->
+      <div class="act-marine__text-panel">
+        <div>
           <span class="section-label">Marine Adventures</span>
           <h2>Scuba Diving &amp; Snorkeling</h2>
-          <p style="color:var(--slate);margin-bottom:1.5rem;">Descend into the heart of the Coral Triangle — one of
-            Earth's most biodiverse marine ecosystems. Our PADI-certified dive masters guide you through vibrant coral
-            walls, underwater caves, and encounters with sea turtles, reef sharks, and schools of tropical fish.</p>
-          <p style="color:var(--slate);margin-bottom:2rem;">For those who prefer the surface, our snorkeling excursions
-            reveal a world of color just below the waterline — with visibility that stretches to the horizon.</p>
-        </div>
-        <div class="reveal reveal-delay-2">
-          <div class="section-img" style="box-shadow:var(--shadow-lg)"><img
-              src="../assets/images/activities/diving.webp" alt="Scuba Diving" class="img-cover" style="height: 100%;">
+          <p>Descend into the heart of the Coral Triangle — one of Earth's most biodiverse marine ecosystems. Our
+            dive masters will guide you through vibrant coral walls, underwater caves, and encounters with sea
+            turtles, reef sharks, and schools of tropical fish.</p>
+          <p>For those who prefer the surface, our snorkeling excursions reveal a world of color just below the
+            waterline — with visibility that stretches to the horizon.</p>
+
+          <div class="act-marine__stats reveal reveal-delay-1">
+            <div class="act-marine__stat">
+              <span class="act-marine__stat-num">40+</span>
+              <span class="act-marine__stat-label">Dive Sites</span>
+            </div>
+            <div class="act-marine__stat">
+              <span class="act-marine__stat-num">25m</span>
+              <span class="act-marine__stat-label">Avg. Visibility</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WATER SPORTS -->
-  <section class="section-lg section-bg-sand">
-    <div class="container">
-      <div class="split-section">
-        <div class="reveal reveal-delay-1" style="order:1;">
-          <div class="section-img" style="box-shadow:var(--shadow-lg);"><img
-              src="../assets/images/activity-kayaking.png" alt="Kayaking" class="img-cover" style="height: 100%;"></div>
-        </div>
-        <div class="reveal" style="order:2;">
-          <span class="section-label">On the Water</span>
-          <h2>Paddleboarding &amp; Kayaking</h2>
-          <p style="color:var(--slate);margin-bottom:1.5rem;">Glide across the calm turquoise waters of Pulisan Bay at
-            your own pace. Our stand-up paddleboards and sea kayaks are the perfect way to explore hidden coves,
-            mangrove channels, and coastline formations that are inaccessible by land.</p>
-          <p style="color:var(--slate);margin-bottom:2rem;">Early morning and sunset sessions are particularly magical —
-            when the bay transforms into a mirror reflecting the sky's most spectacular palette.</p>
+
+
+  <!-- ECO-TRAILS — "The Journal" Layout -->
+  <section class="act-trails" id="land-adventures">
+    <div class="act-trails__bg"></div>
+    <div class="act-trails__inner">
+
+      <!-- Text column -->
+      <div class="act-trails__content reveal">
+        <span class="section-label">Land Adventures</span>
+        <h2>Eco-Trails</h2>
+        <p>Traverse ancient trails that wind through tropical forests and open onto sweeping savanna vistas. Our guided
+          treks range from gentle coastal walks to challenging hill climbs — each rewarding you with breathtaking
+          panoramas of the bay, the hills, and the distant ocean horizon.</p>
+        <p>Every path tells a story of the land — from medicinal plants used by generations of Minahasa healers to the
+          geological formations shaped by millennia of wind and water.</p>
+
+        <div class="act-trails__img-stack left-stack" style="margin-top: 3rem;">
+          <div class="act-trails__img-main">
+            <img src="../assets/images/activity-trekking.png" alt="Eco-Trekking trails at Pulisanbay">
+          </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- TREKKING -->
-  <section class="section-lg section-bg-white" id="land-adventures">
-    <div class="container">
-      <div class="split-section">
-        <div class="reveal">
-          <span class="section-label">Land Adventures</span>
-          <h2>Eco-Trails</h2>
-          <p style="color:var(--slate);margin-bottom:1.5rem;">Traverse ancient trails that wind through tropical forests
-            and open onto sweeping savanna vistas. Our guided treks range from gentle coastal walks to challenging hill
-            climbs — each rewarding you with breathtaking panoramas of the bay, the hills, and the distant ocean
-            horizon.</p>
-          <p style="color:var(--slate);margin-bottom:2rem;">Every path tells a story of the land — from medicinal plants
-            used by generations of Minahasa healers to the geological formations shaped by millennia of wind and water.
-          </p>
+      <!-- Image column -->
+      <div class="act-trails__img-col reveal reveal-delay-2">
+        <div class="act-trails__img-stack right-stack">
+          <div class="act-trails__img-main">
+            <img src="../assets/images/hero-conservation.png" alt="Tropical forest at Pulisanbay">
+          </div>
         </div>
-        <div class="reveal reveal-delay-2">
-          <div class="section-img" style="box-shadow:var(--shadow-lg);"><img
-              src="../assets/images/activity-trekking.png" alt="Trekking" class="img-cover" style="height: 100%;"></div>
+        <p class="act-trails__img-caption">Ancient paths through living wilderness</p>
+
+        <div class="act-trails__chips reveal reveal-delay-1" style="margin-top: 2rem;">
+          <span class="act-trails__chip"><i class="fas fa-seedling"></i> Medicinal Plants</span>
+          <span class="act-trails__chip"><i class="fas fa-mountain"></i> Hill Climbs</span>
+          <span class="act-trails__chip"><i class="fas fa-binoculars"></i> Bird Watching</span>
+          <span class="act-trails__chip"><i class="fas fa-water"></i> Coastal Walks</span>
+          <span class="act-trails__chip"><i class="fas fa-compass"></i> Guided Routes</span>
         </div>
       </div>
     </div>
@@ -168,33 +220,29 @@ $navStyle = "";
     </div>
   </section>
 
-  <!-- ROCK CLIMBING -->
-  <section class="section-lg section-bg-white">
-    <div class="container">
-      <div class="split-section">
-        <div class="reveal reveal-delay-1">
-          <div class="section-img" style="box-shadow:var(--shadow-lg); height: 380px;"><img
-              src="../assets/images/hero-about.png" alt="Rock Climbing" class="img-cover" style="height: 100%;"></div>
-        </div>
-        <div class="reveal">
+  <!-- ROCK CLIMBING — "Vertical Power" Layout -->
+  <section class="act-climb" id="rock-climbing">
+    <div class="act-climb__inner">
+      <!-- Image panel — tall & vertical -->
+      <div class="act-climb__img-panel reveal">
+        <img src="../assets/images/hero-about.png" alt="Rock Climbing at Pulisanbay coastline">
+      </div>
+
+      <!-- Text panel -->
+      <div class="act-climb__text-panel reveal reveal-delay-1">
+        <div class="act-climb__text-inner">
           <span class="section-label">Vertical Adventures</span>
           <h2>Rock Climbing</h2>
-          <p style="color:var(--slate);margin-bottom:1.5rem;">Challenge yourself on the natural limestone formations and
-            volcanic rock faces that define Pulisanbay's dramatic coastline. With routes ranging from beginner-friendly
-            to advanced, every climber finds their perfect ascent.</p>
-          <p style="color:var(--slate);margin-bottom:2rem;">Our experienced guides provide all equipment and safety
-            briefings. The reward? Unparalleled views from vantage points that few ever reach.</p>
+          <p>Challenge yourself on the natural limestone formations and volcanic rock faces that define Pulisanbay's
+            dramatic coastline. With routes ranging from beginner-friendly to advanced, every climber finds their
+            perfect ascent.</p>
+          <p>Our experienced guides provide all equipment and safety briefings. The reward? Unparalleled views from
+            vantage points that few ever reach.</p>
         </div>
       </div>
     </div>
+    </div>
   </section>
-
-  <?php
-  $ctaTitle = "Ready for Your Next Adventure?";
-  $ctaText = "Every day at Pulisanbay holds a new discovery. What will yours be?";
-  $ctaLabel = "Plan Your Activities";
-  include __DIR__ . '/../includes/cta-banner.php';
-  ?>
 
   <?php include __DIR__ . '/../includes/footer.php'; ?>
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
