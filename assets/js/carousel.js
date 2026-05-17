@@ -127,4 +127,31 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
   }
+  // 4. CULINARY ICONS SLIDER (gastronomy.php)
+  const culinarySwiper = document.querySelector(".gast-culinary-swiper");
+  if (culinarySwiper) {
+    new Swiper(".gast-culinary-swiper", {
+      effect: "slide",
+      freeMode: {
+        enabled: true,
+        sticky: true,
+      },
+      slidesPerView: 1,
+      spaceBetween: 0,
+      grabCursor: true,
+      loop: true,
+      autoplay: {
+        delay: 4500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      pagination: {
+        el: ".gast-culinary-pagination",
+        clickable: true,
+      },
+      keyboard: {
+        enabled: true,
+      },
+    });
+  }
 });
