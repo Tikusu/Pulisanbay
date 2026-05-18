@@ -154,4 +154,33 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
   }
+  // 5. ECHOES GALLERY SLIDER (culture.php)
+  const echoesSwiper = document.querySelector(".cult-echoes-swiper");
+  if (echoesSwiper) {
+    new Swiper(".cult-echoes-swiper", {
+      effect: "slide",
+      freeMode: {
+        enabled: true,
+        sticky: false,
+      },
+      slidesPerView: "auto",
+      spaceBetween: 16,
+      grabCursor: true,
+      pagination: {
+        el: ".cult-echoes-pagination",
+        clickable: true,
+      },
+      keyboard: {
+        enabled: true,
+      },
+      breakpoints: {
+        0: {
+          spaceBetween: 12,
+        },
+        768: {
+          spaceBetween: 16,
+        },
+      },
+    });
+  }
 });
