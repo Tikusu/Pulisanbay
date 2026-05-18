@@ -435,8 +435,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  background: rgba(8, 145, 178, 0.1);
   color: var(--oceanic-turquoise);
   font-size: 1rem;
 }
