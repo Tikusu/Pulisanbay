@@ -837,7 +837,6 @@
 .pillar-icon {
   width: 64px;
   height: 64px;
-  border-radius: 50%;
   background: linear-gradient(
     135deg,
     var(--oceanic-turquoise),
