@@ -171,7 +171,7 @@ $navStyle = ""; ?>
           <div class="feature-item">
             <div class="feature-icon"><i class="fas fa-solar-panel"></i></div>
             <div>
-              <h4>Resource</h4>
+              <h4>Essentials</h4>
               <p>Electricity & Clean Water</p>
             </div>
           </div>
