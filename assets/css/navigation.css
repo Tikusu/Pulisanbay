@@ -78,6 +78,9 @@
 .navbar.scrolled .nav-links a {
   color: var(--charcoal);
 }
+.navbar.scrolled .nav-links a.btn-cta:hover {
+  color: var(--charcoal) !important;
+}
 .nav-links a:hover {
   background: rgba(255, 255, 255, 0.15);
 }
