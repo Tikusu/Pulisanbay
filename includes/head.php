@@ -6,16 +6,6 @@
  *   $pageTitle       — The <title> tag content
  *   $pageDescription — The meta description content
  * 
- * Example usage:
- *   <?php
- *   $pageTitle = "About Us — Pulisanbay";
- *   $pageDescription = "Learn about Pulisanbay...";
- *   ?>
- *   <!DOCTYPE html>
- *   <html lang="en">
- *   <head>
- *     <?php include __DIR__ . '/../includes/head.php'; ?>
- *   </head>
  */
 ?>
 <meta charset="UTF-8">
