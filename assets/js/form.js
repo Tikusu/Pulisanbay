@@ -8,13 +8,13 @@
 
 /** UI string constants */
 const FORM_STRINGS = {
-  SENDING: "Sending...",
-  DEFAULT: "Send Inquiry",
-  SUCCESS: "Thank you! Your inquiry has been submitted successfully.",
-  CONNECT_ERROR: "Unable to connect. Please try again later.",
-  FIELDS_REQUIRED: "Please fill in all fields.",
-  INVALID_EMAIL: "Please enter a valid email address.",
-  GENERIC_ERROR: "Something went wrong. Please try again.",
+  SENDING: "Sending...", // submit button
+  DEFAULT: "Send Inquiry", // submit button
+  SUCCESS: "Thank you! Your inquiry has been submitted successfully.", // toast
+  CONNECT_ERROR: "Unable to connect. Please try again later.", // toast
+  FIELDS_REQUIRED: "Please fill in all fields.", // toast
+  INVALID_EMAIL: "Please enter a valid email address.", // toast
+  GENERIC_ERROR: "Something went wrong. Please try again.", // toast
 };
 
 /** Email validation regex */
