@@ -16,7 +16,7 @@ header('Access-Control-Allow-Headers: Content-Type');
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
     exit;
-}
+} // Beacuse browser will send OPTIONS method before the actual POST from user submission
 
 // Only accept POST requests
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -70,7 +70,7 @@ try {
         ':whatsapp' => $whatsapp,
         ':message' => $message
     ]);
-    
+
     echo json_encode(['success' => true, 'message' => 'Inquiry submitted successfully.']);
 } catch (Exception $e) {
     error_log('Inquiry submission failed: ' . $e->getMessage());
