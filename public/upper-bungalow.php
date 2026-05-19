@@ -8,15 +8,14 @@ $navStyle = ""; ?>
 
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
-  <section class="hero">
-    <div class="hero-bg"
-      style="background-image:url('../assets/images/the-pulisan/upper-bungalow/upper-bungalow-hero.webp')"></div>
-    <div class="hero-content">
-      <h1>Upper Bungalow</h1>
-      <p>Elevated among the hillside canopy — where every sunrise feels like it was painted just for you.</p>
-    </div>
-    <div class="hero-scroll-indicator"><span></span></div>
-  </section>
+
+  <?php
+  $heroImage = '../assets/images/the-pulisan/upper-bungalow/upper-bungalow-hero.webp';
+  $heroTitle = 'Upper Bungalow';
+  $heroSubtitle = 'Elevated among the hillside canopy — where every sunrise feels like it was painted just for you.';
+  include __DIR__ . '/../includes/hero.php';
+  ?>
+
   <section class="section-lg section-bg-white">
     <div class="container">
       <div class="section-header reveal"><span class="section-label">Gallery</span>
@@ -31,6 +30,7 @@ $navStyle = ""; ?>
       </div>
     </div>
   </section>
+
   <section class="section-lg section-bg-sand">
     <div class="container">
       <div class="split-section">
@@ -87,7 +87,7 @@ $navStyle = ""; ?>
             </div>
           </div>
           <button class="btn-more-amenities" id="toggleAmenitiesUpper"
-            onclick="toggleAmenities('moreAmenitiesUpper','toggleAmenitiesUpper')">
+            data-panel="moreAmenitiesUpper">
             <span class="toggle-label">More...</span>
           </button>
         </div>
@@ -99,51 +99,16 @@ $navStyle = ""; ?>
       </div>
     </div>
   </section>
-  <section class="section-lg section-bg-white">
-    <div class="container">
-      <div class="grid-2">
-        <div class="reveal" style="padding:2.5rem;background:var(--earthy-sand);">
-          <h3 style="margin-bottom:1.25rem;"><i class="fas fa-file-contract"
-              style="color:var(--oceanic-turquoise);margin-right:8px;"></i>Terms of Service</h3>
-          <ul style="color:var(--slate);font-size:0.9rem;line-height:2;list-style:none;">
-            <li>✦ Check-in time: 14:00 | Check-out time: 12:00</li>
-            <li>✦ Advance booking required (min. 14 days prior)</li>
-            <li>✦ Minimum stay of 3 nights during peak season</li>
-            <li>✦ Maximum 1 additional person per room (charges apply)</li>
-            <li>✦ Elevated location — involves stairs and hillside walkways</li>
-            <li style="margin-top:1rem;"><a href="terms-and-conditions.php"
-                style="color:var(--oceanic-turquoise);text-decoration:none;font-weight:600;font-size:0.85rem;">View Full
-                Terms & Conditions →</a></li>
-          </ul>
-        </div>
-        <div class="reveal reveal-delay-1" style="padding:2.5rem;background:var(--earthy-sand);">
-          <h3 style="margin-bottom:1.25rem;"><i class="fas fa-shield-halved"
-              style="color:var(--oceanic-turquoise);margin-right:8px;"></i>Policy</h3>
-          <ul style="color:var(--slate);font-size:0.9rem;line-height:2;list-style:none;">
-            <li>✦ 50% non-refundable deposit required to secure booking</li>
-            <li>✦ No cancellations accepted less than 14 days before arrival</li>
-            <li>✦ No refunds for no-shows or early check-outs</li>
-            <li>✦ Date changes permitted up to 14 days before arrival (once only)</li>
-            <li>✦ Non-smoking property</li>
-            <li>✦ Pets are not permitted</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section" style="display: none;"
-    style="background:linear-gradient(135deg,var(--oceanic-turquoise),var(--deep-sea));text-align:center;color:var(--white);">
-    <div class="container reveal">
-      <h2 style="color:var(--white);margin-bottom:1rem;">Reserve Your Upper Bungalow</h2>
-      <p style="color:rgba(255,255,255,0.85);max-width:500px;margin:0 auto 2rem;">Ascend to where the forest canopy
-        meets the ocean horizon.</p>
-      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;"><a href="contact.php"
-          class="btn-cta-outline">Inquire Now</a><a href="the-pulisan.php" class="btn-cta-outline"
-          style="border-color:rgba(255,255,255,0.3);">← Back to All Rooms</a></div>
-    </div>
-  </section>
+
+  <?php
+  $policyAccent = 'var(--oceanic-turquoise)';
+  $termsExtra = 'Elevated location — involves stairs and hillside walkways';
+  $policyExtra = 'Non-smoking property';
+  include __DIR__ . '/../includes/room-policies.php';
+  ?>
+
   <?php include __DIR__ . '/../includes/footer.php'; ?>
-  <div class="lightbox" id="lightbox"><button class="lightbox-close">&times;</button><img src="" alt=""></div>
+  <?php include __DIR__ . '/../includes/lightbox.php'; ?>
   <script src="../assets/js/main.js"></script>
 </body>
 

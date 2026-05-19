@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initLightbox();
   initInteractiveCards(".acco-card");
   initInteractiveCards(".idea-card");
+  initToggleAmenities();
 });
 
 // --- NAVBAR SCROLL EFFECT ---
@@ -63,30 +64,34 @@ function initMobileMenu() {
   const navLinks = document.querySelector(".nav-links");
   if (!hamburger || !navLinks) return;
 
+  /** Shared helper — closes the mobile nav and restores page scroll. */
+  function closeMobileMenu() {
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+
   hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navLinks.classList.toggle("open");
-    document.body.style.overflow = navLinks.classList.contains("open")
-      ? "hidden"
-      : "";
+    const isOpen = navLinks.classList.contains("open");
+    if (isOpen) {
+      closeMobileMenu();
+    } else {
+      hamburger.classList.add("active");
+      navLinks.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
   });
 
   // Close menu when a regular (non-dropdown) link is tapped
   navLinks.querySelectorAll("a:not(.dropdown-toggle)").forEach((a) => {
-    a.addEventListener("click", () => {
-      hamburger.classList.remove("active");
-      navLinks.classList.remove("open");
-      document.body.style.overflow = "";
-    });
+    a.addEventListener("click", closeMobileMenu);
   });
 
   // Close menu when clicking outside
   document.addEventListener("click", (e) => {
     if (navLinks.classList.contains("open")) {
       if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-        hamburger.classList.remove("active");
-        navLinks.classList.remove("open");
-        document.body.style.overflow = "";
+        closeMobileMenu();
       }
     }
   });
@@ -142,6 +147,7 @@ function initLightbox() {
 // --- TOAST NOTIFICATION ---
 // Creates or reuses a toast element to show success/error messages.
 // Used by the form submission handler in form.js.
+let _toastTimer = null;
 function showToast(message, type = "success") {
   let toast = document.querySelector(".toast");
   if (!toast) {
@@ -149,10 +155,19 @@ function showToast(message, type = "success") {
     toast.className = "toast";
     document.body.appendChild(toast);
   }
+
+  // Clear any previous dismiss timer to prevent premature hide
+  if (_toastTimer) {
+    clearTimeout(_toastTimer);
+  }
+
   toast.textContent = message;
   toast.className = `toast ${type}`;
   requestAnimationFrame(() => toast.classList.add("show"));
-  setTimeout(() => toast.classList.remove("show"), 4000);
+  _toastTimer = setTimeout(() => {
+    toast.classList.remove("show");
+    _toastTimer = null;
+  }, 4000);
 }
 
 // --- INTERACTIVE CARDS ---
@@ -202,21 +217,25 @@ function initInteractiveCards(selector) {
 }
 
 
-// --- TOGGLE MORE AMENITIES ---
+// --- TOGGLE MORE AMENITIES (event-delegated) ---
 // Shows/hides the hidden amenities section and animates the CSS chevron.
-function toggleAmenities(panelId, btnId) {
-  const panel = document.getElementById(panelId);
-  const btn   = document.getElementById(btnId);
-  if (!panel || !btn) return;
+// Listens on buttons with class `.btn-more-amenities` that have
+// `data-panel` and `data-btn` attributes instead of inline onclick.
+function initToggleAmenities() {
+  document.querySelectorAll(".btn-more-amenities").forEach((btn) => {
+    const panelId = btn.getAttribute("data-panel");
+    const panel = panelId ? document.getElementById(panelId) : null;
+    if (!panel) return;
 
-  const isOpen = panel.style.display !== 'none';
-  if (isOpen) {
-    panel.style.display = 'none';
-    btn.classList.remove('open');
-    btn.querySelector('.toggle-label').textContent = 'More...';
-  } else {
-    panel.style.display = 'block';
-    btn.classList.add('open');
-    btn.querySelector('.toggle-label').textContent = 'Less';
-  }
+    btn.addEventListener("click", () => {
+      const isOpen = panel.style.display !== "none";
+      panel.style.display = isOpen ? "none" : "block";
+      btn.classList.toggle("open", !isOpen);
+
+      const label = btn.querySelector(".toggle-label");
+      if (label) {
+        label.textContent = isOpen ? "More..." : "Less";
+      }
+    });
+  });
 }

@@ -11,15 +11,12 @@ $navStyle = ""; ?>
 
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
-  <section class="hero">
-    <div class="hero-bg" style="background-image:url('../assets/images/hero-conservation.png')"></div>
-    <div class="hero-content">
-      <h1>Conservation</h1>
-      <p>At Pulisanbay, conservation isn't a side project — it is the very foundation upon which everything is built.
-      </p>
-    </div>
-    <div class="hero-scroll-indicator"><span></span></div>
-  </section>
+  <?php
+  $heroImage = '../assets/images/hero-conservation.png';
+  $heroTitle = 'Conservation';
+  $heroSubtitle = 'At Pulisanbay, conservation isn\'t a side project — it is the very foundation upon which everything is built.';
+  include __DIR__ . '/../includes/hero.php';
+  ?>
 
   <!-- WALLACE CONSERVATION LICOUPANG -->
   <section class="section-lg section-bg-white">

@@ -15,15 +15,12 @@ $navStyle = "";
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
 
-  <section class="hero">
-    <div class="hero-bg" style="background-image: url('../assets/images/activities/activities-hero.webp')"></div>
-    <div class="hero-content">
-      <h1>Activities</h1>
-      <p>From the depths of the Coral Triangle to the peaks of ancient savanna hills — every adventure at Pulisanbay
-        writes a chapter of your story.</p>
-    </div>
-    <div class="hero-scroll-indicator"><span></span></div>
-  </section>
+  <?php
+  $heroImage = '../assets/images/activities/activities-hero.webp';
+  $heroTitle = 'Activities';
+  $heroSubtitle = 'From the depths of the Coral Triangle to the peaks of ancient savanna hills — every adventure at Pulisanbay writes a chapter of your story.';
+  include __DIR__ . '/../includes/hero.php';
+  ?>
 
   <!-- WATER SPORTS — Asymmetric Staggered Layout -->
   <section class="act-water" id="water-sports">

@@ -13,15 +13,12 @@ $navStyle = ""; ?>
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
 
-  <section class="hero">
-    <div class="hero-bg" style="background-image:url('../assets/images/hero-gastronomy.png')"></div>
-    <div class="hero-content">
-      <h1>Gastronomy</h1>
-      <p>Where the ocean's harvest meets the hands of local artisans — every plate tells a story of the land, the sea,
-        and the people who call this place home.</p>
-    </div>
-    <div class="hero-scroll-indicator"><span></span></div>
-  </section>
+  <?php
+  $heroImage = '../assets/images/hero-gastronomy.png';
+  $heroTitle = 'Gastronomy';
+  $heroSubtitle = 'Where the ocean\'s harvest meets the hands of local artisans — every plate tells a story of the land, the sea, and the people who call this place home.';
+  include __DIR__ . '/../includes/hero.php';
+  ?>
 
   <!-- CULINARY ICONS — Land Adventures / UNSRAT Layout -->
   <section class="gast-culinary" id="culinary-icons">

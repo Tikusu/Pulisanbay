@@ -11,16 +11,13 @@ $navStyle = "";
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
 
-  <section class="hero">
-    <div class="hero-bg"
-      style="background-image:url('../assets/images/the-pulisan/main-page/the-pulisan-offers.webp'); background-position: bottom;">
-    </div>
-    <div class="hero-content">
-      <h1>Special Offers</h1>
-      <p>Enhance your Pulisanbay experience with our curated add-on packages and exclusive retreats.</p>
-    </div>
-    <div class="hero-scroll-indicator"><span></span></div>
-  </section>
+  <?php
+  $heroImage = '../assets/images/the-pulisan/main-page/the-pulisan-offers.webp';
+  $heroTitle = 'Special Offers';
+  $heroSubtitle = 'Enhance your Pulisanbay experience with our curated add-on packages and exclusive retreats.';
+  $heroPosition = 'bottom';
+  include __DIR__ . '/../includes/hero.php';
+  ?>
 
   <!-- RENT-A-RESORT -->
   <section class="section-lg section-bg-white">

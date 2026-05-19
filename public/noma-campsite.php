@@ -11,15 +11,12 @@ $navStyle = ""; ?>
 
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
-  <section class="hero">
-    <div class="hero-bg" style="background-image:url('../assets/images/noma/noma-hero.webp')"></div>
-    <div class="hero-content">
-      <h1>NOMA</h1>
-      <p>Fall asleep to ocean waves and wake to golden sunrises. Where the thrill of the outdoors meets the comfort you
-        deserve.</p>
-    </div>
-    <div class="hero-scroll-indicator"><span></span></div>
-  </section>
+  <?php
+  $heroImage = '../assets/images/noma/noma-hero.webp';
+  $heroTitle = 'NOMA';
+  $heroSubtitle = 'Fall asleep to ocean waves and wake to golden sunrises. Where the thrill of the outdoors meets the comfort you deserve.';
+  include __DIR__ . '/../includes/hero.php';
+  ?>
 
   <!-- TENT PACKAGES -->
   <section id="tent-packages" class="section-lg section-bg-white">

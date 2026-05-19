@@ -1058,6 +1058,30 @@
   background: var(--forest-green);
 }
 
+/* ===== CTA BANNER ===== */
+.cta-banner {
+  text-align: center;
+  color: var(--white);
+}
+.cta-banner__title {
+  color: var(--white);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-bottom: 1rem;
+}
+.cta-banner__text {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.15rem;
+  max-width: 550px;
+  margin: 0 auto 2rem;
+}
+.cta-banner__link {
+  font-size: 1rem;
+  padding: 0.85rem 2.5rem;
+}
+.cta-banner__link i {
+  margin-left: 4px;
+}
+
 /* ===== OVERLAPPING GALLERY ===== */
 .overlap-gallery {
   position: relative;
@@ -1112,12 +1136,7 @@
   width: 45%;
   aspect-ratio: 4 / 3;
   z-index: 2;
-  /* border: 4px solid rgba(255, 255, 255, 0.01); */
 }
-
-/* .overlap-sub2:hover {
-  border: 4px solid rgba(255, 255, 255, 1);
-} */
 
 @media (max-width: 768px) {
   .overlap-gallery {

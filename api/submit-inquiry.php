@@ -20,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 
 // Only accept POST requests
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
     echo json_encode(['success' => false, 'error' => 'Method not allowed']);
     exit;
 }
@@ -27,8 +28,14 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 // Database connection from config
 require_once __DIR__ . '/../config/db.php';
 
-// Parse JSON body
+// Parse JSON body — guard against malformed input
 $input = json_decode(file_get_contents('php://input'), true);
+
+if (!is_array($input)) {
+    http_response_code(400);
+    echo json_encode(['success' => false, 'error' => 'Invalid request body.']);
+    exit;
+}
 
 $name = trim($input['name'] ?? '');
 $email = trim($input['email'] ?? '');
@@ -37,11 +44,13 @@ $message = trim($input['message'] ?? '');
 
 // Server-side validation
 if (empty($name) || empty($email) || empty($whatsapp) || empty($message)) {
+    http_response_code(400);
     echo json_encode(['success' => false, 'error' => 'All fields are required.']);
     exit;
 }
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    http_response_code(400);
     echo json_encode(['success' => false, 'error' => 'Invalid email address.']);
     exit;
 }
@@ -64,5 +73,7 @@ try {
     
     echo json_encode(['success' => true, 'message' => 'Inquiry submitted successfully.']);
 } catch (Exception $e) {
+    error_log('Inquiry submission failed: ' . $e->getMessage());
+    http_response_code(500);
     echo json_encode(['success' => false, 'error' => 'Server error. Please try again later.']);
 }

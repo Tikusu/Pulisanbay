@@ -13,15 +13,12 @@ $navStyle = ""; ?>
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
 
-  <section class="hero">
-    <div class="hero-bg" style="background-image:url('../assets/images/hero-culture.png')"></div>
-    <div class="hero-content">
-      <h1>Culture</h1>
-      <p>Where the ancient rhythms of Minahasa still echo through the hills — and every tradition is a bridge between
-        the past and the future.</p>
-    </div>
-    <div class="hero-scroll-indicator"><span></span></div>
-  </section>
+  <?php
+  $heroImage = '../assets/images/hero-culture.png';
+  $heroTitle = 'Culture';
+  $heroSubtitle = 'Where the ancient rhythms of Minahasa still echo through the hills — and every tradition is a bridge between the past and the future.';
+  include __DIR__ . '/../includes/hero.php';
+  ?>
 
   <!-- WARUGA & HERITAGE — Eco-Trails Layout -->
   <section class="cult-waruga" id="waruga-heritage">
@@ -160,7 +157,7 @@ $navStyle = ""; ?>
   </section>
 
   <?php include __DIR__ . '/../includes/footer.php'; ?>
-  <div class="lightbox" id="lightbox"><button class="lightbox-close">&times;</button><img src="" alt=""></div>
+  <?php include __DIR__ . '/../includes/lightbox.php'; ?>
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <script src="../assets/js/carousel.js"></script>
   <script src="../assets/js/main.js"></script>

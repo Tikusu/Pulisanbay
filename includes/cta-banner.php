@@ -15,12 +15,16 @@ $ctaLabel    = $ctaLabel    ?? 'Plan Your Escape';
 $ctaLink     = $ctaLink     ?? 'contact.php';
 $ctaGradient = $ctaGradient ?? 'linear-gradient(135deg, var(--oceanic-turquoise), var(--deep-sea))';
 ?>
-<section class="section" style="background:<?= $ctaGradient ?>;text-align:center;color:var(--white);">
+<section class="section cta-banner" style="background:<?= $ctaGradient ?>;">
   <div class="container reveal">
-    <h2 style="color:var(--white);font-size:clamp(2rem,4vw,2.8rem);margin-bottom:1rem;"><?= $ctaTitle ?></h2>
-    <p style="color:rgba(255,255,255,0.85);font-size:1.15rem;max-width:550px;margin:0 auto 2rem;"><?= $ctaText ?></p>
-    <a href="<?= $ctaLink ?>" class="btn-cta-outline" style="font-size:1rem;padding:0.85rem 2.5rem;">
-      <?= $ctaLabel ?> <i class="fas fa-arrow-right" style="margin-left:4px;"></i>
+    <h2 class="cta-banner__title"><?= $ctaTitle ?></h2>
+    <p class="cta-banner__text"><?= $ctaText ?></p>
+    <a href="<?= $ctaLink ?>" class="btn-cta-outline cta-banner__link">
+      <?= $ctaLabel ?> <i class="fas fa-arrow-right"></i>
     </a>
   </div>
 </section>
+<?php
+// Reset variables to prevent leaking into subsequent includes
+unset($ctaTitle, $ctaText, $ctaLabel, $ctaLink, $ctaGradient);
+?>

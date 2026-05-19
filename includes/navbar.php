@@ -20,7 +20,8 @@ $navClass = !empty($navStyle) ? "navbar $navStyle" : "navbar";
     <li><a href="index.php">Home</a></li>
     <li><a href="about.php">About Us</a></li>
     <li>
-      <a href="#" class="dropdown-toggle">Accommodation <i class="fas fa-chevron-down" style="font-size:0.65rem"></i></a>
+      <a href="#" class="dropdown-toggle">Accommodation <i class="fas fa-chevron-down"
+          style="font-size:0.65rem"></i></a>
       <div class="dropdown-menu">
         <a href="the-pulisan.php">The Pulisan</a>
         <a href="noma-campsite.php">NOMA Campsite</a>

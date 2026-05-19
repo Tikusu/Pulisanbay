@@ -11,16 +11,12 @@ $navStyle = "";
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
 
-  <section class="hero">
-    <div class="hero-bg" style="background-image: url('../assets/images/the-pulisan/main-page/the-pulisan-hero.webp')">
-    </div>
-    <div class="hero-content">
-      <h1>The Pulisan</h1>
-      <p>An exclusive collection of bungalows and suites where traditional Minahasa architecture meets modern luxury —
-        perched between emerald hills and the turquoise sea.</p>
-    </div>
-    <div class="hero-scroll-indicator"><span></span></div>
-  </section>
+  <?php
+  $heroImage = '../assets/images/the-pulisan/main-page/the-pulisan-hero.webp';
+  $heroTitle = 'The Pulisan';
+  $heroSubtitle = 'An exclusive collection of bungalows and suites where traditional Minahasa architecture meets modern luxury — perched between emerald hills and the turquoise sea.';
+  include __DIR__ . '/../includes/hero.php';
+  ?>
 
   <!-- ROOM TYPES -->
   <section class="section-lg section-bg-white">

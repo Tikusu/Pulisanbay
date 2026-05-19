@@ -10,15 +10,12 @@ $navStyle = ""; ?>
 
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
-  <section class="hero">
-    <div class="hero-bg" style="background-image:url('../assets/images/hero-community.png')"></div>
-    <div class="hero-content">
-      <h1>Community</h1>
-      <p>"Si Tou Timou Tumou Tou" — People live to help others live. The Minahasa philosophy that guides everything we
-        do.</p>
-    </div>
-    <div class="hero-scroll-indicator"><span></span></div>
-  </section>
+  <?php
+  $heroImage = '../assets/images/hero-community.png';
+  $heroTitle = 'Community';
+  $heroSubtitle = '"Si Tou Timou Tumou Tou" — People live to help others live. The Minahasa philosophy that guides everything we do.';
+  include __DIR__ . '/../includes/hero.php';
+  ?>
 
   <section class="section-lg section-bg-white">
     <div class="container">

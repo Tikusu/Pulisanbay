@@ -6,53 +6,81 @@
 // Depends on showToast() from main.js being loaded first.
 // =============================================
 
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('inquiryForm');
+/** UI string constants */
+const FORM_STRINGS = {
+  SENDING: "Sending...",
+  DEFAULT: "Send Inquiry",
+  SUCCESS: "Thank you! Your inquiry has been submitted successfully.",
+  CONNECT_ERROR: "Unable to connect. Please try again later.",
+  FIELDS_REQUIRED: "Please fill in all fields.",
+  INVALID_EMAIL: "Please enter a valid email address.",
+  GENERIC_ERROR: "Something went wrong. Please try again.",
+};
+
+/** Email validation regex */
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+/**
+ * Validates inquiry form fields.
+ * @param {{ name: string, email: string, whatsapp: string, message: string }} fields
+ * @returns {string|null} Error message string, or null if valid.
+ */
+function validateInquiryForm({ name, email, whatsapp, message }) {
+  if (!name || !email || !whatsapp || !message) {
+    return FORM_STRINGS.FIELDS_REQUIRED;
+  }
+  if (!EMAIL_REGEX.test(email)) {
+    return FORM_STRINGS.INVALID_EMAIL;
+  }
+  return null;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("inquiryForm");
   if (!form) return;
 
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const btn = document.getElementById('submitBtn');
-    const btnText = document.getElementById('btnText');
-    
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-    const whatsapp = form.whatsapp.value.trim();
-    const message = form.message.value.trim();
+    const btn = document.getElementById("submitBtn");
+    const btnText = document.getElementById("btnText");
+
+    const fields = {
+      name: form.name.value.trim(),
+      email: form.email.value.trim(),
+      whatsapp: form.whatsapp.value.trim(),
+      message: form.message.value.trim(),
+    };
 
     // Client-side validation
-    if (!name || !email || !whatsapp || !message) {
-      showToast('Please fill in all fields.', 'error');
-      return;
-    }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      showToast('Please enter a valid email address.', 'error');
+    const validationError = validateInquiryForm(fields);
+    if (validationError) {
+      showToast(validationError, "error");
       return;
     }
 
     // Submit to API — path is relative to /public/ directory
     btn.disabled = true;
-    btnText.textContent = 'Sending...';
+    btnText.textContent = FORM_STRINGS.SENDING;
 
     try {
-      const res = await fetch('../api/submit-inquiry.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, whatsapp, message })
+      const res = await fetch("../api/submit-inquiry.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(fields),
       });
       const data = await res.json();
-      
+
       if (data.success) {
-        showToast('Thank you! Your inquiry has been submitted successfully.', 'success');
+        showToast(FORM_STRINGS.SUCCESS, "success");
         form.reset();
       } else {
-        showToast(data.error || 'Something went wrong. Please try again.', 'error');
+        showToast(data.error || FORM_STRINGS.GENERIC_ERROR, "error");
       }
     } catch (err) {
-      showToast('Unable to connect. Please try again later.', 'error');
+      showToast(FORM_STRINGS.CONNECT_ERROR, "error");
     } finally {
       btn.disabled = false;
-      btnText.textContent = 'Send Inquiry';
+      btnText.textContent = FORM_STRINGS.DEFAULT;
     }
   });
 });

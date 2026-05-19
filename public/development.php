@@ -10,15 +10,12 @@ $navStyle = ""; ?>
 
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
-  <section class="hero">
-    <div class="hero-bg" style="background-image:url('../assets/images/hero-development.png')"></div>
-    <div class="hero-content">
-      <h1>Development</h1>
-      <p>Transforming a vision into reality — building world-class infrastructure that harmonizes with the natural
-        landscape of Pulisan Bay.</p>
-    </div>
-    <div class="hero-scroll-indicator"><span></span></div>
-  </section>
+  <?php
+  $heroImage = '../assets/images/hero-development.png';
+  $heroTitle = 'Development';
+  $heroSubtitle = 'Transforming a vision into reality — building world-class infrastructure that harmonizes with the natural landscape of Pulisan Bay.';
+  include __DIR__ . '/../includes/hero.php';
+  ?>
 
   <section class="section-lg section-bg-white">
     <div class="container">

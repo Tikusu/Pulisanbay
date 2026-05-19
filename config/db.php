@@ -6,12 +6,22 @@
  * to the SQLite database. Auto-creates the database file and
  * inquiries table on first use.
  * 
+ * The connection is memoized via a static variable so that
+ * repeated calls to getDB() within the same request reuse
+ * the existing PDO instance.
+ * 
  * Usage:
  *   require_once __DIR__ . '/../config/db.php';
  *   $db = getDB();
  */
 
 function getDB() {
+    static $instance = null;
+
+    if ($instance !== null) {
+        return $instance;
+    }
+
     // SQLite file lives in /db/ at project root
     $dbPath = __DIR__ . '/../db/inquiries.sqlite';
     $dbDir = dirname($dbPath);
@@ -21,11 +31,11 @@ function getDB() {
         mkdir($dbDir, 0755, true);
     }
     
-    $db = new PDO('sqlite:' . $dbPath);
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $instance = new PDO('sqlite:' . $dbPath);
+    $instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
     // Create the inquiries table if this is a fresh database
-    $db->exec("CREATE TABLE IF NOT EXISTS inquiries (
+    $instance->exec("CREATE TABLE IF NOT EXISTS inquiries (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         name TEXT NOT NULL,
         email TEXT NOT NULL,
@@ -34,5 +44,5 @@ function getDB() {
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP
     )");
     
-    return $db;
+    return $instance;
 }

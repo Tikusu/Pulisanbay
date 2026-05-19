@@ -15,19 +15,13 @@ $navStyle = "";
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
   <!--  -->
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg"
-      style="background-image: url('../assets/images/about/about-hero.webp');background-position: top;"></div>
-    <div class="hero-content">
-      <h1 class="reveal reveal-delay-2">Special Economic Zone Likupang</h1>
-      <p class="reveal reveal-delay-4">An eco-tourism master-planning project in North Sulawesi — designated as one of
-        Indonesia's five
-        Super Priority
-        Destinations, positioned as the entrance gate of Eastern Indonesia's natural wonders.</p>
-    </div>
-    <div class="hero-scroll-indicator"><span></span></div>
-  </section>
+  <?php
+  $heroImage = '../assets/images/about/about-hero.webp';
+  $heroTitle = 'Special Economic Zone Likupang';
+  $heroSubtitle = 'An eco-tourism master-planning project in North Sulawesi — designated as one of Indonesia\'s five Super Priority Destinations, positioned as the entrance gate of Eastern Indonesia\'s natural wonders.';
+  $heroPosition = 'top';
+  include __DIR__ . '/../includes/hero.php';
+  ?>
 
   <!-- VIDEO PROFILE -->
   <section class="section-lg section-bg-white">
