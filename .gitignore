@@ -1,2 +1,5 @@
 # other
 other-resources/
+
+# sqlite
+*.sqlite
