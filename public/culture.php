@@ -7,7 +7,7 @@ $navStyle = ""; ?>
 <head>
   <?php include __DIR__ . '/../includes/head.php'; ?>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="../assets/css/culture-enhanced.css" />
+  <link rel="stylesheet" href="../assets/<?= $isProd ? 'dist/css/culture-enhanced.min.css' : 'css/culture-enhanced.css' ?>" />
 </head>
 
 <body>
@@ -159,8 +159,8 @@ $navStyle = ""; ?>
   <?php include __DIR__ . '/../includes/footer.php'; ?>
   <?php include __DIR__ . '/../includes/lightbox.php'; ?>
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-  <script src="../assets/js/carousel.js"></script>
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/<?= $isProd ? 'dist/js/carousel.min.js' : 'js/carousel.js' ?>"></script>
+  <script src="../assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
 </body>
 
 </html>

@@ -14,23 +14,13 @@
  *   $db = getDB();
  */
 
+require_once __DIR__ . '/env.php';
+
 function getDB() {
     static $instance = null;
 
     if ($instance !== null) {
         return $instance;
-    }
-
-    // Load environment variables from .env file
-    $envPath = __DIR__ . '/../.env';
-    if (file_exists($envPath)) {
-        $env = parse_ini_file($envPath);
-        if (is_array($env)) {
-            foreach ($env as $key => $value) {
-                $_ENV[$key] = $value;
-                putenv("$key=$value");
-            }
-        }
     }
 
     // Get credentials from environment

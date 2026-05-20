@@ -1,0 +1,12 @@
+{
+  "name": "pulisanbay",
+  "private": true,
+  "description": "Pulisanbay — Regenerative Tourism Website",
+  "scripts": {
+    "build": "node build.mjs",
+    "build:dev": "node build.mjs --dev"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

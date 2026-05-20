@@ -239,8 +239,8 @@ $navStyle = ""; ?>
   include __DIR__ . '/../includes/cta-banner.php'; ?> -->
   <?php include __DIR__ . '/../includes/footer.php'; ?>
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-  <script src="../assets/js/main.js"></script>
-  <script src="../assets/js/carousel.js"></script>
+  <script src="../assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
+  <script src="../assets/<?= $isProd ? 'dist/js/carousel.min.js' : 'js/carousel.js' ?>"></script>
 </body>
 
 </html>

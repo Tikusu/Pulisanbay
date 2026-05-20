@@ -5,7 +5,7 @@ $navStyle = ""; ?>
 <html lang="en">
 
 <head><?php include __DIR__ . '/../includes/head.php'; ?>
-  <link rel="stylesheet" href="../assets/css/culture-enhanced.css" />
+  <link rel="stylesheet" href="../assets/<?= $isProd ? 'dist/css/culture-enhanced.min.css' : 'css/culture-enhanced.css' ?>" />
 </head>
 
 <body>
@@ -111,7 +111,7 @@ $navStyle = ""; ?>
   </section>
 
   <?php include __DIR__ . '/../includes/footer.php'; ?>
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
 </body>
 
 </html>

@@ -6,7 +6,7 @@ $navStyle = ""; ?>
 
 <head>
   <?php include __DIR__ . '/../includes/head.php'; ?>
-  <link rel="stylesheet" href="../assets/css/conservation-enhanced.css" />
+  <link rel="stylesheet" href="../assets/<?= $isProd ? 'dist/css/conservation-enhanced.min.css' : 'css/conservation-enhanced.css' ?>" />
 </head>
 
 <body>
@@ -221,7 +221,7 @@ $navStyle = ""; ?>
   $ctaGradient = "linear-gradient(135deg,var(--forest-green),var(--deep-sea))";
   include __DIR__ . '/../includes/cta-banner.php'; ?>
   <?php include __DIR__ . '/../includes/footer.php'; ?>
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
 </body>
 
 </html>
