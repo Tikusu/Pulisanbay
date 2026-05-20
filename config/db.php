@@ -3,8 +3,7 @@
  * db.php — Database Connection & Setup
  * 
  * Provides the getDB() function that returns a PDO connection
- * to the SQLite database. Auto-creates the database file and
- * inquiries table on first use.
+ * to the Supabase PostgreSQL database.
  * 
  * The connection is memoized via a static variable so that
  * repeated calls to getDB() within the same request reuse
@@ -22,27 +21,33 @@ function getDB() {
         return $instance;
     }
 
-    // SQLite file lives in /db/ at project root
-    $dbPath = __DIR__ . '/../db/inquiries.sqlite';
-    $dbDir = dirname($dbPath);
-    
-    // Auto-create the /db/ directory if it doesn't exist yet
-    if (!is_dir($dbDir)) {
-        mkdir($dbDir, 0755, true);
+    // Load environment variables from .env file
+    $envPath = __DIR__ . '/../.env';
+    if (file_exists($envPath)) {
+        $env = parse_ini_file($envPath);
+        if (is_array($env)) {
+            foreach ($env as $key => $value) {
+                $_ENV[$key] = $value;
+                putenv("$key=$value");
+            }
+        }
     }
+
+    // Get credentials from environment
+    $host = getenv('DB_HOST') ?: $_ENV['DB_HOST'] ?? '';
+    $port = getenv('DB_PORT') ?: $_ENV['DB_PORT'] ?? '5432';
+    $dbname = getenv('DB_NAME') ?: $_ENV['DB_NAME'] ?? '';
+    $user = getenv('DB_USER') ?: $_ENV['DB_USER'] ?? '';
+    $password = getenv('DB_PASSWORD') ?: $_ENV['DB_PASSWORD'] ?? '';
+
+    if (!$host || !$dbname || !$user || !$password) {
+        throw new Exception("Database configuration is missing. Please check your .env file.");
+    }
+
+    $dsn = "pgsql:host=$host;port=$port;dbname=$dbname;sslmode=require";
     
-    $instance = new PDO('sqlite:' . $dbPath);
+    $instance = new PDO($dsn, $user, $password);
     $instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
-    // Create the inquiries table if this is a fresh database
-    $instance->exec("CREATE TABLE IF NOT EXISTS inquiries (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT NOT NULL,
-        email TEXT NOT NULL,
-        whatsapp TEXT NOT NULL,
-        message TEXT NOT NULL,
-        created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-    )");
     
     return $instance;
 }

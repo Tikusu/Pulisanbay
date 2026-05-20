@@ -4,3 +4,6 @@
 # other
 other-resources/
 .rules
+
+# environment variables
+.env
