@@ -49,12 +49,17 @@ document.addEventListener("DOMContentLoaded", () => {
       email: form.email.value.trim(),
       whatsapp: form.whatsapp.value.trim(),
       message: form.message.value.trim(),
+      website_url: form.website_url ? form.website_url.value : "",
     };
 
     // Client-side validation
     const validationError = validateInquiryForm(fields);
     if (validationError) {
       showToast(validationError, "error");
+      return;
+    }
+
+    if (!confirm("Are you sure you want to send this inquiry?")) {
       return;
     }
 

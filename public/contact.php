@@ -50,6 +50,11 @@ $navStyle = "scrolled";
             <h3 style="margin-bottom:0.5rem;">Inquiry Form</h3>
             <p style="color:var(--slate);font-size:0.9rem;margin-bottom:2rem;">All fields are required</p>
             <form id="inquiryForm">
+              <!-- Honeypot field (hidden from users, visible to bots) -->
+              <div style="position: absolute; left: -9999px;" aria-hidden="true">
+                <label for="website_url">Leave this field blank if you are human</label>
+                <input type="text" id="website_url" name="website_url" tabindex="-1" autocomplete="off">
+              </div>
               <div class="form-group"><label for="fullName">Full Name</label><input type="text" id="fullName"
                   name="name" placeholder="Your full name" required></div>
               <div class="form-group"><label for="email">Email Address</label><input type="email" id="email"
