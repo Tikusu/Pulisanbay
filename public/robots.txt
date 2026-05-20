@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Disallow indexing of the API and configuration files if they are ever exposed
+Disallow: /api/
+Disallow: /config/
+Disallow: /includes/
+Disallow: /assets/dist/
+Disallow: /assets/js/
+
+Sitemap: https://pulisanbay.xyz/sitemap.xml
