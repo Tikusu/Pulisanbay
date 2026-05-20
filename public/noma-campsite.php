@@ -51,7 +51,7 @@ $navStyle = ""; ?>
           </div>
         </div>
         <div class="card reveal-delay-1">
-          <div class="card-img-wrapper"><img src="../assets/images/hero-campsite.png" alt="Decathlon Apenaz"
+          <div class="card-img-wrapper"><img src="../assets/images/noma/arpenaz.webp" alt="Decathlon Apenaz"
               class="card-img"></div>
           <div class="card-body"><span class="section-label" style="font-size:0.7rem;">5-Person Capacity</span>
             <h3>Decathlon Arpenaz</h3>
