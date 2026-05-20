@@ -7,14 +7,15 @@ $navStyle = ""; ?>
 <head>
   <?php include __DIR__ . '/../includes/head.php'; ?>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="../assets/<?= $isProd ? 'dist/css/culture-enhanced.min.css' : 'css/culture-enhanced.css' ?>" />
+  <link rel="stylesheet"
+    href="../assets/<?= $isProd ? 'dist/css/culture-enhanced.min.css' : 'css/culture-enhanced.css' ?>" />
 </head>
 
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
 
   <?php
-  $heroImage = '../assets/images/hero-culture.png';
+  $heroImage = '../assets/images/culture/culture-hero.webp';
   $heroTitle = 'Culture';
   $heroSubtitle = 'Where the ancient rhythms of Minahasa still echo through the hills — and every tradition is a bridge between the past and the future.';
   include __DIR__ . '/../includes/hero.php';
@@ -28,8 +29,9 @@ $navStyle = ""; ?>
       <!-- Text column -->
       <div class="cult-waruga__content reveal">
         <span class="section-label">Ancient Heritage</span>
-        <h2>Waruga &amp; Heritage</h2>
-        <p>The Waruga are ancient Minahasa stone sarcophagi — carved burial monuments that stand as silent sentinels of
+        <h2>Amphitheatre</h2>
+        <p>The Amphitheatre is a majestic open-air stone structure — a cultural monument that stands as a silent
+          sentinel of
           a
           civilization that revered both its ancestors and the natural world.</p>
         <p>Our guided heritage tours explore the cultural significance of these remarkable monuments, connecting
@@ -39,7 +41,7 @@ $navStyle = ""; ?>
 
         <div class="cult-waruga__img-stack left-stack" style="margin-top: 3rem;">
           <div class="cult-waruga__img-main">
-            <img src="../assets/images/hero-culture.png" style="aspect-ratio: 3/2;" alt="Waruga heritage">
+            <img src="../assets/images/culture/amphitheatre2.webp" style="aspect-ratio: 3/2;" alt="Waruga heritage">
           </div>
         </div>
       </div>
@@ -63,7 +65,7 @@ $navStyle = ""; ?>
     <div class="cult-gitar__inner">
       <div class="cult-gitar__img-wrap reveal">
         <div class="cult-gitar__img-inner">
-          <img src="../assets/images/hero-culture.png" alt="Gitar Mama — traditional Minahasa instrument">
+          <img src="../assets/images/culture/gitar-mama.webp" alt="Gitar Mama — traditional Minahasa instrument">
         </div>
       </div>
       <div class="cult-gitar__content reveal reveal-delay-2">
@@ -125,31 +127,29 @@ $navStyle = ""; ?>
       <!-- Image Gallery Slider -->
       <div class="swiper cult-echoes-swiper reveal" style="margin-top: 4rem;">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="cult-echoes__slide-img">
-              <img src="../assets/images/hero-culture.png" alt="Kabasaran war dance">
+          <?php
+          $galleryImages = [
+            'landscape.webp' => 'Event',
+            'kain tenun.webp' => 'Kain Tenun weaving',
+            'credits.webp' => 'Exhibition credits',
+            'kain-tenun2.webp' => 'Kain Tenun weaving 2',
+            'mesin-tenun.webp' => 'Traditional weaving machine',
+            'kolintang.webp' => 'Kolintang instrument',
+            'kabasaran.webp' => 'Kabasaran war dance',
+            'kabasaran2.webp' => 'Kabasaran war dance 2',
+            'kabasaran3.webp' => 'Kabasaran war dance 3',
+            'kabasaran4.webp' => 'Kabasaran war dance 4',
+            'gantungan.webp' => 'Gantungan',
+          ];
+          foreach ($galleryImages as $img => $alt):
+            ?>
+            <div class="swiper-slide">
+              <div class="cult-echoes__slide-img">
+                <img src="../assets/images/culture/echoes-of-minahasa/<?= str_replace(' ', '%20', $img) ?>"
+                  alt="<?= $alt ?>">
+              </div>
             </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="cult-echoes__slide-img">
-              <img src="../assets/images/hero-culture.png" alt="Kain Tenun weaving">
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="cult-echoes__slide-img">
-              <img src="../assets/images/hero-culture.png" alt="Contemporary Minahasa art">
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="cult-echoes__slide-img">
-              <img src="../assets/images/hero-culture.png" alt="Contemporary Minahasa art">
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="cult-echoes__slide-img">
-              <img src="../assets/images/hero-culture.png" alt="Contemporary Minahasa art">
-            </div>
-          </div>
+          <?php endforeach; ?>
         </div>
         <div class="swiper-pagination cult-echoes-pagination"></div>
       </div>
