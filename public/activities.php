@@ -9,7 +9,8 @@ $navStyle = "";
 <head>
   <?php include __DIR__ . '/../includes/head.php'; ?>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="../assets/<?= $isProd ? 'dist/css/activities-enhanced.min.css' : 'css/activities-enhanced.css' ?>" />
+  <link rel="stylesheet"
+    href="../assets/<?= $isProd ? 'dist/css/activities-enhanced.min.css' : 'css/activities-enhanced.css' ?>" />
 </head>
 
 <body>
@@ -28,7 +29,7 @@ $navStyle = "";
       <!-- Image side -->
       <div class="act-water__img-stack reveal">
         <div class="act-water__img-main">
-          <img src="../assets/images/activity-kayaking.png" alt="Kayaking at Pulisanbay">
+          <img src="../assets/images/activities/kayaking.webp" alt="Kayaking at Pulisanbay">
         </div>
         <div class="act-water__badge">
           <span class="act-water__badge-num">∞</span>
@@ -114,7 +115,7 @@ $navStyle = "";
 
         <div class="act-trails__img-stack left-stack" style="margin-top: 3rem;">
           <div class="act-trails__img-main">
-            <img src="../assets/images/activity-trekking.png" alt="Eco-Trekking trails at Pulisanbay">
+            <img src="../assets/images/activities/savanna.webp" alt="Eco-Trekking trails at Pulisanbay">
           </div>
         </div>
       </div>
@@ -123,7 +124,7 @@ $navStyle = "";
       <div class="act-trails__img-col reveal reveal-delay-2">
         <div class="act-trails__img-stack right-stack">
           <div class="act-trails__img-main">
-            <img src="../assets/images/hero-conservation.png" alt="Tropical forest at Pulisanbay">
+            <img src="../assets/images/activities/eco-trail.webp" alt="Tropical forest at Pulisanbay">
           </div>
         </div>
         <p class="act-trails__img-caption">Ancient paths through living wilderness</p>
@@ -222,7 +223,7 @@ $navStyle = "";
     <div class="act-climb__inner">
       <!-- Image panel — tall & vertical -->
       <div class="act-climb__img-panel reveal">
-        <img src="../assets/images/hero-about.png" alt="Rock Climbing at Pulisanbay coastline">
+        <img src="../assets/images/activities/rock-climbing.webp" alt="Rock Climbing at Pulisanbay coastline">
       </div>
 
       <!-- Text panel -->
