@@ -6,13 +6,14 @@ $navStyle = ""; ?>
 
 <head>
   <?php include __DIR__ . '/../includes/head.php'; ?>
-  <link rel="stylesheet" href="../assets/<?= $isProd ? 'dist/css/conservation-enhanced.min.css' : 'css/conservation-enhanced.css' ?>" />
+  <link rel="stylesheet"
+    href="../assets/<?= $isProd ? 'dist/css/conservation-enhanced.min.css' : 'css/conservation-enhanced.css' ?>" />
 </head>
 
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
   <?php
-  $heroImage = '../assets/images/hero-conservation.png';
+  $heroImage = '../assets/images/conservation/conservation-hero.webp';
   $heroTitle = 'Conservation';
   $heroSubtitle = 'At Pulisanbay, conservation isn\'t a side project — it is the very foundation upon which everything is built.';
   include __DIR__ . '/../includes/hero.php';
@@ -69,40 +70,43 @@ $navStyle = ""; ?>
         <!-- Card 1 — Reduce -->
         <div class="cons-3r__card reveal">
           <div class="cons-3r__card-content">
-            <span class="cons-3r__number" style="background-image: linear-gradient(135deg, var(--forest-green), #22C55E);">01</span>
+            <span class="cons-3r__number"
+              style="background-image: linear-gradient(135deg, var(--forest-green), #22C55E);">01</span>
             <h3>Reduce</h3>
             <p>Minimizing waste generation through thoughtful procurement, eliminating single-use plastics, and adopting
               sustainable building materials sourced from the region. Every operational decision is guided by its
               environmental footprint.</p>
           </div>
           <div class="cons-3r__card-img">
-            <img src="../assets/images/hero-conservation.png" alt="Reduce initiatives at Pulisanbay">
+            <img src="../assets/images/conservation/reduce.webp" alt="Reduce initiatives at Pulisanbay">
           </div>
         </div>
 
         <!-- Card 2 — Reuse -->
         <div class="cons-3r__card reveal reveal-delay-1">
           <div class="cons-3r__card-content">
-            <span class="cons-3r__number" style="background-image: linear-gradient(135deg, var(--oceanic-turquoise), var(--deep-sea));">02</span>
+            <span class="cons-3r__number"
+              style="background-image: linear-gradient(135deg, var(--oceanic-turquoise), var(--deep-sea));">02</span>
             <h3>Reuse</h3>
             <p>Implementing creative reuse programs — from composting organic waste for resort gardens to repurposing
               construction materials for community projects.</p>
           </div>
           <div class="cons-3r__card-img">
-            <img src="../assets/images/four-pillars/Nature.webp" alt="Reuse initiatives at Pulisanbay">
+            <img src="../assets/images/conservation/reuse.webp" alt="Reuse initiatives at Pulisanbay">
           </div>
         </div>
 
         <!-- Card 3 — Recycle -->
         <div class="cons-3r__card reveal reveal-delay-2">
           <div class="cons-3r__card-content">
-            <span class="cons-3r__number" style="background-image: linear-gradient(135deg, var(--savanna-gold), #B8860B);">03</span>
+            <span class="cons-3r__number"
+              style="background-image: linear-gradient(135deg, var(--savanna-gold), #B8860B);">03</span>
             <h3>Recycle</h3>
             <p>State-of-the-art waste processing facilities ensure that recyclable materials are properly sorted,
               processed, and reintroduced into the supply chain.</p>
           </div>
           <div class="cons-3r__card-img">
-            <img src="../assets/images/four-pillars/pillar-bg.webp" alt="Recycle initiatives at Pulisanbay">
+            <img src="../assets/images/conservation/recycle.webp" alt="Recycle initiatives at Pulisanbay">
           </div>
         </div>
       </div>
@@ -138,7 +142,7 @@ $navStyle = ""; ?>
 
       <!-- Image panel — right side -->
       <div class="cons-forest__img-panel reveal reveal-delay-1">
-        <img src="../assets/images/hero-about.png" alt="Protected forest at Pulisanbay">
+        <img src="../assets/images/conservation/protected-forest.webp" alt="Protected forest at Pulisanbay">
       </div>
     </div>
   </section>
@@ -157,7 +161,7 @@ $navStyle = ""; ?>
         <!-- Image 1 below text -->
         <div class="cons-unsrat__img-stack cons-unsrat__img-stack--left" style="margin-top: 3rem;">
           <div class="cons-unsrat__img-main">
-            <img src="../assets/images/conservation/hidden-camera.webp" style="aspect-ratio: 2/1;"
+            <img src="../assets/images/conservation/research-activity.webp" style="aspect-ratio: 2/1;"
               alt="Camera trap research at Pulisanbay">
           </div>
         </div>
@@ -165,7 +169,7 @@ $navStyle = ""; ?>
         <!-- Image 2 below image 1 -->
         <div class="cons-unsrat__img-stack cons-unsrat__img-stack--left" style="margin-top: 2rem;">
           <div class="cons-unsrat__img-main">
-            <img src="../assets/images/conservation/WCL-rangers.webp" style="aspect-ratio: 2/1;"
+            <img src="../assets/images/conservation/research-activity2.webp" style="aspect-ratio: 2/1;"
               alt="WCL Rangers in the field">
           </div>
         </div>
