@@ -123,10 +123,28 @@ function initLightbox() {
   // Open lightbox when any gallery image is clicked
   document.querySelectorAll(".gallery-item img").forEach((img) => {
     img.addEventListener("click", () => {
+      // Set src and alt first
       lbImg.src = img.src;
       lbImg.alt = img.alt;
-      lightbox.classList.add("active");
-      document.body.style.overflow = "hidden";
+
+      // Asynchronously decode the high-res image off the main thread before starting transition
+      // This completely avoids frame drops and UI locking
+      if (typeof lbImg.decode === "function") {
+        lbImg.decode()
+          .then(() => {
+            lightbox.classList.add("active");
+            document.body.style.overflow = "hidden";
+          })
+          .catch(() => {
+            // Fallback in case of decode error
+            lightbox.classList.add("active");
+            document.body.style.overflow = "hidden";
+          });
+      } else {
+        // Fallback for older browsers
+        lightbox.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
     });
   });
 
