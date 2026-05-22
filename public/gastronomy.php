@@ -7,14 +7,15 @@ $navStyle = ""; ?>
 <head>
   <?php include __DIR__ . '/../includes/head.php'; ?>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="../assets/<?= $isProd ? 'dist/css/gastronomy-enhanced.min.css' : 'css/gastronomy-enhanced.css' ?>" />
+  <link rel="stylesheet"
+    href="../assets/<?= $isProd ? 'dist/css/gastronomy-enhanced.min.css' : 'css/gastronomy-enhanced.css' ?>" />
 </head>
 
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
 
   <?php
-  $heroImage = '../assets/images/hero-gastronomy.png';
+  $heroImage = '../assets/images/gastronomy/gastronomy-hero.webp';
   $heroTitle = 'Gastronomy';
   $heroSubtitle = 'Where the ocean\'s harvest meets the hands of local artisans — every plate tells a story of the land, the sea, and the people who call this place home.';
   include __DIR__ . '/../includes/hero.php';
