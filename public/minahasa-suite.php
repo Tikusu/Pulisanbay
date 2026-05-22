@@ -22,11 +22,14 @@ $navStyle = ""; ?>
         <h2>The Crown Jewel of The Pulisan</h2>
       </div>
       <div class="gallery-grid reveal">
-        <div class="gallery-item"><img src="../assets/images/room-minahasa-suite.png" alt="Minahasa Suite Interior">
-        </div>
-        <div class="gallery-item"><img src="../assets/images/room-upper-bungalow.png" alt="Minahasa Suite Terrace">
-        </div>
-        <div class="gallery-item"><img src="../assets/images/hero-accommodation.png" alt="Minahasa Suite View"></div>
+        <div class="gallery-item"><img src="../assets/images/the-pulisan/minahasa-suite/minahasa-suite-bedroom.webp" alt="Minahasa Suite Master Bedroom"></div>
+        <div class="gallery-item"><img src="../assets/images/the-pulisan/minahasa-suite/minahasa-suite-bedroom2.webp" alt="Minahasa Suite Elegant Bedding"></div>
+        <div class="gallery-item"><img src="../assets/images/the-pulisan/minahasa-suite/minahasa-suite-living-room.webp" alt="Minahasa Suite Living Room"></div>
+        <div class="gallery-item"><img src="../assets/images/the-pulisan/minahasa-suite/minahasa-suite-living-room2.webp" alt="Minahasa Suite Lounge Area"></div>
+        <div class="gallery-item"><img src="../assets/images/the-pulisan/minahasa-suite/minahasa-suite-dining-area.webp" alt="Minahasa Suite Dining Area"></div>
+        <div class="gallery-item"><img src="../assets/images/the-pulisan/minahasa-suite/minahasa-suite-balcony.webp" alt="Minahasa Suite Panoramic Balcony"></div>
+        <div class="gallery-item"><img src="../assets/images/the-pulisan/minahasa-suite/minahasa-suite-bathroom.webp" alt="Minahasa Suite Luxury Bathroom"></div>
+        <!-- <div class="gallery-item"><img src="../assets/images/the-pulisan/minahasa-suite/minahasa-suite-hero.webp" alt="Minahasa Suite Heritage View"></div> -->
       </div>
     </div>
   </section>
@@ -101,8 +104,8 @@ $navStyle = ""; ?>
           </button>
         </div>
         <div class="reveal reveal-delay-2">
-          <div class="img-rounded" style="box-shadow:var(--shadow-lg);"><img
-              src="../assets/images/room-minahasa-suite.png" alt="Minahasa Suite" class="img-cover"
+          <div class="section-img" style="box-shadow:var(--shadow-lg);"><img
+              src="../assets/images/the-pulisan/minahasa-suite/minahasa-suite-bedroom.webp" alt="Minahasa Suite Cozy Stay" class="img-cover"
               style="height:560px;"></div>
         </div>
       </div>

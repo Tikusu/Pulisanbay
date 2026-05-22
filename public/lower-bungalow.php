@@ -22,10 +22,12 @@ $navStyle = ""; ?>
         <h2>Where the Garden Meets the Sea</h2>
       </div>
       <div class="gallery-grid reveal">
-        <div class="gallery-item"><img src="../assets/images/room-lower-bungalow.png" alt="Lower Bungalow Exterior">
-        </div>
-        <div class="gallery-item"><img src="../assets/images/room-club.png" alt="Lower Bungalow Interior"></div>
-        <div class="gallery-item"><img src="../assets/images/hero-accommodation.png" alt="Lower Bungalow View"></div>
+        <div class="gallery-item"><img src="../assets/images/the-pulisan/lower-bungalow/lower-bungalow-balcony.webp" alt="Lower Bungalow Private Balcony"></div>
+        <div class="gallery-item"><img src="../assets/images/the-pulisan/lower-bungalow/lower-bungalow-balcony-table.webp" alt="Lower Bungalow Balcony Seating"></div>
+        <div class="gallery-item"><img src="../assets/images/the-pulisan/lower-bungalow/lower-bungalow-bedroom.webp" alt="Lower Bungalow Cozy Bedroom"></div>
+        <div class="gallery-item"><img src="../assets/images/the-pulisan/lower-bungalow/lower-bungalow-berdroom2.webp" alt="Lower Bungalow Bedroom Detail"></div>
+        <div class="gallery-item"><img src="../assets/images/the-pulisan/lower-bungalow/bungalow-bathroom.webp" alt="Lower Bungalow Modern Bathroom"></div>
+        <!-- <div class="gallery-item"><img src="../assets/images/the-pulisan/lower-bungalow/lower-bungalow-hero.webp" alt="Lower Bungalow Tropical View"></div> -->
       </div>
     </div>
   </section>
@@ -91,8 +93,8 @@ $navStyle = ""; ?>
           </button>
         </div>
         <div class="reveal reveal-delay-2">
-          <div class="img-rounded" style="box-shadow:var(--shadow-lg);"><img
-              src="../assets/images/room-lower-bungalow.png" alt="Lower Bungalow" class="img-cover"
+          <div class="section-img" style="box-shadow:var(--shadow-lg);"><img
+              src="../assets/images/the-pulisan/lower-bungalow/lower-bungalow-bedroom.webp" alt="Lower Bungalow Cozy Stay" class="img-cover"
               style="height:500px;"></div>
         </div>
       </div>

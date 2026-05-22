@@ -22,9 +22,14 @@ $navStyle = ""; ?>
         <h2>A Space Designed for Serenity</h2>
       </div>
       <div class="gallery-grid reveal">
-        <div class="gallery-item"><img src="../assets/images/room-club.png" alt="Club Room Interior"></div>
-        <div class="gallery-item"><img src="../assets/images/hero-accommodation.png" alt="Club Room View"></div>
-        <div class="gallery-item"><img src="../assets/images/room-lower-bungalow.png" alt="Club Room Details"></div>
+        <div class="gallery-item"><img src="../assets/images/the-pulisan/club-room/club-room-bed.webp" alt="Club Room King Bed"></div>
+        <div class="gallery-item"><img src="../assets/images/the-pulisan/club-room/club-room-bed2.webp" alt="Club Room Comfortable Bedding"></div>
+        <div class="gallery-item"><img src="../assets/images/the-pulisan/club-room/club-room-bed3.webp" alt="Club Room Cozy Bedroom"></div>
+        <div class="gallery-item"><img src="../assets/images/the-pulisan/club-room/club-room-drawer.webp" alt="Club Room Desk & Furnishings"></div>
+        <div class="gallery-item"><img src="../assets/images/the-pulisan/club-room/club-room-drawer2.webp" alt="Club Room Traditional Wood Drawer"></div>
+        <div class="gallery-item"><img src="../assets/images/the-pulisan/club-room/club-room-bathroom.webp" alt="Club Room Modern Bathroom"></div>
+        <div class="gallery-item"><img src="../assets/images/the-pulisan/club-room/club-room-sink.webp" alt="Club Room Elegant Sink & Vanity"></div>
+        <!-- <div class="gallery-item"><img src="../assets/images/the-pulisan/club-room/club-room-hero.webp" alt="Club Room Garden View & Lounge"></div> -->
       </div>
     </div>
   </section>
@@ -83,8 +88,8 @@ $navStyle = ""; ?>
           </button>
         </div>
         <div class="reveal reveal-delay-2">
-          <div class="img-rounded" style="box-shadow:var(--shadow-lg);"><img src="../assets/images/room-club.png"
-              alt="Club Room" class="img-cover" style="height:500px;"></div>
+          <div class="section-img" style="box-shadow:var(--shadow-lg);"><img src="../assets/images/the-pulisan/club-room/club-room-bed3.webp"
+              alt="Club Room Cozy Stay" class="img-cover" style="height:500px;"></div>
         </div>
       </div>
     </div>
