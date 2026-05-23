@@ -37,7 +37,6 @@
   --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.12);
 
-  /* --- Border Radii --- */
-  --radius: 12px;
+  /* --- Border Radius --- */
   --radius-lg: 20px;
 }
