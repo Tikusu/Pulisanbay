@@ -118,8 +118,8 @@
   }
 }
 
-/* --- Mobile Breakpoint (≤768px) --- */
-@media (max-width: 768px) {
+/* --- Mobile Breakpoint (≤640px) --- */
+@media (max-width: 640px) {
   .grid-2,
   .grid-3,
   .grid-4 {
