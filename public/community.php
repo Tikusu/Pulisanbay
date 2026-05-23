@@ -36,7 +36,7 @@ $navStyle = ""; ?>
           </div>
         </div>
         <div class="reveal reveal-delay-2">
-          <div class="img-rounded" style="box-shadow:var(--shadow-lg);"><img src="../assets/images/hero-community.png"
+          <div class="section-img" style="box-shadow:var(--shadow-lg);"><img src="../assets/images/hero-community.png"
               alt="Local Community" class="img-cover" style="height:460px;"></div>
         </div>
       </div>
