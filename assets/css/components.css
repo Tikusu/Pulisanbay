@@ -829,6 +829,7 @@
 }
 .pillar-card:hover {
   transform: translateY(-6px);
+}
 .pillar-icon {
   width: 64px;
   height: 64px;
