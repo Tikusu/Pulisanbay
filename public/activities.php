@@ -98,7 +98,7 @@ $navStyle = "";
 
 
 
-  <!-- ECO-TRAILS — "The Journal" Layout -->
+  <!-- ECO-TRAILS — Layout -->
   <section class="act-trails" id="land-adventures">
     <div class="act-trails__bg"></div>
     <div class="act-trails__inner">
