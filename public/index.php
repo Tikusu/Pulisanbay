@@ -172,25 +172,18 @@ $navStyle = "";
         <div class="pillar-card">
           <img src="../assets/images/four-pillars/Nature.webp" alt="Nature" class="img-round">
           <h3>Nature</h3>
-          <!-- <p>Preserving pristine environments — crystal waters, undulating hills, green forests, and the vibrant
-            underwater world.</p> -->
         </div>
         <div class="pillar-card reveal-delay-1">
           <img src="../assets/images/four-pillars/Culture.webp" alt="Culture" class="img-round">
           <h3>Culture</h3>
-          <!-- <p>Reviving the spirit of "Si Tou Timou Tumou Tou" — empowering communities and honoring ancestral wisdom.</p> -->
         </div>
         <div class="pillar-card reveal-delay-2">
           <img src="../assets/images/four-pillars/Destination.webp" alt="Destination" class="img-round">
           <h3>Destination</h3>
-          <!-- <p>Crafting world-class attractions that position Pulisanbay as the gateway to Eastern Indonesia's wonders.
-          </p> -->
         </div>
         <div class="pillar-card reveal-delay-3">
           <img src="../assets/images/four-pillars/Memorable.webp" alt="Memorable" class="img-round">
           <h3>Memorable</h3>
-          <!-- <p>Creating lasting impressions — from the moment you enter the gates to your final horizon at Pulisan Bay.
-          </p> -->
         </div>
       </div>
       <a href="about.php" class="btn-cta-dark"
