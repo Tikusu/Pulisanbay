@@ -156,6 +156,9 @@
   .cons-3r__grid {
     grid-template-columns: 1fr;
   }
+  .cons-3r__card:nth-child(2) {
+    flex-direction: column;
+  }
 }
 @media (max-width: 640px) {
   .cons-3r {
