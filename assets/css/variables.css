@@ -25,11 +25,12 @@
   --overlay-dark: rgba(12, 74, 110, 0.55);
   --overlay-black: rgba(0, 0, 0, 0.45);
 
-  /* --- Shadows (sm → lg) --- */
+  /* --- Shadows (sm → lg for progressive elevation) --- */
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
   --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.12);
 
   /* --- Border Radius --- */
+  --radius: 12px;
   --radius-lg: 20px;
 }

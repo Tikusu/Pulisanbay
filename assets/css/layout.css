@@ -1,10 +1,3 @@
-/* =============================================
-   LAYOUT SYSTEM
-   =============================================
-   Section spacing, containers, grid systems,
-   and responsive breakpoints for page structure.
-   ============================================= */
-
 /* --- Section Spacing --- */
 .section {
   padding: 6rem 3rem;
@@ -13,9 +6,7 @@
   padding: 8rem 3rem;
 }
 
-/* --- Containers ---
-   Max-width wrappers to center content.
-   container-sm is used for narrower content like videos. */
+/* --- Containers --- */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -25,8 +16,7 @@
   margin: 0 auto;
 }
 
-/* --- Section Headers ---
-   Centered title + subtitle pattern used across all sections. */
+/* --- Section Headers --- */
 .section-header {
   text-align: center;
   margin-bottom: 4rem;
@@ -42,9 +32,7 @@
   margin: 0 auto;
 }
 
-/* --- Section Label ---
-   Small uppercase label that appears above section headings
-   (e.g., "Regenerative Tourism", "Our Foundation"). */
+/* --- Section Label --- */
 .section-label {
   display: inline-block;
   font-size: 0.8rem;
@@ -77,9 +65,7 @@
   color: var(--savanna-gold);
 }
 
-/* ===== GRID LAYOUTS =====
-   Reusable grid classes for 2, 3, and 4 column layouts.
-   split-section is a special 50/50 layout for text+image pairs. */
+/* ===== GRID LAYOUTS ===== */
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -119,7 +105,7 @@
     gap: 2.5rem;
   }
   
-  /* Enforce Text > Image order on mobile/tablet */
+  /* Enforce 'Text > Image' order on mobile/tablet */
   .split-section > * {
     order: 1 !important;
   }
@@ -132,8 +118,8 @@
   }
 }
 
-/* --- Mobile Breakpoint (≤640px) --- */
-@media (max-width: 640px) {
+/* --- Mobile Breakpoint (≤768px) --- */
+@media (max-width: 768px) {
   .grid-2,
   .grid-3,
   .grid-4 {
