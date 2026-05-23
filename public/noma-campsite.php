@@ -204,7 +204,7 @@ $navStyle = ""; ?>
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <a href="activities.php#land-adventures" class="acco-card reveal">
-              <img src="../assets/images/activity-trekking.png" alt="Trekking" class="acco-card__img">
+              <img src="../assets/images/activities/eco-trail.webp" alt="Trekking" class="acco-card__img">
               <div class="acco-card__content" style="padding-bottom:1rem;">
                 <h3 class="acco-card__title">Trekking</h3>
               </div>
@@ -212,7 +212,7 @@ $navStyle = ""; ?>
           </div>
           <div class="swiper-slide">
             <a href="activities.php#land-adventures" class="acco-card reveal reveal-delay-1">
-              <img src="../assets/images/hero-campsite.png" alt="Hiking" class="acco-card__img">
+              <img src="../assets/images/activities/savanna.webp" alt="Hiking" class="acco-card__img">
               <div class="acco-card__content" style="padding-bottom:1rem;">
                 <h3 class="acco-card__title">Hiking</h3>
               </div>
