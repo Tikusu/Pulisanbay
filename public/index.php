@@ -121,7 +121,7 @@ $navStyle = "";
       </div>
       <div class="grid-4 reveal">
         <a href="activities.php" class="card" style="text-decoration:none;color:inherit;">
-          <div class="card-img-wrapper"><img src="../assets/images/hero-activities.png" alt="Activities"
+          <div class="card-img-wrapper"><img src="../assets/images/activities/activities-hero.webp" alt="Activities"
               class="card-img"></div>
           <div class="card-body">
             <h3>Activities</h3>
@@ -130,7 +130,7 @@ $navStyle = "";
           </div>
         </a>
         <a href="conservation.php" class="card" style="text-decoration:none;color:inherit;">
-          <div class="card-img-wrapper"><img src="../assets/images/hero-conservation.png" alt="Conservation"
+          <div class="card-img-wrapper"><img src="../assets/images/conservation-teaser.webp" alt="Conservation"
               class="card-img"></div>
           <div class="card-body">
             <h3>Conservation</h3>
@@ -139,7 +139,7 @@ $navStyle = "";
           </div>
         </a>
         <a href="culture.php" class="card" style="text-decoration:none;color:inherit;">
-          <div class="card-img-wrapper"><img src="../assets/images/hero-culture.png" alt="Culture" class="card-img">
+          <div class="card-img-wrapper"><img src="../assets/images/culture/gitar-mama.webp" alt="Culture" class="card-img">
           </div>
           <div class="card-body">
             <h3>Culture</h3>
@@ -148,7 +148,7 @@ $navStyle = "";
           </div>
         </a>
         <a href="gastronomy.php" class="card" style="text-decoration:none;color:inherit;">
-          <div class="card-img-wrapper"><img src="../assets/images/hero-gastronomy.png" alt="Gastronomy"
+          <div class="card-img-wrapper"><img src="../assets/images/gastronomy/gastronomy-hero.webp" alt="Gastronomy"
               class="card-img"></div>
           <div class="card-body">
             <h3>Gastronomy</h3>
