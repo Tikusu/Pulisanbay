@@ -346,7 +346,7 @@ $navStyle = "";
       
       <div class="reveal" style="overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.08);">
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14411.012059281808!2d125.15104058137882!3d1.6772737057971725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3287b3b225f71191%3A0xe96d6bb768da8c59!2sKEK%20Pariwisata%20Likupang!5e0!3m2!1sen!2sid!4v1779609646669!5m2!1sen!2sid" 
+          src="https://maps.google.com/maps?q=KEK%20Pariwisata%20Likupang,%20North%20Sulawesi&t=k&z=14&ie=UTF8&iwloc=&output=embed" 
           width="100%" 
           height="500" 
           style="border:0; display: block; filter: grayscale(50%) contrast(95%); transition: filter 0.3s ease;" 
