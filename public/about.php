@@ -59,7 +59,7 @@ $navStyle = "";
         </div>
         <div class="reveal reveal-delay-2">
           <div class="section-img" style="position: relative; box-shadow:var(--shadow-lg); height: 100%;">
-            <img src="../assets/images/Johnny-Widjaja.webp" alt="Johnny Widjaja" class="img-cover"
+            <img src="../assets/images/about/johnny-widjaja.webp" alt="Johnny Widjaja" class="img-cover"
               style="height: 100%;">
             <div style="position: absolute; bottom: 2rem; left: 1.75rem; z-index: 10;">
               <span
