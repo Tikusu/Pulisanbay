@@ -234,8 +234,7 @@ $navStyle = "";
           <p>Challenge yourself on the natural limestone formations and volcanic rock faces that define Pulisanbay's
             dramatic coastline. With routes ranging from beginner-friendly to advanced, every climber finds their
             perfect ascent.</p>
-          <p>Our experienced guides provide all equipment and safety briefings. The reward? Unparalleled views from
-            vantage points that few ever reach.</p>
+          <p>Our experienced guides provide all equipment and safety briefings.</p>
         </div>
       </div>
     </div>
