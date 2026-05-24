@@ -15,15 +15,15 @@ $navStyle = "";
 
   <!-- HERO -->
   <section class="hero" id="hero-home">
-    <div class="hero-bg" style="background-image: url('../assets/images/hero-homepage.png')"></div>
+    <div class="hero-bg" style="background-image: url('../assets/images/home-hero.webp')"></div>
     <div class="hero-content">
       <h1>Beyond Nature Experience</h1>
       <p>A regenerative sanctuary in the heart of the Coral Triangle — where every footprint restores, every moment
         reconnects, and every horizon tells a story.</p>
-      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-        <!-- <a href="about.php" class="btn-cta-outline">Discover Our Story</a> -->
-        <!-- <a href="contact.php" class="btn-cta">Plan Your Escape</a> -->
-      </div>
+      <!-- <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="about.php" class="btn-cta-outline">Discover Our Story</a>
+        <a href="contact.php" class="btn-cta">Plan Your Escape</a>
+      </div> -->
     </div>
     <div class="hero-scroll-indicator"><span></span></div>
   </section>
@@ -45,7 +45,7 @@ $navStyle = "";
         </div>
         <div class="reveal reveal-delay-2">
           <div class="section-img" style="box-shadow:var(--shadow-lg);">
-            <img src="../assets/images/hero-about.png" alt="Pulisanbay Landscape" class="img-cover"
+            <img src="../assets/images/regenerative-tourism.webp" alt="Pulisanbay Landscape" class="img-cover"
               style="height: 100%;">
           </div>
         </div>
