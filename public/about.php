@@ -335,6 +335,31 @@ $navStyle = "";
     </div>
   </section>
 
+  <!-- LOCATION & ACCESSIBILITY -->
+  <section class="section-lg section-bg-white">
+    <div class="container">
+      <div class="section-header reveal" style="margin-bottom: 3rem;">
+        <span class="section-label">Location</span>
+        <h2>Find Us</h2>
+        <p>Located in the heart of Likupang SEZ, Desa Pulisan, North Sulawesi. Pulisanbay is the gateway to Eastern Indonesia's natural wonders.</p>
+      </div>
+      
+      <div class="reveal" style="overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.08);">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14411.012059281808!2d125.15104058137882!3d1.6772737057971725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3287b3b225f71191%3A0xe96d6bb768da8c59!2sKEK%20Pariwisata%20Likupang!5e0!3m2!1sen!2sid!4v1779609646669!5m2!1sen!2sid" 
+          width="100%" 
+          height="500" 
+          style="border:0; display: block; filter: grayscale(50%) contrast(95%); transition: filter 0.3s ease;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          onmouseover="this.style.filter='none'"
+          onmouseout="this.style.filter='grayscale(15%) contrast(95%)'">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
   <?php include __DIR__ . '/../includes/footer.php'; ?>
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <script src="../assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
