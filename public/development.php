@@ -11,7 +11,7 @@ $navStyle = ""; ?>
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
   <?php
-  $heroImage = '../assets/images/hero-development.png';
+  $heroImage = '../assets/images/development/SEZ LIK_View A_Final.webp';
   $heroTitle = 'Development';
   $heroSubtitle = 'Transforming a vision into reality — building world-class infrastructure that harmonizes with the natural landscape of Pulisan Bay.';
   include __DIR__ . '/../includes/hero.php';
@@ -19,7 +19,7 @@ $navStyle = ""; ?>
 
   <section class="section-lg section-bg-white">
     <div class="container">
-      <div class="section-header reveal"><span class="section-label">Progress Update</span>
+      <div class="section-header reveal"><span class="section-label">Current Development</span>
         <h2>Infrastructure Development</h2>
         <p>The KEK Likupang Special Economic Zone is advancing steadily — with careful attention to environmental
           integration at every stage.</p>
@@ -98,6 +98,20 @@ $navStyle = ""; ?>
       </div>
     </div>
   </section>
+
+  <section class="section-lg" style="padding-bottom: 2rem;">
+    <div class="container">
+      <div class="section-header reveal" style="margin-bottom: 2rem;">
+        <span class="section-label">Master Plan</span>
+        <h2>Development Area Plan</h2>
+        <p>A comprehensive overview of the planned infrastructure and facilities across the Pulisanbay landscape.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="reveal" style="width: 100%; line-height: 0;">
+    <img src="../assets/images/development/pulisanbay-development-area-plan.webp" alt="Pulisanbay Development Area Plan" style="width: 100%; height: auto; display: block;">
+  </div>
 
   <section class="section-lg section-bg-dark">
     <div class="container">
