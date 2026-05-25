@@ -18,7 +18,7 @@ $allowedOrigin = getenv('ALLOWED_ORIGIN') ?: $_ENV['ALLOWED_ORIGIN'] ?? '';
 if ($appEnv === 'production' && !empty($allowedOrigin)) {
     header('Access-Control-Allow-Origin: ' . $allowedOrigin);
 } else {
-    // In development, allow localhost or all
+    // In development, allow all
     header('Access-Control-Allow-Origin: *');
 }
 
