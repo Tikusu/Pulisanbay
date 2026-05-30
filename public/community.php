@@ -11,7 +11,7 @@ $navStyle = ""; ?>
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
   <?php
-  $heroImage = '../assets/images/hero-community.png';
+  $heroImage = '../assets/images/community/community-hero.webp';
   $heroTitle = 'Community';
   $heroSubtitle = '"Si Tou Timou Tumou Tou" — People live to help others live. The Minahasa philosophy that guides everything we do.';
   include __DIR__ . '/../includes/hero.php';
@@ -36,7 +36,7 @@ $navStyle = ""; ?>
           </div>
         </div>
         <div class="reveal reveal-delay-2">
-          <div class="section-img" style="box-shadow:var(--shadow-lg);"><img src="../assets/images/hero-community.png"
+          <div class="section-img" style="box-shadow:var(--shadow-lg);"><img src="../assets/images/community/community.webp"
               alt="Local Community" class="img-cover" style="height:460px;"></div>
         </div>
       </div>
