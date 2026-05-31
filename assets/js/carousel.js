@@ -144,11 +144,19 @@ function initNomaTentCarousel() {
   if (!document.querySelector(".noma-tent-swiper")) return;
 
   new Swiper(".noma-tent-swiper", {
+    effect: "slide",
     grabCursor: true,
     freeMode: { enabled: true, sticky: true },
-    slidesPerView: "auto",
-    spaceBetween: 32,
+    speed: 500,
+    slidesPerView: 1,
+    spaceBetween: 24,
     loop: true,
+    breakpoints: {
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 32,
+      },
+    },
     pagination: {
       el: ".noma-tent-pagination",
       clickable: true,

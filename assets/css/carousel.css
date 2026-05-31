@@ -485,10 +485,9 @@
 }
 
 /* Use the full selector chain so Swiper's own .swiper-slide width rule
-   cannot override ours. The 48% is relative to the swiper container. */
+   cannot override ours. */
 .noma-tent-swiper .swiper-slide {
-  max-width: 50%;
-  aspect-ratio: 32 / 28;
+  aspect-ratio: 8 / 7;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -579,18 +578,18 @@
   margin-top: 2.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .noma-tent-swiper .swiper-slide {
-    width: 80%;
+    aspect-ratio: 4 / 3;
   }
 }
 
-@media (max-width: 480px) {
-  .noma-tent-swiper .swiper-slide {
-    width: 90%;
-  }
-
+@media (max-width: 576px) {
   .noma-tent-slide__body {
     padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+    width: 100%;
+  }
+  .noma-tent-swiper .swiper-slide {
+    aspect-ratio: 7 / 8;
   }
 }
