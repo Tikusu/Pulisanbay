@@ -60,28 +60,6 @@ $navStyle = ""; ?>
     </div>
   </section>
 
-  <!-- GITAR MAMA — Premium Split (Image Left, Text Right) -->
-  <section class="cult-gitar" id="gitar-mama">
-    <div class="cult-gitar__inner">
-      <div class="cult-gitar__img-wrap reveal">
-        <div class="cult-gitar__img-inner">
-          <img src="../assets/images/culture/gitar-mama.webp" alt="Gitar Mama — traditional Minahasa instrument">
-        </div>
-      </div>
-      <div class="cult-gitar__content reveal reveal-delay-2">
-        <span class="section-label">Musical Heritage</span>
-        <h2>Gitar Mama</h2>
-        <p>Standing at an awe-inspiring two meters tall, the Gitar Mama is more than a musical instrument — it is a
-          cultural monument. This traditional Minahasa creation produces deep, resonant melodies that have echoed
-          through
-          the hills of North Sulawesi for generations.</p>
-        <p>At Pulisanbay, the Gitar Mama is not simply displayed — it is played, taught, and celebrated. Guests are
-          invited to experience live performances by local musicians and even try their hand at coaxing melodies from
-          this magnificent instrument during interactive cultural workshops.</p>
-      </div>
-    </div>
-  </section>
-
   <!-- ECHOES OF MINAHASA — Cards + Gallery -->
   <section class="cult-echoes" id="echoes-of-minahasa">
     <div class="cult-echoes__inner">
