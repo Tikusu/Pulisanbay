@@ -131,11 +131,6 @@ $navStyle = "";
           <p>Complimentary return airport transfer *T&C apply</p>
         </div>
         <div class="pillar-card">
-          <div class="pillar-icon"><i class="fas fa-concierge-bell"></i></div>
-          <h3>Concierge</h3>
-          <p>24/7 guest services</p>
-        </div>
-        <div class="pillar-card">
           <div class="pillar-icon"><i class="fas fa-wifi"></i></div>
           <h3>Connectivity</h3>
           <p>High-speed WiFi and Smart TV</p>
