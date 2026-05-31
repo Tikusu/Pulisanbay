@@ -27,7 +27,7 @@ $policyExtra  = $policyExtra  ?? '';
           <?php endif; ?>
           <li>✦ Valid government-issued ID required at check-in</li>
           <li>✦ Rates are subject to applicable taxes and service charges</li>
-          <li style="margin-top:1rem;"><a href="terms-and-conditions.php"
+          <li style="margin-top:1rem;"><a href="https://www.thepulisan.com/index.php/rates/" target="_blank"
               style="color:<?= $policyAccent ?>;text-decoration:none;font-weight:600;font-size:0.85rem;">View Full
               Terms & Conditions →</a></li>
         </ul>

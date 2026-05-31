@@ -177,14 +177,7 @@ $navStyle = "";
               <p>Indulge in a delightful BBQ experience!</p>
             </div>
           </div>
-          <div class="feature-item" style="display:none;">
-            <div class="feature-icon"><i class="fas fa-fish"></i></div>
-            <div>
-              <h4>Marine Explorer Package</h4>
-              <p>2-dive trip, snorkeling tour, and sunset paddleboard session.</p>
-            </div>
-          </div>
-          <a href="offers.php" class="btn-cta-dark"
+          <a href="https://www.thepulisan.com/index.php/rates/#:~:text=RENT-,%2DA%2D,-RESORT%0A(EXCLUSIVE%20PRIVATE" target="_blank" class="btn-cta-dark"
             style="background: var(--oceanic-turquoise);font-size:1rem;padding:0.85rem 2.5rem;margin-top:3rem;">
             Learn More <i class="fas fa-arrow-right" style="margin-left:4px;"></i>
           </a>
