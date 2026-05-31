@@ -475,3 +475,122 @@
   border-radius: 4px;
   background: var(--charcoal);
 }
+
+/* =============================================
+   NOMA TENT PACKAGES CAROUSEL
+   ============================================= */
+.noma-tent-swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Use the full selector chain so Swiper's own .swiper-slide width rule
+   cannot override ours. The 48% is relative to the swiper container. */
+.noma-tent-swiper .swiper-slide {
+  max-width: 50%;
+  aspect-ratio: 32 / 28;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Uniform dark overlay — keeps text readable without a distracting gradient */
+.noma-tent-swiper .swiper-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 20, 48, 0.1);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.noma-tent-slide__body {
+  position: relative;
+  z-index: 2;
+  padding: 1.75rem 1.75rem 1.75rem 2.25rem; /* extra left padding */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 85%;
+}
+
+.noma-tent-slide__body .section-label {
+  color: var(--white);
+  margin-bottom: 0.35rem;
+}
+
+.noma-tent-slide__body h3 {
+  color: var(--white);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  margin-bottom: 0.5rem;
+}
+
+.noma-tent-slide__body p {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.noma-tent-slide__body .card-link {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.noma-tent-slide__body .card-link:hover {
+  color: var(--savanna-gold);
+  border-color: var(--savanna-gold);
+}
+
+/* Pagination — matches Around NOMA style */
+.noma-tent-pagination {
+  position: static !important;
+  margin-top: 2rem;   /* breathing room between slider and dots */
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.noma-tent-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+  border: 1px solid var(--charcoal);
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.noma-tent-pagination .swiper-pagination-bullet-active {
+  width: 20px;
+  border-radius: 4px;
+  background: var(--charcoal);
+}
+
+/* CTA button below the carousel */
+.noma-tent-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .noma-tent-swiper .swiper-slide {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .noma-tent-swiper .swiper-slide {
+    width: 90%;
+  }
+
+  .noma-tent-slide__body {
+    padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+  }
+}

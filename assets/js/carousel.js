@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initWildlifeCarousel();
   initPillarsCarousel();
   initNomaCarousel();
+  initNomaTentCarousel();
   initCulinaryCarousel();
   initEchoesCarousel();
 });
@@ -124,7 +125,7 @@ function initNomaCarousel() {
 
   new Swiper(".noma-around-swiper", {
     ...SWIPER_DEFAULTS,
-    autoplay: { ...SWIPER_DEFAULTS.autoplay, delay: 5000 },
+    autoplay: false,
     slidesPerView: 1,
     spaceBetween: 24,
     loop: false,
@@ -138,7 +139,24 @@ function initNomaCarousel() {
   });
 }
 
-// --- 4. CULINARY ICONS SLIDER (gastronomy.php) ---
+// --- 4. NOMA TENT PACKAGES CAROUSEL (noma-campsite.php) ---
+function initNomaTentCarousel() {
+  if (!document.querySelector(".noma-tent-swiper")) return;
+
+  new Swiper(".noma-tent-swiper", {
+    grabCursor: true,
+    freeMode: { enabled: true, sticky: true },
+    slidesPerView: "auto",
+    spaceBetween: 32,
+    loop: true,
+    pagination: {
+      el: ".noma-tent-pagination",
+      clickable: true,
+    },
+  });
+}
+
+// --- 5. CULINARY ICONS SLIDER (gastronomy.php) ---
 function initCulinaryCarousel() {
   if (!document.querySelector(".gast-culinary-swiper")) return;
 

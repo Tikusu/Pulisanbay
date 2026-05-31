@@ -26,128 +26,45 @@ $navStyle = ""; ?>
         <p>From premium expedition tents to cozy family shelters — we've curated the perfect camping experience for
           every type of adventurer.</p>
       </div>
-      <div class="grid-3 reveal">
-        <div class="card">
-          <div class="card-img-wrapper"><img src="../assets/images/noma/rendezvous.webp" alt="Eiger Rendezvous"
-              class="card-img"></div>
-          <div class="card-body"><span class="section-label" style="font-size:0.7rem;">4-Person Capacity</span>
-            <h3>Eiger Rendezvous</h3>
-            <p>Our flagship tent package — a premium Eiger expedition tent with full setup, sleeping gear, camping
-              lights, and a curated comfort kit. Perfect for the discerning adventurer.</p>
-            <div style="margin-top:1.25rem;">
-              <div
-                style="display:flex;align-items:center;gap:8px;margin-bottom:0.5rem;color:var(--slate);font-size:0.85rem;">
-                <i class="fas fa-check" style="color:var(--forest-green);"></i> A set of mattress included
-              </div>
-              <div
-                style="display:flex;align-items:center;gap:8px;margin-bottom:0.5rem;color:var(--slate);font-size:0.85rem;">
-                <i class="fas fa-check" style="color:var(--forest-green);"></i> Waterproof
-              </div>
-              <div style="display:flex;align-items:center;gap:8px;color:var(--slate);font-size:0.85rem;"><i
-                  class="fas fa-check" style="color:var(--forest-green);"></i> Moderate Windproof</div>
+      <div class="swiper noma-tent-swiper reveal">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide noma-tent-slide" style="background-image: url('../assets/images/noma/rendezvous.webp');">
+            <div class="noma-tent-slide__body">
+              <span class="section-label" style="font-size:0.7rem;">4-Person Capacity</span>
+              <h3>Eiger Rendezvous</h3>
+              <p>Our flagship tent package — a premium Eiger expedition tent with full setup, sleeping gear, camping
+                lights, and a curated comfort kit. Perfect for the discerning adventurer.</p>
+              <a href="contact.php" class="card-link" style="margin-top:1.25rem;">Book This Package <i
+                  class="fas fa-arrow-right"></i></a>
             </div>
-            <a href="contact.php" class="card-link" style="margin-top:1.25rem;">Book This Package <i
-                class="fas fa-arrow-right"></i></a>
           </div>
-        </div>
-        <div class="card reveal-delay-1">
-          <div class="card-img-wrapper"><img src="../assets/images/noma/arpenaz.webp" alt="Decathlon Apenaz"
-              class="card-img"></div>
-          <div class="card-body"><span class="section-label" style="font-size:0.7rem;">5-Person Capacity</span>
-            <h3>Decathlon Arpenaz</h3>
-            <p>A spacious family-friendly tent with easy setup, ideal for groups and families looking to connect with
-              nature.</p>
-            <div style="margin-top:1.25rem;">
-              <div
-                style="display:flex;align-items:center;gap:8px;margin-bottom:0.5rem;color:var(--slate);font-size:0.85rem;">
-                <i class="fas fa-check" style="color:var(--forest-green);"></i> 2 sets of mattresses included
-              </div>
-              <div
-                style="display:flex;align-items:center;gap:8px;margin-bottom:0.5rem;color:var(--slate);font-size:0.85rem;">
-                <i class="fas fa-check" style="color:var(--forest-green);"></i> Quick set up
-              </div>
-              <div
-                style="display:flex;align-items:center;gap:8px;margin-bottom:0.5rem;color:var(--slate);font-size:0.85rem;">
-                <i class="fas fa-check" style="color:var(--forest-green);"></i> Waterproof
-              </div>
-              <div style="display:flex;align-items:center;gap:8px;color:var(--slate);font-size:0.85rem;"><i
-                  class="fas fa-check" style="color:var(--forest-green);"></i> Windproof</div>
+          <div class="swiper-slide noma-tent-slide" style="background-image: url('../assets/images/noma/arpenaz.webp');">
+            <div class="noma-tent-slide__body">
+              <span class="section-label" style="font-size:0.7rem;">5-Person Capacity</span>
+              <h3>Decathlon Arpenaz</h3>
+              <p>A spacious family-friendly tent with easy setup, ideal for groups and families looking to connect with
+                nature.</p>
+              <a href="contact.php" class="card-link" style="margin-top:1.25rem;">Book This Package <i
+                  class="fas fa-arrow-right"></i></a>
             </div>
-            <a href="contact.php" class="card-link" style="margin-top:1.25rem;">Book This Package <i
-                class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="swiper-slide noma-tent-slide" style="background-image: url('../assets/images/noma/air-second.webp');">
+            <div class="noma-tent-slide__body">
+              <span class="section-label" style="font-size:0.7rem;">6-Person Capacity</span>
+              <h3>Decathlon Air Second</h3>
+              <p>An innovative inflatable tent for the modern camper — set up in seconds and enjoy instant comfort.
+                Lightweight, compact, and perfectly functional.</p>
+              <a href="contact.php" class="card-link" style="margin-top:1.25rem;">Book This Package <i
+                  class="fas fa-arrow-right"></i></a>
+            </div>
           </div>
         </div>
-        <div class="card reveal-delay-2">
-          <div class="card-img-wrapper"><img src="../assets/images/noma/air-second.webp" alt="Decathlon Air Second"
-              class="card-img"></div>
-          <div class="card-body"><span class="section-label" style="font-size:0.7rem;">6-Person Capacity</span>
-            <h3>Decathlon Air Second</h3>
-            <p>An innovative inflatable tent for the modern camper — set up in seconds and enjoy instant comfort.
-              Lightweight, compact, and perfectly functional.</p>
-            <div style="margin-top:1.25rem;">
-              <div
-                style="display:flex;align-items:center;gap:8px;margin-bottom:0.5rem;color:var(--slate);font-size:0.85rem;">
-                <i class="fas fa-check" style="color:var(--forest-green);"></i> 2 sets of mattresses included
-              </div>
-              <div
-                style="display:flex;align-items:center;gap:8px;margin-bottom:0.5rem;color:var(--slate);font-size:0.85rem;">
-                <i class="fas fa-check" style="color:var(--forest-green);"></i> Inflatable — sets up in seconds
-              </div>
-              <div
-                style="display:flex;align-items:center;gap:8px;margin-bottom:0.5rem;color:var(--slate);font-size:0.85rem;">
-                <i class="fas fa-check" style="color:var(--forest-green);"></i> Waterproof
-              </div>
-              <div
-                style="display:flex;align-items:center;gap:8px;margin-bottom:0.5rem;color:var(--slate);font-size:0.85rem;">
-                <i class="fas fa-check" style="color:var(--forest-green);"></i> Windproof
-              </div>
-            </div><a href="contact.php" class="card-link" style="margin-top:1.25rem;">Book This Package <i
-                class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>
+        <div class="swiper-pagination noma-tent-pagination"></div>
       </div>
-    </div>
-  </section>
-
-  <!-- PACKAGE INCLUSIONS -->
-  <section class="section-lg section-bg-sand">
-    <div class="container">
-      <div class="section-header reveal"><span class="section-label">Rate Inclusions</span>
-        <h2>What's Included in Your Package</h2>
-      </div>
-      <div class="grid-4 grid-4-dense reveal">
-        <div class="pillar-card">
-          <div class="pillar-icon"><i class="fas fa-ticket-alt"></i></div>
-          <h3>Entrance Fee</h3>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon"><i class="fas fa-campground"></i></div>
-          <h3>Tent Pitch Space</h3>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon"><i class="fas fa-chair"></i></div>
-          <h3>Camping Chairs</h3>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon"><i class="fas fa-lightbulb"></i></div>
-          <h3>Tent Lighting</h3>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon"><i class="fas fa-bed"></i></div>
-          <h3>Fabric Mattress</h3>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon"><i class="fas fa-plug"></i></div>
-          <h3>Power Outlets</h3>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon"><i class="fas fa-route"></i></div>
-          <h3>Access to Eco-Trails</h3>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon"><i class="fas fa-mountain"></i></div>
-          <h3>Access to Savana Peaks</h3>
-        </div>
+      <div class="noma-tent-cta reveal">
+        <a href="https://www.instagram.com/noma.adventure/" target="_blank" rel="noopener noreferrer" class="btn-cta-dark">
+          <i class="fab fa-instagram"></i> Learn More <i class="fas fa-arrow-right"></i>
+        </a>
       </div>
     </div>
   </section>
@@ -219,7 +136,7 @@ $navStyle = ""; ?>
             </a>
           </div>
           <div class="swiper-slide">
-            <a href="activities.php#wildlife-carousel" class="acco-card reveal reveal-delay-2">
+            <a href="activities.php#wildlife-carousel" class="acco-card">
               <img src="../assets/images/wildlife/Tarsius.webp" alt="Wildlife Encounter" class="acco-card__img">
               <div class="acco-card__content" style="padding-bottom:1rem;">
                 <h3 class="acco-card__title">Wildlife Encounter</h3>
