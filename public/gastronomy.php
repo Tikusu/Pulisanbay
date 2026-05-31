@@ -106,55 +106,6 @@ $navStyle = ""; ?>
     </div>
   </section>
 
-  <!-- DIETARY ACCOMMODATIONS — Premium Card Grid -->
-  <section class="gast-dietary" id="dietary-accommodations">
-    <div class="gast-dietary__inner">
-      <div class="gast-dietary__header reveal">
-        <span class="section-label">Tailored for You</span>
-        <h2>Dietary Accommodations</h2>
-        <p>We believe every guest deserves an exceptional dining experience, regardless of dietary needs.</p>
-      </div>
-
-      <div class="gast-dietary__grid">
-        <div class="gast-dietary__card reveal" data-num="01">
-          <div class="gast-dietary__icon"
-            style="background-image: linear-gradient(135deg, var(--forest-green), #22C55E);">
-            <i class="fas fa-leaf"></i>
-          </div>
-          <h3>Vegetarian &amp; Vegan</h3>
-          <p>Full vegetarian and vegan menus crafted with the same creativity and care as our signature dishes.</p>
-        </div>
-
-        <div class="gast-dietary__card reveal reveal-delay-1" data-num="02">
-          <div class="gast-dietary__icon"
-            style="background-image: linear-gradient(135deg, var(--savanna-gold), #B8860B);">
-            <i class="fas fa-wheat-awn-circle-exclamation"></i>
-          </div>
-          <h3>Gluten-Free</h3>
-          <p>Gluten-free options thoughtfully integrated across all meals without compromising flavor.</p>
-        </div>
-
-        <div class="gast-dietary__card reveal reveal-delay-2" data-num="03">
-          <div class="gast-dietary__icon"
-            style="background-image: linear-gradient(135deg, var(--oceanic-turquoise), var(--deep-sea));">
-            <i class="fas fa-triangle-exclamation"></i>
-          </div>
-          <h3>Allergy-Aware</h3>
-          <p>Detailed allergen information available. Our chefs can adapt any dish to meet your specific requirements.
-          </p>
-        </div>
-
-        <div class="gast-dietary__card reveal reveal-delay-3" data-num="04">
-          <div class="gast-dietary__icon" style="background-image: linear-gradient(135deg, #DC2626, #F97316);">
-            <i class="fas fa-star-and-crescent"></i>
-          </div>
-          <h3>Halal Options</h3>
-          <p>Halal-prepared meals available upon advance request, honoring your traditions with full respect.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <?php include __DIR__ . '/../includes/footer.php'; ?>
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <script src="../assets/<?= $isProd ? 'dist/js/carousel.min.js' : 'js/carousel.js' ?>"></script>
