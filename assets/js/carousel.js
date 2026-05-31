@@ -126,6 +126,7 @@ function initNomaCarousel() {
   new Swiper(".noma-around-swiper", {
     ...SWIPER_DEFAULTS,
     autoplay: false,
+    speed: 500,
     slidesPerView: 1,
     spaceBetween: 24,
     loop: false,
