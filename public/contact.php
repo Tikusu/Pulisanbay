@@ -40,8 +40,8 @@ $navStyle = "scrolled";
             <div class="feature-icon"><i class="fas fa-envelope"></i></div>
             <div>
               <h4>Email</h4>
-              <p><a href="mailto:info@pulisanbay.xyz" target="_blank"
-                  style="text-decoration: none; color: inherit;">info@pulisanbay.xyz</a></p>
+              <p><a href="mailto:info@pulisanbay.com" target="_blank"
+                  style="text-decoration: none; color: inherit;">info@pulisanbay.com</a></p>
             </div>
           </div>
         </div>
