@@ -497,12 +497,12 @@
   overflow: hidden;
 }
 
-/* Uniform dark overlay — keeps text readable without a distracting gradient */
+/* Dark gradient overlay on the left to keep text readable */
 .noma-tent-swiper .swiper-slide::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(8, 20, 48, 0.1);
+  background: linear-gradient(90deg, rgba(8, 20, 48, 0.3) 0%, rgba(8, 20, 48, 0.1) 100%);
   pointer-events: none;
   z-index: 1;
 }
