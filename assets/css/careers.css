@@ -1,0 +1,271 @@
+/* ==========================================================================
+   CAREERS PAGE STYLES (careers.css)
+   ========================================================================== */
+
+/* --- Job Opportunities Grid & Cards --- */
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.job-card {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.job-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--oceanic-turquoise);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(8, 145, 178, 0.2);
+  box-shadow: var(--shadow-md);
+}
+
+.job-card:hover::before {
+  opacity: 1;
+}
+
+.job-card__dept {
+  display: inline-block;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--oceanic-turquoise);
+  background: rgba(8, 145, 178, 0.07);
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  margin-bottom: 1.25rem;
+  width: fit-content;
+}
+
+.job-card__title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--deep-sea);
+  margin-bottom: 0.85rem;
+  line-height: 1.2;
+}
+
+.job-card__desc {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--slate);
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.job-card__link {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--savanna-gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  transition: gap 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  margin-top: auto;
+}
+
+.job-card__link i {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.job-card:hover .job-card__link {
+  color: var(--deep-sea);
+  gap: 10px;
+}
+
+.job-card:hover .job-card__link i {
+  transform: translateX(2px);
+}
+
+/* --- Empty / No Jobs Available Alert --- */
+.jobs-empty-state {
+  text-align: center;
+  background: var(--earthy-sand);
+  padding: 4rem 2rem;
+  max-width: 760px;
+  margin: 2rem auto 0;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: var(--shadow-sm);
+}
+
+.jobs-empty-state__icon {
+  font-size: 2.5rem;
+  color: var(--savanna-gold);
+  margin-bottom: 1.5rem;
+}
+
+.jobs-empty-state h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--deep-sea);
+  margin-bottom: 1rem;
+}
+
+.jobs-empty-state p {
+  color: var(--charcoal);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 580px;
+  margin: 0 auto 2rem;
+}
+
+.jobs-empty-state__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--deep-sea);
+  color: var(--white);
+  padding: 0.85rem 2.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 0;
+}
+
+.jobs-empty-state__btn:hover {
+  background: var(--deep-sea-dark);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* --- Form Layout adjustments --- */
+.careers-form-container {
+  background: var(--warm-cream);
+  padding: 3rem;
+  box-shadow: var(--shadow-sm);
+  margin-top: 1rem;
+}
+
+.careers-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2rem;
+}
+
+.careers-form-grid .form-group.full-width {
+  grid-column: span 2;
+}
+
+/* --- Custom Styled File Upload Component --- */
+.file-upload-zone {
+  border: 2px dashed #cbd5e1;
+  background: var(--white);
+  padding: 2.25rem 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.file-upload-zone:hover {
+  border-color: var(--oceanic-turquoise);
+  background: rgba(8, 145, 178, 0.02);
+}
+
+.file-upload-zone.dragover {
+  border-color: var(--oceanic-turquoise);
+  background: rgba(8, 145, 178, 0.05);
+  box-shadow: 0 0 0 4px rgba(8, 145, 178, 0.1);
+}
+
+.file-upload-zone__input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.file-upload-zone__icon {
+  font-size: 2rem;
+  color: var(--light-slate);
+  margin-bottom: 0.85rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.file-upload-zone:hover .file-upload-zone__icon {
+  color: var(--oceanic-turquoise);
+  transform: translateY(-2px);
+}
+
+.file-upload-zone__text {
+  font-size: 0.95rem;
+  color: var(--charcoal);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.file-upload-zone__subtext {
+  font-size: 0.82rem;
+  color: var(--slate);
+}
+
+.file-upload-zone__filename {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--forest-green);
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  background: rgba(22, 101, 52, 0.06);
+  padding: 0.45rem 1rem;
+  border-radius: 40px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .careers-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .careers-form-grid .form-group.full-width {
+    grid-column: span 1;
+  }
+  .careers-form-container {
+    padding: 2rem 1.5rem;
+  }
+}

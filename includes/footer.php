@@ -33,11 +33,13 @@
       <a href="culture.php">Culture</a>
       <a href="gastronomy.php">Gastronomy</a>
       <a href="community.php">Community</a>
+      <a href="offers.php">Offers</a>
     </div>
     <div>
       <h4>Connect</h4>
       <a href="contact.php">Inquiry Form</a>
       <a href="development.php">Development</a>
+      <a href="careers.php">Careers</a>
       <a href="terms-and-conditions.php">Terms & Conditions</a>
     </div>
 
