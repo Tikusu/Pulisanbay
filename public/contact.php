@@ -11,8 +11,8 @@ $navStyle = "scrolled";
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
 
-  <!-- FORM SECTION (no hero — navbar starts scrolled) -->
-  <section class="section-lg section-bg-white" style="padding-top:8rem;">
+  <!-- FORM SECTION -->
+  <section class="section-lg section-bg-white" style="padding-bottom:4rem;">
     <div class="container">
       <div class="split-section" style="gap:5rem;">
         <div class="reveal">
@@ -70,6 +70,23 @@ $navStyle = "scrolled";
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- LOCATION & ACCESSIBILITY -->
+  <section class="section-bg-white" style="padding: 0;">
+    <div style="overflow: hidden;">
+      <iframe 
+        src="https://maps.google.com/maps?q=KEK%20Pariwisata%20Likupang,%20North%20Sulawesi&t=k&z=14&ie=UTF8&iwloc=&output=embed" 
+        width="100%" 
+        height="500" 
+        style="border:0; display: block; filter: grayscale(50%) contrast(95%); transition: filter 0.3s ease;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        onmouseover="this.style.filter='none'"
+        onmouseout="this.style.filter='grayscale(15%) contrast(95%)'">
+      </iframe>
     </div>
   </section>
 
