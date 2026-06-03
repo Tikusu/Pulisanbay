@@ -110,7 +110,7 @@ $navStyle = "";
         <p>Traverse ancient trails that wind through tropical forests and open onto sweeping savanna vistas. Our guided
           treks range from gentle coastal walks to challenging hill climbs — each rewarding you with breathtaking
           panoramas of the bay, the hills, and the distant ocean horizon.</p>
-        <p>Every path tells a story of the land — from medicinal plants used by generations of Minahasa healers to the
+        <p>Every path tells a story of the land — from unique plants of Minahasa, to the
           geological formations shaped by millennia of wind and water.</p>
 
         <div class="act-trails__img-stack left-stack" style="margin-top: 3rem;">
@@ -130,7 +130,7 @@ $navStyle = "";
         <p class="act-trails__img-caption">Ancient paths through living wilderness</p>
 
         <div class="act-trails__chips reveal reveal-delay-1" style="margin-top: 2rem;">
-          <span class="act-trails__chip"><i class="fas fa-seedling"></i> Medicinal Plants</span>
+          <span class="act-trails__chip"><i class="fas fa-seedling"></i> Plants</span>
           <span class="act-trails__chip"><i class="fas fa-mountain"></i> Hill Climbs</span>
           <span class="act-trails__chip"><i class="fas fa-binoculars"></i> Bird Watching</span>
           <span class="act-trails__chip"><i class="fas fa-water"></i> Coastal Walks</span>
