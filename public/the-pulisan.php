@@ -27,7 +27,7 @@ $navStyle = "";
           the comfort and luxury you deserve.</p>
       </div>
       <div class="grid-2">
-        <a href="club-room.php" class="room-card reveal">
+        <a href="/the-pulisan/club-room" class="room-card reveal">
           <div class="room-card__img-wrapper">
             <img src="../assets/images/the-pulisan/club-room/club-room-hero.webp" alt="Club Room"
               class="room-card__img">
@@ -49,7 +49,7 @@ $navStyle = "";
           </div>
         </a>
 
-        <a href="lower-bungalow.php" class="room-card reveal reveal-delay-1">
+        <a href="/the-pulisan/lower-bungalow" class="room-card reveal reveal-delay-1">
           <div class="room-card__img-wrapper">
             <img src="../assets/images/the-pulisan/lower-bungalow/lower-bungalow-hero.webp" alt="Lower Bungalow"
               class="room-card__img">
@@ -71,7 +71,7 @@ $navStyle = "";
           </div>
         </a>
 
-        <a href="upper-bungalow.php" class="room-card reveal">
+        <a href="/the-pulisan/upper-bungalow" class="room-card reveal">
           <div class="room-card__img-wrapper">
             <img src="../assets/images/the-pulisan/upper-bungalow/upper-bungalow-hero.webp" alt="Upper Bungalow"
               class="room-card__img">
@@ -93,7 +93,7 @@ $navStyle = "";
           </div>
         </a>
 
-        <a href="minahasa-suite.php" class="room-card reveal reveal-delay-1">
+        <a href="/the-pulisan/minahasa-suite" class="room-card reveal reveal-delay-1">
           <div class="room-card__img-wrapper">
             <img src="../assets/images/the-pulisan/minahasa-suite/minahasa-suite-hero.webp" alt="Minahasa Suite"
               class="room-card__img">

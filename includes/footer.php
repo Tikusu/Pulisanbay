@@ -22,25 +22,25 @@
     </div>
     <div>
       <h4>Explore</h4>
-      <a href="about.php">About Us</a>
-      <a href="the-pulisan.php">The Pulisan</a>
-      <a href="noma-campsite.php">NOMA Campsite</a>
-      <a href="activities.php">Activities</a>
+      <a href="/about">About Us</a>
+      <a href="/the-pulisan">The Pulisan</a>
+      <a href="/noma-campsite">NOMA Campsite</a>
+      <a href="/activities">Activities</a>
     </div>
     <div>
       <h4>Discover</h4>
-      <a href="conservation.php">Conservation</a>
-      <a href="culture.php">Culture</a>
-      <a href="gastronomy.php">Gastronomy</a>
-      <a href="community.php">Community</a>
-      <a href="offers.php">Offers</a>
+      <a href="/conservation">Conservation</a>
+      <a href="/culture">Culture</a>
+      <a href="/gastronomy">Gastronomy</a>
+      <a href="/community">Community</a>
+      <a href="/offers">Offers</a>
     </div>
     <div>
       <h4>Connect</h4>
-      <a href="contact.php">Inquiry Form</a>
-      <a href="development.php">Development</a>
-      <a href="careers.php">Careers</a>
-      <a href="terms-and-conditions.php">Terms & Conditions</a>
+      <a href="/contact">Inquiry Form</a>
+      <a href="/development">Development</a>
+      <a href="/careers">Careers</a>
+      <a href="/terms-and-conditions">Terms & Conditions</a>
     </div>
 
   </div>

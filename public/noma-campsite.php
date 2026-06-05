@@ -34,7 +34,7 @@ $navStyle = ""; ?>
               <h3>Eiger Rendezvous</h3>
               <p>Our flagship tent package — a premium Eiger expedition tent with full setup, sleeping gear, camping
                 lights, and a curated comfort kit. Perfect for the discerning adventurer.</p>
-              <a href="contact.php" class="card-link" style="margin-top:1.25rem;">Book This Package <i
+              <a href="/contact" class="card-link" style="margin-top:1.25rem;">Book This Package <i
                   class="fas fa-arrow-right"></i></a>
             </div>
           </div>
@@ -44,7 +44,7 @@ $navStyle = ""; ?>
               <h3>Decathlon Arpenaz</h3>
               <p>A spacious family-friendly tent with easy setup, ideal for groups and families looking to connect with
                 nature.</p>
-              <a href="contact.php" class="card-link" style="margin-top:1.25rem;">Book This Package <i
+              <a href="/contact" class="card-link" style="margin-top:1.25rem;">Book This Package <i
                   class="fas fa-arrow-right"></i></a>
             </div>
           </div>
@@ -54,7 +54,7 @@ $navStyle = ""; ?>
               <h3>Decathlon Air Second</h3>
               <p>An innovative inflatable tent for the modern camper — set up in seconds and enjoy instant comfort.
                 Lightweight, compact, and perfectly functional.</p>
-              <a href="contact.php" class="card-link" style="margin-top:1.25rem;">Book This Package <i
+              <a href="/contact" class="card-link" style="margin-top:1.25rem;">Book This Package <i
                   class="fas fa-arrow-right"></i></a>
             </div>
           </div>
@@ -96,7 +96,7 @@ $navStyle = ""; ?>
               <p>Clean restrooms, showers, and changing rooms.</p>
             </div>
           </div>
-          <a href="contact.php" class="btn-cta-dark" style="display:none;margin-top:0.5rem;">Inquire About Rates <i
+          <a href="/contact" class="btn-cta-dark" style="display:none;margin-top:0.5rem;">Inquire About Rates <i
               class="fas fa-arrow-right"></i></a>
         </div>
         <div class="reveal reveal-delay-2">

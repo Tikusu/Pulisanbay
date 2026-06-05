@@ -21,8 +21,8 @@ $navStyle = "";
       <p>A regenerative sanctuary in the heart of the Coral Triangle — where every footprint restores, every moment
         reconnects, and every horizon tells a story.</p>
       <!-- <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-        <a href="about.php" class="btn-cta-outline">Discover Our Story</a>
-        <a href="contact.php" class="btn-cta">Plan Your Escape</a>
+        <a href="/about" class="btn-cta-outline">Discover Our Story</a>
+        <a href="/contact" class="btn-cta">Plan Your Escape</a>
       </div> -->
     </div>
     <div class="hero-scroll-indicator"><span></span></div>
@@ -41,7 +41,7 @@ $navStyle = "";
           <p style="color:var(--slate);margin-bottom:2rem;">Every trail you walk helps protect ancient forests. Every
             meal you savor sustains local fishermen and farmers. Every sunrise you witness is a testament to an
             ecosystem being lovingly restored. This is not just a holiday — it is a partnership with the earth.</p>
-          <a href="about.php" class="btn-cta-dark">Our Story <i class="fas fa-arrow-right"></i></a>
+          <a href="/about" class="btn-cta-dark">Our Story <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="reveal reveal-delay-2">
           <div class="section-img" style="box-shadow:var(--shadow-lg);">
@@ -63,7 +63,7 @@ $navStyle = "";
           Pulisanbay.</p>
       </div>
       <div class="grid-2 reveal">
-        <a href="the-pulisan.php" class="acco-card">
+        <a href="/the-pulisan" class="acco-card">
           <img src="../assets/images/the-pulisan/main-page/the-pulisan-hero.webp" alt="The Pulisan Resort"
             class="acco-card__img" loading="lazy">
           <div class="acco-card__overlay-base"></div>
@@ -85,7 +85,7 @@ $navStyle = "";
             </div>
           </div>
         </a>
-        <a href="noma-campsite.php" class="acco-card">
+        <a href="/noma-campsite" class="acco-card">
           <img src="../assets/images/noma/noma-hero.webp" alt="NOMA Campsite" class="acco-card__img" loading="lazy">
           <div class="acco-card__overlay-base"></div>
           <div class="acco-card__overlay-hover"></div>
@@ -120,7 +120,7 @@ $navStyle = "";
           Pulisanbay is a story waiting to unfold.</p>
       </div>
       <div class="grid-4 reveal">
-        <a href="activities.php" class="card" style="text-decoration:none;color:inherit;">
+        <a href="/activities" class="card" style="text-decoration:none;color:inherit;">
           <div class="card-img-wrapper"><img src="../assets/images/activities/activities-hero.webp" alt="Activities"
               class="card-img"></div>
           <div class="card-body">
@@ -129,7 +129,7 @@ $navStyle = "";
                 class="fas fa-arrow-right"></i></span>
           </div>
         </a>
-        <a href="conservation.php" class="card" style="text-decoration:none;color:inherit;">
+        <a href="/conservation" class="card" style="text-decoration:none;color:inherit;">
           <div class="card-img-wrapper"><img src="../assets/images/conservation-teaser.webp" alt="Conservation"
               class="card-img"></div>
           <div class="card-body">
@@ -138,7 +138,7 @@ $navStyle = "";
               <i class="fas fa-arrow-right"></i></span>
           </div>
         </a>
-        <a href="culture.php" class="card" style="text-decoration:none;color:inherit;">
+        <a href="/culture" class="card" style="text-decoration:none;color:inherit;">
           <div class="card-img-wrapper"><img src="../assets/images/culture/gitar-mama.webp" alt="Culture" class="card-img">
           </div>
           <div class="card-body">
@@ -147,7 +147,7 @@ $navStyle = "";
               class="card-link">Discover <i class="fas fa-arrow-right"></i></span>
           </div>
         </a>
-        <a href="gastronomy.php" class="card" style="text-decoration:none;color:inherit;">
+        <a href="/gastronomy" class="card" style="text-decoration:none;color:inherit;">
           <div class="card-img-wrapper"><img src="../assets/images/gastronomy/gastronomy-hero.webp" alt="Gastronomy"
               class="card-img"></div>
           <div class="card-body">
@@ -186,7 +186,7 @@ $navStyle = "";
           <h3>Memorable</h3>
         </div>
       </div>
-      <a href="about.php" class="btn-cta-dark"
+      <a href="/about" class="btn-cta-dark"
         style="background: var(--oceanic-turquoise);font-size:1rem;padding:0.85rem 2.5rem;margin-top:3rem;">
         Learn More <i class="fas fa-arrow-right" style="margin-left:4px;"></i>
       </a>

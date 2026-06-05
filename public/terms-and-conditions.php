@@ -201,7 +201,7 @@ $navStyle = "";
         <h2 id="group-policy">Group Policy</h2>
         <p>Available for a booking with a minimum of 7 rooms of up to 14 persons, with a minimum stay of 5 nights. For
           inquiries, please email us at <a href="mailto:inquiry@thepulisan.com">inquiry@thepulisan.com</a>, or fill out
-          our <a href="contact.php">inquiry form</a>.</p>
+          our <a href="/contact">inquiry form</a>.</p>
 
         <h2 id="minimum-stay">Minimum Stay Policy</h2>
         <p>A minimum stay of 3 nights is required during the Christmas and New Year period (December 20—January 5). No
@@ -241,7 +241,7 @@ $navStyle = "";
         <ol>
           <li><strong>Notifications:</strong> Any cancellations must be sent to The Pulisan in writing via email to <a
               href="mailto:reservation@thepulisan.com">reservation@thepulisan.com</a> or fill out our <a
-              href="contact.php">contact form</a> at
+              href="/contact">contact form</a> at
             least 14 days before arrival.</li>
           <li><strong>Late Cancellations:</strong> No cancellations will be accepted less than 14 days (2 weeks) before
             the initial arrival date, except in cases of a force majeure event.</li>
@@ -251,7 +251,7 @@ $navStyle = "";
 
         <h2 id="submission">Reservation Submission and Policy</h2>
         <ol>
-          <li><strong>Reservation Submission:</strong> Fill out our <a href="contact.php">inquiry form</a> or submit
+          <li><strong>Reservation Submission:</strong> Fill out our <a href="/contact">inquiry form</a> or submit
             manually to The Pulisan
             reservations department at <a href="mailto:reservation@thepulisan.com">reservation@thepulisan.com</a> and
             via WhatsApp only to <a href="https://wa.me/6282196659675">+62 821 9665 9675</a>. *All reservations are
@@ -271,7 +271,7 @@ $navStyle = "";
               and no cancellations or requests for additional meals will be accepted on-site.</small>
           </li>
           <li>A 3-day reservation in advance is mandatory for day-use guests and is subject to limited capacity.</li>
-          <li>For day-use reservations, please use our <a href="contact.php">inquiry form</a> or send us a WhatsApp text
+          <li>For day-use reservations, please use our <a href="/contact">inquiry form</a> or send us a WhatsApp text
             to <a href="https://wa.me/6282196659675">+62
               821 9665 9675</a>.</li>
         </ul>

@@ -9,7 +9,7 @@
 $navClass = !empty($navStyle) ? "navbar $navStyle" : "navbar";
 ?>
 <nav class="<?= $navClass ?>" id="navbar">
-  <a href="index.php" class="logo">
+  <a href="/" class="logo">
     <img src="../assets/images/logo/pulisanbay-sez-logo-white.webp" alt="Pulisanbay Logo" class="logo-white">
     <img src="../assets/images/logo/pulisanbay-sez-logo-dark.webp" alt="Pulisanbay Logo" class="logo-dark">
   </a>
@@ -17,32 +17,32 @@ $navClass = !empty($navStyle) ? "navbar $navStyle" : "navbar";
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links" id="navLinks">
-    <li><a href="index.php">Home</a></li>
-    <li><a href="about.php">About Us</a></li>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About Us</a></li>
     <li>
       <a href="#" class="dropdown-toggle">Accommodation <i class="fas fa-chevron-down"
           style="font-size:0.65rem"></i></a>
       <div class="dropdown-menu">
-        <a href="the-pulisan.php">The Pulisan</a>
-        <a href="noma-campsite.php">NOMA Campsite</a>
+        <a href="/the-pulisan">The Pulisan</a>
+        <a href="/noma-campsite">NOMA Campsite</a>
       </div>
     </li>
     <li>
       <a href="#" class="dropdown-toggle">Experiences <i class="fas fa-chevron-down" style="font-size:0.65rem"></i></a>
       <div class="dropdown-menu">
-        <a href="activities.php">Activities</a>
-        <a href="conservation.php">Conservation</a>
-        <a href="culture.php">Culture</a>
-        <a href="gastronomy.php">Gastronomy</a>
+        <a href="/activities">Activities</a>
+        <a href="/conservation">Conservation</a>
+        <a href="/culture">Culture</a>
+        <a href="/gastronomy">Gastronomy</a>
       </div>
     </li>
     <li>
       <a href="#" class="dropdown-toggle">What's On <i class="fas fa-chevron-down" style="font-size:0.65rem"></i></a>
       <div class="dropdown-menu">
-        <a href="community.php">Community</a>
-        <a href="development.php">Development</a>
+        <a href="/community">Community</a>
+        <a href="/development">Development</a>
       </div>
     </li>
-    <li><a href="contact.php" class="btn-cta">Inquire Now</a></li>
+    <li><a href="/contact" class="btn-cta">Inquire Now</a></li>
   </ul>
 </nav>

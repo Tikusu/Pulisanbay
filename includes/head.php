@@ -12,6 +12,7 @@ require_once __DIR__ . '/../config/env.php';
 $isProd = (getenv('APP_ENV') ?: ($_ENV['APP_ENV'] ?? 'development')) === 'production';
 ?>
 <meta charset="UTF-8">
+<base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= htmlspecialchars($pageTitle ?? 'Pulisanbay') ?></title>
 <meta name="description" content="<?= htmlspecialchars($pageDescription ?? '') ?>">
