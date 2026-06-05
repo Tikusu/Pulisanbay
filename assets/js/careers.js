@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
       btnText.textContent = STRINGS.SUBMITTING;
 
       try {
-        const response = await fetch("../api/submit-application.php", {
+        const response = await fetch("/api/submit-application", {
           method: "POST",
           body: formData // Fetch sets content-type header automatically for FormData
         });

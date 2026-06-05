@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btnText.textContent = FORM_STRINGS.SENDING;
 
     try {
-      const res = await fetch("../api/submit-inquiry.php", {
+      const res = await fetch("/api/submit-inquiry", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(fields),
