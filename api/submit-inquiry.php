@@ -99,22 +99,53 @@ $email = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
 $whatsapp = htmlspecialchars($whatsapp, ENT_QUOTES, 'UTF-8');
 $message = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
 
-try {
-    $db = getDB();
-    $stmt = $db->prepare("INSERT INTO inquiries (name, email, whatsapp, message) VALUES (:name, :email, :whatsapp, :message)");
-    $stmt->execute([
-        ':name' => $name,
-        ':email' => $email,
-        ':whatsapp' => $whatsapp,
-        ':message' => $message
-    ]);
+// Insert via Supabase REST API (bypasses shared hosting outbound firewall blocks on port 5432)
+$supabaseUrl = getenv('SUPABASE_URL') ?: $_ENV['SUPABASE_URL'] ?? '';
+$supabaseKey = getenv('SUPABASE_KEY') ?: $_ENV['SUPABASE_KEY'] ?? '';
 
-    // Record successful submission time for rate limiting
-    $_SESSION['last_submission_time'] = time();
+if (empty($supabaseUrl) || empty($supabaseKey)) {
+    error_log('Supabase credentials are not configured.');
+    http_response_code(500);
+    echo json_encode(['success' => false, 'error' => 'Server configuration error.']);
+    exit;
+}
 
-    echo json_encode(['success' => true, 'message' => 'Inquiry submitted successfully.']);
-} catch (Exception $e) {
-    error_log('Inquiry submission failed: ' . $e->getMessage());
+$restEndpoint = rtrim($supabaseUrl, '/') . '/rest/v1/inquiries';
+$payload = json_encode([
+    'name' => $name,
+    'email' => $email,
+    'whatsapp' => $whatsapp,
+    'message' => $message
+]);
+
+$ch = curl_init($restEndpoint);
+curl_setopt_array($ch, [
+    CURLOPT_POST => true,
+    CURLOPT_POSTFIELDS => $payload,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_HTTPHEADER => [
+        'apikey: ' . $supabaseKey,
+        'Authorization: Bearer ' . $supabaseKey,
+        'Content-Type: application/json',
+        'Prefer: return=minimal'
+    ],
+    CURLOPT_TIMEOUT => 30,
+    CURLOPT_SSL_VERIFYPEER => ($appEnv === 'production')
+]);
+
+$curlResponse = curl_exec($ch);
+$httpStatus = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+$curlError = curl_error($ch);
+curl_close($ch);
+
+if ($curlError || $httpStatus >= 300) {
+    error_log('Supabase REST API insert failed: HTTP ' . $httpStatus . ' | ' . $curlResponse . ' | cURL: ' . $curlError);
     http_response_code(500);
     echo json_encode(['success' => false, 'error' => 'Server error. Please try again later.']);
+    exit;
 }
+
+// Record successful submission time for rate limiting
+$_SESSION['last_submission_time'] = time();
+
+echo json_encode(['success' => true, 'message' => 'Inquiry submitted successfully.']);

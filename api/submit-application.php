@@ -185,31 +185,46 @@ if ($curlError || ($httpStatus !== 200 && $httpStatus !== 200)) {
 // Build the public/storage URL for the uploaded file
 $cvStoragePath = rtrim($supabaseUrl, '/') . '/storage/v1/object/public/' . $storageBucket . '/' . $uniqueFilename;
 
-// Insert Application into Supabase Database
-require_once __DIR__ . '/../config/db.php';
+// Insert Application into Supabase Database via REST API (bypasses shared hosting outbound firewall blocks on port 5432)
+$restEndpoint = rtrim($supabaseUrl, '/') . '/rest/v1/job_applications';
+$payload = json_encode([
+    'name' => $name,
+    'email' => $email,
+    'phone' => $phone,
+    'previous_position' => $prevPosition,
+    'division' => $division,
+    'expected_salary' => $expectedSalary,
+    'cv_path' => $cvStoragePath
+]);
 
-try {
-    $db = getDB();
-    $stmt = $db->prepare("
-        INSERT INTO job_applications (name, email, phone, previous_position, division, expected_salary, cv_path)
-        VALUES (:name, :email, :phone, :previous_position, :division, :expected_salary, :cv_path)
-    ");
-    $stmt->execute([
-        ':name'              => $name,
-        ':email'             => $email,
-        ':phone'             => $phone,
-        ':previous_position' => $prevPosition,
-        ':division'          => $division,
-        ':expected_salary'   => $expectedSalary,
-        ':cv_path'           => $cvStoragePath,
-    ]);
+$ch2 = curl_init($restEndpoint);
+curl_setopt_array($ch2, [
+    CURLOPT_POST => true,
+    CURLOPT_POSTFIELDS => $payload,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_HTTPHEADER => [
+        'apikey: ' . $supabaseKey,
+        'Authorization: Bearer ' . $supabaseKey,
+        'Content-Type: application/json',
+        'Prefer: return=minimal'
+    ],
+    CURLOPT_TIMEOUT => 30,
+    CURLOPT_SSL_VERIFYPEER => ($appEnv === 'production')
+]);
 
-    // Record successful submission for rate limiting
-    $_SESSION['last_application_time'] = time();
+$curlResponse2 = curl_exec($ch2);
+$httpStatus2 = curl_getinfo($ch2, CURLINFO_HTTP_CODE);
+$curlError2 = curl_error($ch2);
+curl_close($ch2);
 
-    echo json_encode(['success' => true, 'message' => 'Application submitted successfully.']);
-} catch (Exception $e) {
-    error_log('Job application DB insert failed: ' . $e->getMessage());
+if ($curlError2 || $httpStatus2 >= 300) {
+    error_log('Job application DB insert failed: HTTP ' . $httpStatus2 . ' | ' . $curlResponse2 . ' | cURL: ' . $curlError2);
     http_response_code(500);
     echo json_encode(['success' => false, 'error' => 'Server error. Please try again later.']);
+    exit;
 }
+
+// Record successful submission for rate limiting
+$_SESSION['last_application_time'] = time();
+
+echo json_encode(['success' => true, 'message' => 'Application submitted successfully.']);
