@@ -10,3 +10,6 @@ other-resources/
 
 # node
 node_modules/
+
+# zip files
+*.zip
