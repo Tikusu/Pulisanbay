@@ -11,16 +11,35 @@ $pageTitle = "Careers — Join the Pulisanbay Team | North Sulawesi";
 $pageDescription = "Build a career at Pulisanbay, a regenerative tourism sanctuary in KEK Likupang. Explore open positions and apply to be part of our mission to restore nature and empower communities.";
 $navStyle = "scrolled";
 
-// Fetch available jobs from Supabase
+// Fetch available jobs from Supabase via REST API
 $availableJobs = [];
-try {
-    require_once __DIR__ . '/../config/db.php';
-    $db = getDB();
-    $stmt = $db->query("SELECT id, title, department, description FROM jobs WHERE available = true ORDER BY created_at ASC");
-    $availableJobs = $stmt->fetchAll(PDO::FETCH_ASSOC);
-} catch (Exception $e) {
-    error_log('Failed to fetch jobs: ' . $e->getMessage());
-    $availableJobs = [];
+require_once __DIR__ . '/../config/env.php';
+$supabaseUrl = getenv('SUPABASE_URL') ?: $_ENV['SUPABASE_URL'] ?? '';
+$supabaseKey = getenv('SUPABASE_KEY') ?: $_ENV['SUPABASE_KEY'] ?? '';
+
+if (!empty($supabaseUrl) && !empty($supabaseKey)) {
+    $jobsEndpoint = rtrim($supabaseUrl, '/') . '/rest/v1/jobs?select=id,title,department,description&available=eq.true&order=created_at.asc';
+    $ch = curl_init($jobsEndpoint);
+    curl_setopt_array($ch, [
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_HTTPHEADER => [
+            'apikey: ' . $supabaseKey,
+            'Authorization: Bearer ' . $supabaseKey,
+            'Content-Type: application/json',
+        ],
+        CURLOPT_TIMEOUT => 10,
+        CURLOPT_SSL_VERIFYPEER => true,
+    ]);
+    $response = curl_exec($ch);
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    $curlError = curl_error($ch);
+    curl_close($ch);
+
+    if (!$curlError && $httpCode === 200) {
+        $availableJobs = json_decode($response, true) ?? [];
+    } else {
+        error_log('Failed to fetch jobs: HTTP ' . $httpCode . ' | ' . $curlError . ' | ' . $response);
+    }
 }
 ?>
 <!DOCTYPE html>
