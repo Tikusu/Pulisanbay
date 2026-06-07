@@ -12,7 +12,7 @@ $navStyle = "";
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
 
   <?php
-  $heroImage = '../assets/images/the-pulisan/main-page/the-pulisan-hero.webp';
+  $heroImage = '/assets/images/the-pulisan/main-page/the-pulisan-hero.webp';
   $heroTitle = 'The Pulisan';
   $heroSubtitle = 'An exclusive collection of bungalows and suites where traditional Minahasa architecture meets modern luxury — perched between emerald hills and the turquoise sea.';
   include __DIR__ . '/../includes/hero.php';
@@ -29,7 +29,7 @@ $navStyle = "";
       <div class="grid-2">
         <a href="/the-pulisan/club-room" class="room-card reveal">
           <div class="room-card__img-wrapper">
-            <img src="../assets/images/the-pulisan/club-room/club-room-hero.webp" alt="Club Room"
+            <img src="/assets/images/the-pulisan/club-room/club-room-hero.webp" alt="Club Room"
               class="room-card__img">
           </div>
           <div class="room-card__content">
@@ -51,7 +51,7 @@ $navStyle = "";
 
         <a href="/the-pulisan/lower-bungalow" class="room-card reveal reveal-delay-1">
           <div class="room-card__img-wrapper">
-            <img src="../assets/images/the-pulisan/lower-bungalow/lower-bungalow-hero.webp" alt="Lower Bungalow"
+            <img src="/assets/images/the-pulisan/lower-bungalow/lower-bungalow-hero.webp" alt="Lower Bungalow"
               class="room-card__img">
           </div>
           <div class="room-card__content">
@@ -73,7 +73,7 @@ $navStyle = "";
 
         <a href="/the-pulisan/upper-bungalow" class="room-card reveal">
           <div class="room-card__img-wrapper">
-            <img src="../assets/images/the-pulisan/upper-bungalow/upper-bungalow-hero.webp" alt="Upper Bungalow"
+            <img src="/assets/images/the-pulisan/upper-bungalow/upper-bungalow-hero.webp" alt="Upper Bungalow"
               class="room-card__img">
           </div>
           <div class="room-card__content">
@@ -95,7 +95,7 @@ $navStyle = "";
 
         <a href="/the-pulisan/minahasa-suite" class="room-card reveal reveal-delay-1">
           <div class="room-card__img-wrapper">
-            <img src="../assets/images/the-pulisan/minahasa-suite/minahasa-suite-hero.webp" alt="Minahasa Suite"
+            <img src="/assets/images/the-pulisan/minahasa-suite/minahasa-suite-hero.webp" alt="Minahasa Suite"
               class="room-card__img">
           </div>
           <div class="room-card__content">
@@ -184,7 +184,7 @@ $navStyle = "";
         </div>
         <div class="reveal reveal-delay-2">
           <div class="section-img" style="box-shadow:var(--shadow-lg);"><img
-              src="../assets/images/the-pulisan/main-page/the-pulisan-offers.webp" alt="The Pulisan" class="img-cover"
+              src="/assets/images/the-pulisan/main-page/the-pulisan-offers.webp" alt="The Pulisan" class="img-cover"
               style="height:450px;">
           </div>
         </div>
@@ -197,7 +197,7 @@ $navStyle = "";
   $ctaLabel = "Inquire Now";
   include __DIR__ . '/../includes/cta-banner.php'; ?>
   <?php include __DIR__ . '/../includes/footer.php'; ?>
-  <script src="../assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
+  <script src="/assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
 </body>
 
 </html>

@@ -49,18 +49,18 @@ $ogImage = $baseUrl . '/assets/images/hero-pulisan.png'; // Default OG image
 
 <?php if ($isProd): ?>
   <!-- Production: single bundled & minified CSS -->
-  <link rel="stylesheet" href="../assets/dist/css/index.min.css">
+  <link rel="stylesheet" href="/assets/dist/css/index.min.css">
 <?php else: ?>
   <!-- Development: individual CSS modules (loaded in dependency order) -->
-  <link rel="stylesheet" href="../assets/css/variables.css">
-  <link rel="stylesheet" href="../assets/css/base.css">
-  <link rel="stylesheet" href="../assets/css/layout.css">
-  <link rel="stylesheet" href="../assets/css/navigation.css">
-  <link rel="stylesheet" href="../assets/css/hero.css">
-  <link rel="stylesheet" href="../assets/css/components.css">
-  <link rel="stylesheet" href="../assets/css/footer.css">
-  <link rel="stylesheet" href="../assets/css/carousel.css">
-  <link rel="stylesheet" href="../assets/css/utilities.css">
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/navigation.css">
+  <link rel="stylesheet" href="/assets/css/hero.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+  <link rel="stylesheet" href="/assets/css/carousel.css">
+  <link rel="stylesheet" href="/assets/css/utilities.css">
 <?php endif; ?>
 
 <!-- Font Awesome Icons -->

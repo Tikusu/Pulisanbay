@@ -8,14 +8,14 @@ $navStyle = ""; ?>
   <?php include __DIR__ . '/../includes/head.php'; ?>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <link rel="stylesheet"
-    href="../assets/<?= $isProd ? 'dist/css/culture-enhanced.min.css' : 'css/culture-enhanced.css' ?>" />
+    href="/assets/<?= $isProd ? 'dist/css/culture-enhanced.min.css' : 'css/culture-enhanced.css' ?>" />
 </head>
 
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
 
   <?php
-  $heroImage = '../assets/images/culture/culture-hero.webp';
+  $heroImage = '/assets/images/culture/culture-hero.webp';
   $heroTitle = 'Culture';
   $heroSubtitle = 'Where the ancient rhythms of Minahasa still echo through the hills — and every tradition is a bridge between the past and the future.';
   include __DIR__ . '/../includes/hero.php';
@@ -41,7 +41,7 @@ $navStyle = ""; ?>
 
         <div class="cult-waruga__img-stack left-stack" style="margin-top: 3rem;">
           <div class="cult-waruga__img-main">
-            <img src="../assets/images/culture/amphitheatre2.webp" style="aspect-ratio: 3/2;" alt="Waruga heritage">
+            <img src="/assets/images/culture/amphitheatre2.webp" style="aspect-ratio: 3/2;" alt="Waruga heritage">
           </div>
         </div>
       </div>
@@ -50,7 +50,7 @@ $navStyle = ""; ?>
       <div class="cult-waruga__img-col reveal reveal-delay-2">
         <div class="cult-waruga__img-stack right-stack">
           <div class="cult-waruga__img-main">
-            <img src="../assets/images/culture/amphitheatre.webp" style="aspect-ratio: 2 / 3;"
+            <img src="/assets/images/culture/amphitheatre.webp" style="aspect-ratio: 2 / 3;"
               alt="Amphitheatre at Pulisanbay">
           </div>
         </div>
@@ -123,7 +123,7 @@ $navStyle = ""; ?>
             ?>
             <div class="swiper-slide">
               <div class="cult-echoes__slide-img">
-                <img src="../assets/images/culture/echoes-of-minahasa/<?= str_replace(' ', '%20', $img) ?>"
+                <img src="/assets/images/culture/echoes-of-minahasa/<?= str_replace(' ', '%20', $img) ?>"
                   alt="<?= $alt ?>">
               </div>
             </div>
@@ -137,8 +137,8 @@ $navStyle = ""; ?>
   <?php include __DIR__ . '/../includes/footer.php'; ?>
   <?php include __DIR__ . '/../includes/lightbox.php'; ?>
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-  <script src="../assets/<?= $isProd ? 'dist/js/carousel.min.js' : 'js/carousel.js' ?>"></script>
-  <script src="../assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
+  <script src="/assets/<?= $isProd ? 'dist/js/carousel.min.js' : 'js/carousel.js' ?>"></script>
+  <script src="/assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
 </body>
 
 </html>

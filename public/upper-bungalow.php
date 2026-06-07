@@ -10,7 +10,7 @@ $navStyle = ""; ?>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
 
   <?php
-  $heroImage = '../assets/images/the-pulisan/upper-bungalow/upper-bungalow-hero.webp';
+  $heroImage = '/assets/images/the-pulisan/upper-bungalow/upper-bungalow-hero.webp';
   $heroTitle = 'Upper Bungalow';
   $heroSubtitle = 'Elevated among the hillside canopy — where every sunrise feels like it was painted just for you.';
   include __DIR__ . '/../includes/hero.php';
@@ -22,13 +22,13 @@ $navStyle = ""; ?>
         <h2>Your Perch Above Paradise</h2>
       </div>
       <div class="gallery-grid reveal">
-        <div class="gallery-item"><img src="../assets/images/the-pulisan/upper-bungalow/upper-bungalow-balcony.webp" alt="Upper Bungalow Private Balcony"></div>
-        <div class="gallery-item"><img src="../assets/images/the-pulisan/upper-bungalow/upper-bungalow-balcony2.webp" alt="Upper Bungalow Balcony Seating"></div>
-        <div class="gallery-item"><img src="../assets/images/the-pulisan/upper-bungalow/upper-bungalow-bedroom.webp" alt="Upper Bungalow Hillside Bedroom"></div>
-        <div class="gallery-item"><img src="../assets/images/the-pulisan/upper-bungalow/upper-bungalow-bedroom2.webp" alt="Upper Bungalow Panorama Bedroom"></div>
-        <div class="gallery-item"><img src="../assets/images/the-pulisan/upper-bungalow/upper-bungalow-bed.webp" alt="Upper Bungalow Comfortable Bed"></div>
-        <div class="gallery-item"><img src="../assets/images/the-pulisan/upper-bungalow/bungalow-bathroom.webp" alt="Upper Bungalow Hillside Bathroom"></div>
-        <!-- <div class="gallery-item"><img src="../assets/images/the-pulisan/upper-bungalow/upper-bungalow-hero.webp" alt="Upper Bungalow Hillside View"></div> -->
+        <div class="gallery-item"><img src="/assets/images/the-pulisan/upper-bungalow/upper-bungalow-balcony.webp" alt="Upper Bungalow Private Balcony"></div>
+        <div class="gallery-item"><img src="/assets/images/the-pulisan/upper-bungalow/upper-bungalow-balcony2.webp" alt="Upper Bungalow Balcony Seating"></div>
+        <div class="gallery-item"><img src="/assets/images/the-pulisan/upper-bungalow/upper-bungalow-bedroom.webp" alt="Upper Bungalow Hillside Bedroom"></div>
+        <div class="gallery-item"><img src="/assets/images/the-pulisan/upper-bungalow/upper-bungalow-bedroom2.webp" alt="Upper Bungalow Panorama Bedroom"></div>
+        <div class="gallery-item"><img src="/assets/images/the-pulisan/upper-bungalow/upper-bungalow-bed.webp" alt="Upper Bungalow Comfortable Bed"></div>
+        <div class="gallery-item"><img src="/assets/images/the-pulisan/upper-bungalow/bungalow-bathroom.webp" alt="Upper Bungalow Hillside Bathroom"></div>
+        <!-- <div class="gallery-item"><img src="/assets/images/the-pulisan/upper-bungalow/upper-bungalow-hero.webp" alt="Upper Bungalow Hillside View"></div> -->
       </div>
     </div>
   </section>
@@ -95,7 +95,7 @@ $navStyle = ""; ?>
         </div>
         <div class="reveal reveal-delay-2">
           <div class="section-img" style="box-shadow:var(--shadow-lg);"><img
-              src="../assets/images/the-pulisan/upper-bungalow/upper-bungalow-bedroom2.webp" alt="Upper Bungalow Cozy Stay" class="img-cover"
+              src="/assets/images/the-pulisan/upper-bungalow/upper-bungalow-bedroom2.webp" alt="Upper Bungalow Cozy Stay" class="img-cover"
               style="height:500px;"></div>
         </div>
       </div>
@@ -111,7 +111,7 @@ $navStyle = ""; ?>
 
   <?php include __DIR__ . '/../includes/footer.php'; ?>
   <?php include __DIR__ . '/../includes/lightbox.php'; ?>
-  <script src="../assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
+  <script src="/assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
 </body>
 
 </html>

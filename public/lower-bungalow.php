@@ -10,7 +10,7 @@ $navStyle = ""; ?>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
 
   <?php
-  $heroImage = '../assets/images/the-pulisan/lower-bungalow/lower-bungalow-hero.webp';
+  $heroImage = '/assets/images/the-pulisan/lower-bungalow/lower-bungalow-hero.webp';
   $heroTitle = 'Lower Bungalow';
   $heroSubtitle = 'Nestled among tropical gardens — an intimate escape where nature is your nearest neighbor.';
   include __DIR__ . '/../includes/hero.php';
@@ -22,12 +22,12 @@ $navStyle = ""; ?>
         <h2>Where the Garden Meets the Sea</h2>
       </div>
       <div class="gallery-grid reveal">
-        <div class="gallery-item"><img src="../assets/images/the-pulisan/lower-bungalow/lower-bungalow-balcony.webp" alt="Lower Bungalow Private Balcony"></div>
-        <div class="gallery-item"><img src="../assets/images/the-pulisan/lower-bungalow/lower-bungalow-balcony-table.webp" alt="Lower Bungalow Balcony Seating"></div>
-        <div class="gallery-item"><img src="../assets/images/the-pulisan/lower-bungalow/lower-bungalow-bedroom.webp" alt="Lower Bungalow Cozy Bedroom"></div>
-        <div class="gallery-item"><img src="../assets/images/the-pulisan/lower-bungalow/lower-bungalow-berdroom2.webp" alt="Lower Bungalow Bedroom Detail"></div>
-        <div class="gallery-item"><img src="../assets/images/the-pulisan/lower-bungalow/bungalow-bathroom.webp" alt="Lower Bungalow Modern Bathroom"></div>
-        <!-- <div class="gallery-item"><img src="../assets/images/the-pulisan/lower-bungalow/lower-bungalow-hero.webp" alt="Lower Bungalow Tropical View"></div> -->
+        <div class="gallery-item"><img src="/assets/images/the-pulisan/lower-bungalow/lower-bungalow-balcony.webp" alt="Lower Bungalow Private Balcony"></div>
+        <div class="gallery-item"><img src="/assets/images/the-pulisan/lower-bungalow/lower-bungalow-balcony-table.webp" alt="Lower Bungalow Balcony Seating"></div>
+        <div class="gallery-item"><img src="/assets/images/the-pulisan/lower-bungalow/lower-bungalow-bedroom.webp" alt="Lower Bungalow Cozy Bedroom"></div>
+        <div class="gallery-item"><img src="/assets/images/the-pulisan/lower-bungalow/lower-bungalow-berdroom2.webp" alt="Lower Bungalow Bedroom Detail"></div>
+        <div class="gallery-item"><img src="/assets/images/the-pulisan/lower-bungalow/bungalow-bathroom.webp" alt="Lower Bungalow Modern Bathroom"></div>
+        <!-- <div class="gallery-item"><img src="/assets/images/the-pulisan/lower-bungalow/lower-bungalow-hero.webp" alt="Lower Bungalow Tropical View"></div> -->
       </div>
     </div>
   </section>
@@ -94,7 +94,7 @@ $navStyle = ""; ?>
         </div>
         <div class="reveal reveal-delay-2">
           <div class="section-img" style="box-shadow:var(--shadow-lg);"><img
-              src="../assets/images/the-pulisan/lower-bungalow/lower-bungalow-bedroom.webp" alt="Lower Bungalow Cozy Stay" class="img-cover"
+              src="/assets/images/the-pulisan/lower-bungalow/lower-bungalow-bedroom.webp" alt="Lower Bungalow Cozy Stay" class="img-cover"
               style="height:500px;"></div>
         </div>
       </div>
@@ -110,7 +110,7 @@ $navStyle = ""; ?>
 
   <?php include __DIR__ . '/../includes/footer.php'; ?>
   <?php include __DIR__ . '/../includes/lightbox.php'; ?>
-  <script src="../assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
+  <script src="/assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
 </body>
 
 </html>

@@ -10,14 +10,14 @@ $navStyle = "";
   <?php include __DIR__ . '/../includes/head.php'; ?>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <link rel="stylesheet"
-    href="../assets/<?= $isProd ? 'dist/css/activities-enhanced.min.css' : 'css/activities-enhanced.css' ?>" />
+    href="/assets/<?= $isProd ? 'dist/css/activities-enhanced.min.css' : 'css/activities-enhanced.css' ?>" />
 </head>
 
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
 
   <?php
-  $heroImage = '../assets/images/activities/activities-hero.webp';
+  $heroImage = '/assets/images/activities/activities-hero.webp';
   $heroTitle = 'Activities';
   $heroSubtitle = 'From the depths of the Coral Triangle to the peaks of ancient savanna hills — every adventure at Pulisanbay writes a chapter of your story.';
   include __DIR__ . '/../includes/hero.php';
@@ -29,7 +29,7 @@ $navStyle = "";
       <!-- Image side -->
       <div class="act-water__img-stack reveal">
         <div class="act-water__img-main">
-          <img src="../assets/images/activities/kayaking.webp" alt="Kayaking at Pulisanbay">
+          <img src="/assets/images/activities/kayaking.webp" alt="Kayaking at Pulisanbay">
         </div>
         <div class="act-water__badge">
           <span class="act-water__badge-num">∞</span>
@@ -67,7 +67,7 @@ $navStyle = "";
     <div class="act-marine__inner reveal">
       <!-- Left: Image -->
       <div class="act-marine__img-panel">
-        <img src="../assets/images/activities/diving.webp" alt="Scuba Diving at Pulisanbay">
+        <img src="/assets/images/activities/diving.webp" alt="Scuba Diving at Pulisanbay">
       </div>
 
       <!-- Right: Text -->
@@ -115,7 +115,7 @@ $navStyle = "";
 
         <div class="act-trails__img-stack left-stack" style="margin-top: 3rem;">
           <div class="act-trails__img-main">
-            <img src="../assets/images/activities/savanna.webp" alt="Eco-Trekking trails at Pulisanbay">
+            <img src="/assets/images/activities/savanna.webp" alt="Eco-Trekking trails at Pulisanbay">
           </div>
         </div>
       </div>
@@ -124,7 +124,7 @@ $navStyle = "";
       <div class="act-trails__img-col reveal reveal-delay-2">
         <div class="act-trails__img-stack right-stack">
           <div class="act-trails__img-main">
-            <img src="../assets/images/activities/eco-trail.webp" alt="Tropical forest at Pulisanbay">
+            <img src="/assets/images/activities/eco-trail.webp" alt="Tropical forest at Pulisanbay">
           </div>
         </div>
         <p class="act-trails__img-caption">Ancient paths through living wilderness</p>
@@ -154,28 +154,28 @@ $navStyle = "";
         <div class="swiper-wrapper">
           <!-- Original slides -->
           <div class="swiper-slide">
-            <img src="../assets/images/wildlife/Yaki.webp" alt="Yaki — Sulawesi Black Crested Macaque">
+            <img src="/assets/images/wildlife/Yaki.webp" alt="Yaki — Sulawesi Black Crested Macaque">
             <span class="card-badge">Macaca nigra</span>
           </div>
           <div class="swiper-slide">
-            <img src="../assets/images/wildlife/Tarsius.webp" alt="Tarsius — Sulawesi Tarsier">
+            <img src="/assets/images/wildlife/Tarsius.webp" alt="Tarsius — Sulawesi Tarsier">
             <span class="card-badge">Tarsius spectrum</span>
           </div>
           <div class="swiper-slide">
-            <img src="../assets/images/wildlife/Rangkong.webp" alt="Burung Rangkong — Sulawesi Hornbill">
+            <img src="/assets/images/wildlife/Rangkong.webp" alt="Burung Rangkong — Sulawesi Hornbill">
             <span class="card-badge">Rhyticeros cassidix</span>
           </div>
           <!-- Duplicated slides — required by Swiper loop mode (needs ≥ slidesPerView×2 slides) -->
           <div class="swiper-slide">
-            <img src="../assets/images/wildlife/Yaki.webp" alt="Yaki — Sulawesi Black Crested Macaque">
+            <img src="/assets/images/wildlife/Yaki.webp" alt="Yaki — Sulawesi Black Crested Macaque">
             <span class="card-badge">Macaca nigra</span>
           </div>
           <div class="swiper-slide">
-            <img src="../assets/images/wildlife/Tarsius.webp" alt="Tarsius — Sulawesi Tarsier">
+            <img src="/assets/images/wildlife/Tarsius.webp" alt="Tarsius — Sulawesi Tarsier">
             <span class="card-badge">Tarsius spectrum</span>
           </div>
           <div class="swiper-slide">
-            <img src="../assets/images/wildlife/Rangkong.webp" alt="Burung Rangkong — Sulawesi Hornbill">
+            <img src="/assets/images/wildlife/Rangkong.webp" alt="Burung Rangkong — Sulawesi Hornbill">
             <span class="card-badge">Rhyticeros cassidix</span>
           </div>
         </div>
@@ -223,7 +223,7 @@ $navStyle = "";
     <div class="act-climb__inner">
       <!-- Image panel — tall & vertical -->
       <div class="act-climb__img-panel reveal">
-        <img src="../assets/images/activities/rock-climbing.webp" alt="Rock Climbing at Pulisanbay coastline">
+        <img src="/assets/images/activities/rock-climbing.webp" alt="Rock Climbing at Pulisanbay coastline">
       </div>
 
       <!-- Text panel -->
@@ -243,8 +243,8 @@ $navStyle = "";
 
   <?php include __DIR__ . '/../includes/footer.php'; ?>
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-  <script src="../assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
-  <script src="../assets/<?= $isProd ? 'dist/js/carousel.min.js' : 'js/carousel.js' ?>"></script>
+  <script src="/assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
+  <script src="/assets/<?= $isProd ? 'dist/js/carousel.min.js' : 'js/carousel.js' ?>"></script>
 </body>
 
 </html>

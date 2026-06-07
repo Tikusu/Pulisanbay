@@ -9,14 +9,14 @@ $navStyle = "";
 <head>
   <?php include __DIR__ . '/../includes/head.php'; ?>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-  <link rel="preload" as="image" href="../assets/images/hero-about.png" imagesizes="100vw">
+  <link rel="preload" as="image" href="/assets/images/hero-about.png" imagesizes="100vw">
 </head>
 
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
   <!--  -->
   <?php
-  $heroImage = '../assets/images/about/about-hero.webp';
+  $heroImage = '/assets/images/about/about-hero.webp';
   $heroTitle = 'Special Economic Zone Likupang';
   $heroSubtitle = 'An eco-tourism master-planning project in North Sulawesi — designated as one of Indonesia\'s five Super Priority Destinations, positioned as the entrance gate of Eastern Indonesia\'s natural wonders.';
   $heroPosition = 'top';
@@ -59,7 +59,7 @@ $navStyle = "";
         </div>
         <div class="reveal reveal-delay-2">
           <div class="section-img" style="position: relative; box-shadow:var(--shadow-lg); height: 100%;">
-            <img src="../assets/images/about/johnny-widjaja.webp" alt="Johnny Widjaja" class="img-cover"
+            <img src="/assets/images/about/johnny-widjaja.webp" alt="Johnny Widjaja" class="img-cover"
               style="height: 100%;">
             <div style="position: absolute; bottom: 2rem; left: 1.75rem; z-index: 10;">
               <span
@@ -80,7 +80,7 @@ $navStyle = "";
     <div class="container">
       <div class="grid-2">
         <div class="reveal" style="padding:2.5rem;background:var(--earthy-sand);">
-          <img src="../assets/images/logo/pulisanbay-logo-dark.webp" alt="Pulisanbay Logo"
+          <img src="/assets/images/logo/pulisanbay-logo-dark.webp" alt="Pulisanbay Logo"
             style="height: 56px; margin-bottom: 1.5rem; width: auto; object-fit: contain;">
           <h3 style="margin-bottom:1rem;">Our Vision</h3>
           <p style="color:var(--slate);">To create high-quality, sustainable living spaces that ensure every environment
@@ -88,7 +88,7 @@ $navStyle = "";
             restores nature and empowers local communities, rather than exploiting them.</p>
         </div>
         <div class="reveal reveal-delay-1" style="padding:2.5rem;background:var(--earthy-sand);">
-          <img src="../assets/images/logo/sez-logo-dark.webp" alt="SEZ Likupang Logo"
+          <img src="/assets/images/logo/sez-logo-dark.webp" alt="SEZ Likupang Logo"
             style="height: 56px; margin-bottom: 1.5rem; width: auto; object-fit: contain;">
           <h3 style="margin-bottom:1rem;">Our Mission</h3>
           <p style="color:var(--slate);">To develop projects that not only meet our clients' needs but also improve the
@@ -108,7 +108,7 @@ $navStyle = "";
       </div>
       <div class="grid-3 reveal">
         <div class="idea-card">
-          <img class="idea-card__img" src="../assets/images/six-ideas/Marine%20Eco%20Tourism.webp"
+          <img class="idea-card__img" src="/assets/images/six-ideas/Marine%20Eco%20Tourism.webp"
             alt="Marine eco-Tourism" loading="lazy">
           <div class="idea-card__overlay-base"></div>
           <div class="idea-card__overlay-hover"></div>
@@ -123,7 +123,7 @@ $navStyle = "";
           </div>
         </div>
         <div class="idea-card reveal-delay-1">
-          <img class="idea-card__img" src="../assets/images/six-ideas/Resort%20Villas%20&amp;%20Hotels.webp"
+          <img class="idea-card__img" src="/assets/images/six-ideas/Resort%20Villas%20&amp;%20Hotels.webp"
             alt="Resort Villas &amp; Hotel" loading="lazy">
           <div class="idea-card__overlay-base"></div>
           <div class="idea-card__overlay-hover"></div>
@@ -138,7 +138,7 @@ $navStyle = "";
           </div>
         </div>
         <div class="idea-card reveal-delay-2">
-          <img class="idea-card__img" src="../assets/images/six-ideas/Sports%20Complex%20&amp;%20Equestrian.webp"
+          <img class="idea-card__img" src="/assets/images/six-ideas/Sports%20Complex%20&amp;%20Equestrian.webp"
             alt="Sports Complex &amp; Equestrian" loading="lazy">
           <div class="idea-card__overlay-base"></div>
           <div class="idea-card__overlay-hover"></div>
@@ -153,7 +153,7 @@ $navStyle = "";
           </div>
         </div>
         <div class="idea-card reveal-delay-1">
-          <img class="idea-card__img" src="../assets/images/six-ideas/International%20Mice%20Events%20Venue.webp"
+          <img class="idea-card__img" src="/assets/images/six-ideas/International%20Mice%20Events%20Venue.webp"
             alt="International MICE Events Venue" loading="lazy">
           <div class="idea-card__overlay-base"></div>
           <div class="idea-card__overlay-hover"></div>
@@ -168,7 +168,7 @@ $navStyle = "";
           </div>
         </div>
         <div class="idea-card reveal-delay-2">
-          <img class="idea-card__img" src="../assets/images/six-ideas/Ecological%20Preservation.webp"
+          <img class="idea-card__img" src="/assets/images/six-ideas/Ecological%20Preservation.webp"
             alt="Ecological Preservation" loading="lazy">
           <div class="idea-card__overlay-base"></div>
           <div class="idea-card__overlay-hover"></div>
@@ -183,7 +183,7 @@ $navStyle = "";
           </div>
         </div>
         <div class="idea-card reveal-delay-3">
-          <img class="idea-card__img" src="../assets/images/six-ideas/Recycle%20Water%20&amp;%203R%20Waste.webp"
+          <img class="idea-card__img" src="/assets/images/six-ideas/Recycle%20Water%20&amp;%203R%20Waste.webp"
             alt="Recycle Waste &amp; 3R" loading="lazy">
           <div class="idea-card__overlay-base"></div>
           <div class="idea-card__overlay-hover"></div>
@@ -203,7 +203,7 @@ $navStyle = "";
 
   <!-- FOUR PILLARS -->
   <section class="section-lg four-pillars-section"
-    style="background-image: url('../assets/images/four-pillars/pillar-bg.webp'); background-size: cover; background-position: right bottom; overflow: hidden;">
+    style="background-image: url('/assets/images/four-pillars/pillar-bg.webp'); background-size: cover; background-position: right bottom; overflow: hidden;">
     <div class="section-header reveal" style="text-align: center; margin-bottom: 3rem; padding: 0 2rem;">
       <span class="section-label">Our Commitment</span>
       <h2>Through The Implementation<br>of These Four Pillars</h2>
@@ -215,7 +215,7 @@ $navStyle = "";
           <!-- Slide 1: Nature -->
           <div class="swiper-slide pillar-slide">
             <div class="pillar-slide-img">
-              <img src="../assets/images/four-pillars/Nature.webp" alt="Nature">
+              <img src="/assets/images/four-pillars/Nature.webp" alt="Nature">
             </div>
             <div class="pillar-slide-content">
               <h3>NATURE</h3>
@@ -227,7 +227,7 @@ $navStyle = "";
           <!-- Slide 2: Culture -->
           <div class="swiper-slide pillar-slide">
             <div class="pillar-slide-img">
-              <img src="../assets/images/four-pillars/Culture.webp" alt="Culture">
+              <img src="/assets/images/four-pillars/Culture.webp" alt="Culture">
             </div>
             <div class="pillar-slide-content">
               <h3>CULTURE</h3>
@@ -239,7 +239,7 @@ $navStyle = "";
           <!-- Slide 3: Destination -->
           <div class="swiper-slide pillar-slide">
             <div class="pillar-slide-img">
-              <img src="../assets/images/four-pillars/Destination.webp" alt="Destination">
+              <img src="/assets/images/four-pillars/Destination.webp" alt="Destination">
             </div>
             <div class="pillar-slide-content">
               <h3>DESTINATION</h3>
@@ -251,7 +251,7 @@ $navStyle = "";
           <!-- Slide 4: Memorable -->
           <div class="swiper-slide pillar-slide">
             <div class="pillar-slide-img">
-              <img src="../assets/images/four-pillars/Memorable.webp" alt="Memorable">
+              <img src="/assets/images/four-pillars/Memorable.webp" alt="Memorable">
             </div>
             <div class="pillar-slide-content">
               <h3>MEMORABLE</h3>
@@ -278,7 +278,7 @@ $navStyle = "";
           Partnership</span>
       </div>
       <div class="reveal" style="max-width:800px;margin:0 auto;text-align:center;">
-        <img src="../assets/images/about/member-of-sintesa.webp" alt="Minahasa Permai Resort Development"
+        <img src="/assets/images/about/member-of-sintesa.webp" alt="Minahasa Permai Resort Development"
           style="max-width: 80%; height: auto; margin-bottom: 0rem;">
         <p style="color:var(--slate);max-width:650px;margin:0 auto;">Our team at Pulisanbay — SEZ Likupang consists of
           experienced professionals in the field of real estate development. With expertise in design, construction, and
@@ -298,37 +298,37 @@ $navStyle = "";
       </div>
       <div class="partners-grid reveal">
         <div class="partner-card">
-          <img src="../assets/images/partnerships/yayasan_indonesia_biru-logo.webp" alt="Indonesia Biru Foundation"
+          <img src="/assets/images/partnerships/yayasan_indonesia_biru-logo.webp" alt="Indonesia Biru Foundation"
             class="partner-logo">
           <span style="font-weight:600;font-size:0.9rem;">Indonesia Biru Foundation</span>
         </div>
         <div class="partner-card">
-          <img src="../assets/images/partnerships/WCL.webp" alt="Wallace Conservation Licoupang" class="partner-logo">
+          <img src="/assets/images/partnerships/WCL.webp" alt="Wallace Conservation Licoupang" class="partner-logo">
           <span style="font-weight:600;font-size:0.9rem;">Wallace Conservation Licoupang</span>
         </div>
         <div class="partner-card">
-          <img src="../assets/images/partnerships/mitratel-logo.webp" alt="Mitratel" class="partner-logo">
+          <img src="/assets/images/partnerships/mitratel-logo.webp" alt="Mitratel" class="partner-logo">
           <span style="font-weight:600;font-size:0.9rem;">Mitratel</span>
         </div>
         <div class="partner-card">
-          <img src="../assets/images/partnerships/PJLEnviro-logo.webp" alt="PJLEnviro" class="partner-logo">
+          <img src="/assets/images/partnerships/PJLEnviro-logo.webp" alt="PJLEnviro" class="partner-logo">
           <span style="font-weight:600;font-size:0.9rem;">PJLEnviro</span>
         </div>
         <div class="partner-card">
-          <img src="../assets/images/partnerships/cirad-logo.webp" alt="Cirad" class="partner-logo">
+          <img src="/assets/images/partnerships/cirad-logo.webp" alt="Cirad" class="partner-logo">
           <span style="font-weight:600;font-size:0.9rem;">Cirad</span>
         </div>
         <div class="partner-card">
-          <img src="../assets/images/partnerships/poralu-logo.webp" alt="Poralu Marine" class="partner-logo">
+          <img src="/assets/images/partnerships/poralu-logo.webp" alt="Poralu Marine" class="partner-logo">
           <span style="font-weight:600;font-size:0.9rem;">Poralu Marine</span>
         </div>
         <div class="partner-card">
-          <img src="../assets/images/partnerships/kabupaten_minahasa_utara-logo.webp" alt="PemKab Minahasa Utara"
+          <img src="/assets/images/partnerships/kabupaten_minahasa_utara-logo.webp" alt="PemKab Minahasa Utara"
             class="partner-logo">
           <span style="font-weight:600;font-size:0.9rem;">PemKab Minahasa Utara</span>
         </div>
         <div class="partner-card">
-          <img src="../assets/images/partnerships/unsrat-logo-2-2.webp" alt="UNSRAT" class="partner-logo">
+          <img src="/assets/images/partnerships/unsrat-logo-2-2.webp" alt="UNSRAT" class="partner-logo">
           <span style="font-weight:600;font-size:0.9rem;">UNSRAT</span>
         </div>
       </div>
@@ -362,8 +362,8 @@ $navStyle = "";
 
   <?php include __DIR__ . '/../includes/footer.php'; ?>
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-  <script src="../assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
-  <script src="../assets/<?= $isProd ? 'dist/js/carousel.min.js' : 'js/carousel.js' ?>"></script>
+  <script src="/assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
+  <script src="/assets/<?= $isProd ? 'dist/js/carousel.min.js' : 'js/carousel.js' ?>"></script>
 </body>
 
 </html>

@@ -12,7 +12,7 @@ $navStyle = "";
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
 
   <?php
-  $heroImage = '../assets/images/the-pulisan/main-page/the-pulisan-offers.webp';
+  $heroImage = '/assets/images/the-pulisan/main-page/the-pulisan-offers.webp';
   $heroTitle = 'Special Offers';
   $heroSubtitle = 'Enhance your Pulisanbay experience with our curated add-on packages and exclusive retreats.';
   $heroPosition = 'bottom';
@@ -124,7 +124,7 @@ $navStyle = "";
     </div>
   </section>
   <?php include __DIR__ . '/../includes/footer.php'; ?>
-  <script src="../assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
+  <script src="/assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
 </body>
 
 </html>

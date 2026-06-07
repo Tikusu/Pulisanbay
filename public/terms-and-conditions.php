@@ -123,7 +123,7 @@ $navStyle = "";
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
 
   <section class="hero" style="height: 50dvh; min-height: 300px;">
-    <div class="hero-bg" style="background-image: url('../assets/images/tnc-hero.webp'); background-position: 50% 30%;">
+    <div class="hero-bg" style="background-image: url('/assets/images/tnc-hero.webp'); background-position: 50% 30%;">
     </div>
     <div class="hero-content" style="margin-top: 3rem;">
       <h1 class="reveal">Terms & Conditions</h1>
@@ -283,7 +283,7 @@ $navStyle = "";
   </section>
 
   <?php include __DIR__ . '/../includes/footer.php'; ?>
-  <script src="../assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
+  <script src="/assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
 </body>
 
 </html>

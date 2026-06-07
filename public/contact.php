@@ -91,8 +91,8 @@ $navStyle = "scrolled";
   </section>
 
   <?php include __DIR__ . '/../includes/footer.php'; ?>
-  <script src="../assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
-  <script src="../assets/<?= $isProd ? 'dist/js/form.min.js' : 'js/form.js' ?>"></script>
+  <script src="/assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
+  <script src="/assets/<?= $isProd ? 'dist/js/form.min.js' : 'js/form.js' ?>"></script>
 </body>
 
 </html>

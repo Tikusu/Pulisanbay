@@ -5,13 +5,13 @@ $navStyle = ""; ?>
 <html lang="en">
 
 <head><?php include __DIR__ . '/../includes/head.php'; ?>
-  <link rel="stylesheet" href="../assets/<?= $isProd ? 'dist/css/culture-enhanced.min.css' : 'css/culture-enhanced.css' ?>" />
+  <link rel="stylesheet" href="/assets/<?= $isProd ? 'dist/css/culture-enhanced.min.css' : 'css/culture-enhanced.css' ?>" />
 </head>
 
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
   <?php
-  $heroImage = '../assets/images/community/community-hero.webp';
+  $heroImage = '/assets/images/community/community-hero.webp';
   $heroTitle = 'Community';
   $heroSubtitle = '"Si Tou Timou Tumou Tou" — People live to help others live. The Minahasa philosophy that guides everything we do.';
   include __DIR__ . '/../includes/hero.php';
@@ -36,7 +36,7 @@ $navStyle = ""; ?>
           </div>
         </div>
         <div class="reveal reveal-delay-2">
-          <div class="section-img" style="box-shadow:var(--shadow-lg);"><img src="../assets/images/community/community.webp"
+          <div class="section-img" style="box-shadow:var(--shadow-lg);"><img src="/assets/images/community/community.webp"
               alt="Local Community" class="img-cover" style="height:460px;"></div>
         </div>
       </div>
@@ -111,7 +111,7 @@ $navStyle = ""; ?>
   </section>
 
   <?php include __DIR__ . '/../includes/footer.php'; ?>
-  <script src="../assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
+  <script src="/assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
 </body>
 
 </html>

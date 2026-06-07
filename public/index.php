@@ -15,7 +15,7 @@ $navStyle = "";
 
   <!-- HERO -->
   <section class="hero" id="hero-home">
-    <div class="hero-bg" style="background-image: url('../assets/images/home-hero.webp')"></div>
+    <div class="hero-bg" style="background-image: url('/assets/images/home-hero.webp')"></div>
     <div class="hero-content">
       <h1>Beyond Nature Experience</h1>
       <p>A regenerative sanctuary in the heart of the Coral Triangle — where every footprint restores, every moment
@@ -45,7 +45,7 @@ $navStyle = "";
         </div>
         <div class="reveal reveal-delay-2">
           <div class="section-img" style="box-shadow:var(--shadow-lg);">
-            <img src="../assets/images/regenerative-tourism.webp" alt="Pulisanbay Landscape" class="img-cover"
+            <img src="/assets/images/regenerative-tourism.webp" alt="Pulisanbay Landscape" class="img-cover"
               style="height: 100%;">
           </div>
         </div>
@@ -64,7 +64,7 @@ $navStyle = "";
       </div>
       <div class="grid-2 reveal">
         <a href="/the-pulisan" class="acco-card">
-          <img src="../assets/images/the-pulisan/main-page/the-pulisan-hero.webp" alt="The Pulisan Resort"
+          <img src="/assets/images/the-pulisan/main-page/the-pulisan-hero.webp" alt="The Pulisan Resort"
             class="acco-card__img" loading="lazy">
           <div class="acco-card__overlay-base"></div>
           <div class="acco-card__overlay-hover"></div>
@@ -86,7 +86,7 @@ $navStyle = "";
           </div>
         </a>
         <a href="/noma-campsite" class="acco-card">
-          <img src="../assets/images/noma/noma-hero.webp" alt="NOMA Campsite" class="acco-card__img" loading="lazy">
+          <img src="/assets/images/noma/noma-hero.webp" alt="NOMA Campsite" class="acco-card__img" loading="lazy">
           <div class="acco-card__overlay-base"></div>
           <div class="acco-card__overlay-hover"></div>
           <span class="acco-card__number">02</span>
@@ -121,7 +121,7 @@ $navStyle = "";
       </div>
       <div class="grid-4 reveal">
         <a href="/activities" class="card" style="text-decoration:none;color:inherit;">
-          <div class="card-img-wrapper"><img src="../assets/images/activities/activities-hero.webp" alt="Activities"
+          <div class="card-img-wrapper"><img src="/assets/images/activities/activities-hero.webp" alt="Activities"
               class="card-img"></div>
           <div class="card-body">
             <h3>Activities</h3>
@@ -130,7 +130,7 @@ $navStyle = "";
           </div>
         </a>
         <a href="/conservation" class="card" style="text-decoration:none;color:inherit;">
-          <div class="card-img-wrapper"><img src="../assets/images/conservation-teaser.webp" alt="Conservation"
+          <div class="card-img-wrapper"><img src="/assets/images/conservation-teaser.webp" alt="Conservation"
               class="card-img"></div>
           <div class="card-body">
             <h3>Conservation</h3>
@@ -139,7 +139,7 @@ $navStyle = "";
           </div>
         </a>
         <a href="/culture" class="card" style="text-decoration:none;color:inherit;">
-          <div class="card-img-wrapper"><img src="../assets/images/culture/gitar-mama.webp" alt="Culture" class="card-img">
+          <div class="card-img-wrapper"><img src="/assets/images/culture/gitar-mama.webp" alt="Culture" class="card-img">
           </div>
           <div class="card-body">
             <h3>Culture</h3>
@@ -148,7 +148,7 @@ $navStyle = "";
           </div>
         </a>
         <a href="/gastronomy" class="card" style="text-decoration:none;color:inherit;">
-          <div class="card-img-wrapper"><img src="../assets/images/gastronomy/gastronomy-hero.webp" alt="Gastronomy"
+          <div class="card-img-wrapper"><img src="/assets/images/gastronomy/gastronomy-hero.webp" alt="Gastronomy"
               class="card-img"></div>
           <div class="card-body">
             <h3>Gastronomy</h3>
@@ -170,19 +170,19 @@ $navStyle = "";
       </div>
       <div class="grid-4 reveal">
         <div class="pillar-card">
-          <img src="../assets/images/four-pillars/Nature.webp" alt="Nature" class="img-round">
+          <img src="/assets/images/four-pillars/Nature.webp" alt="Nature" class="img-round">
           <h3>Nature</h3>
         </div>
         <div class="pillar-card reveal-delay-1">
-          <img src="../assets/images/four-pillars/Culture.webp" alt="Culture" class="img-round">
+          <img src="/assets/images/four-pillars/Culture.webp" alt="Culture" class="img-round">
           <h3>Culture</h3>
         </div>
         <div class="pillar-card reveal-delay-2">
-          <img src="../assets/images/four-pillars/Destination.webp" alt="Destination" class="img-round">
+          <img src="/assets/images/four-pillars/Destination.webp" alt="Destination" class="img-round">
           <h3>Destination</h3>
         </div>
         <div class="pillar-card reveal-delay-3">
-          <img src="../assets/images/four-pillars/Memorable.webp" alt="Memorable" class="img-round">
+          <img src="/assets/images/four-pillars/Memorable.webp" alt="Memorable" class="img-round">
           <h3>Memorable</h3>
         </div>
       </div>
@@ -198,7 +198,7 @@ $navStyle = "";
 
   <?php include __DIR__ . '/../includes/footer.php'; ?>
 
-  <script src="../assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
+  <script src="/assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
 </body>
 
 </html>

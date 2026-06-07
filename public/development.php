@@ -5,13 +5,13 @@ $navStyle = ""; ?>
 <html lang="en">
 
 <head><?php include __DIR__ . '/../includes/head.php'; ?>
-  <link rel="stylesheet" href="../assets/<?= $isProd ? 'dist/css/culture-enhanced.min.css' : 'css/culture-enhanced.css' ?>" />
+  <link rel="stylesheet" href="/assets/<?= $isProd ? 'dist/css/culture-enhanced.min.css' : 'css/culture-enhanced.css' ?>" />
 </head>
 
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
   <?php
-  $heroImage = '../assets/images/development/SEZ LIK_View A_Final.webp';
+  $heroImage = '/assets/images/development/SEZ LIK_View A_Final.webp';
   $heroTitle = 'Development';
   $heroSubtitle = 'Transforming a vision into reality — building world-class infrastructure that harmonizes with the natural landscape of Pulisan Bay.';
   include __DIR__ . '/../includes/hero.php';
@@ -110,7 +110,7 @@ $navStyle = ""; ?>
   </section>
 
   <div class="reveal" style="width: 100%; line-height: 0;">
-    <img src="../assets/images/development/pulisanbay-development-area-plan.webp" alt="Pulisanbay Development Area Plan" style="width: 100%; height: auto; display: block;">
+    <img src="/assets/images/development/pulisanbay-development-area-plan.webp" alt="Pulisanbay Development Area Plan" style="width: 100%; height: auto; display: block;">
   </div>
 
   <section class="section-lg section-bg-dark">
@@ -154,7 +154,7 @@ $navStyle = ""; ?>
   $ctaLabel = "Start Collaborating with Us";
   include __DIR__ . '/../includes/cta-banner.php'; ?>
   <?php include __DIR__ . '/../includes/footer.php'; ?>
-  <script src="../assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
+  <script src="/assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
 </body>
 
 </html>

@@ -10,7 +10,7 @@ $navStyle = ""; ?>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
 
   <?php
-  $heroImage = '../assets/images/the-pulisan/club-room/club-room-hero.webp';
+  $heroImage = '/assets/images/the-pulisan/club-room/club-room-hero.webp';
   $heroTitle = 'Club Room';
   $heroSubtitle = 'Modern elegance meets tropical warmth — a refined retreat wrapped in the gentle embrace of nature.';
   include __DIR__ . '/../includes/hero.php';
@@ -22,14 +22,14 @@ $navStyle = ""; ?>
         <h2>A Space Designed for Serenity</h2>
       </div>
       <div class="gallery-grid reveal">
-        <div class="gallery-item"><img src="../assets/images/the-pulisan/club-room/club-room-bed.webp" alt="Club Room King Bed"></div>
-        <div class="gallery-item"><img src="../assets/images/the-pulisan/club-room/club-room-bed2.webp" alt="Club Room Comfortable Bedding"></div>
-        <div class="gallery-item"><img src="../assets/images/the-pulisan/club-room/club-room-bed3.webp" alt="Club Room Cozy Bedroom"></div>
-        <div class="gallery-item"><img src="../assets/images/the-pulisan/club-room/club-room-drawer.webp" alt="Club Room Desk & Furnishings"></div>
-        <div class="gallery-item"><img src="../assets/images/the-pulisan/club-room/club-room-drawer2.webp" alt="Club Room Traditional Wood Drawer"></div>
-        <div class="gallery-item"><img src="../assets/images/the-pulisan/club-room/club-room-bathroom.webp" alt="Club Room Modern Bathroom"></div>
-        <div class="gallery-item"><img src="../assets/images/the-pulisan/club-room/club-room-sink.webp" alt="Club Room Elegant Sink & Vanity"></div>
-        <!-- <div class="gallery-item"><img src="../assets/images/the-pulisan/club-room/club-room-hero.webp" alt="Club Room Garden View & Lounge"></div> -->
+        <div class="gallery-item"><img src="/assets/images/the-pulisan/club-room/club-room-bed.webp" alt="Club Room King Bed"></div>
+        <div class="gallery-item"><img src="/assets/images/the-pulisan/club-room/club-room-bed2.webp" alt="Club Room Comfortable Bedding"></div>
+        <div class="gallery-item"><img src="/assets/images/the-pulisan/club-room/club-room-bed3.webp" alt="Club Room Cozy Bedroom"></div>
+        <div class="gallery-item"><img src="/assets/images/the-pulisan/club-room/club-room-drawer.webp" alt="Club Room Desk & Furnishings"></div>
+        <div class="gallery-item"><img src="/assets/images/the-pulisan/club-room/club-room-drawer2.webp" alt="Club Room Traditional Wood Drawer"></div>
+        <div class="gallery-item"><img src="/assets/images/the-pulisan/club-room/club-room-bathroom.webp" alt="Club Room Modern Bathroom"></div>
+        <div class="gallery-item"><img src="/assets/images/the-pulisan/club-room/club-room-sink.webp" alt="Club Room Elegant Sink & Vanity"></div>
+        <!-- <div class="gallery-item"><img src="/assets/images/the-pulisan/club-room/club-room-hero.webp" alt="Club Room Garden View & Lounge"></div> -->
       </div>
     </div>
   </section>
@@ -88,7 +88,7 @@ $navStyle = ""; ?>
           </button>
         </div>
         <div class="reveal reveal-delay-2">
-          <div class="section-img" style="box-shadow:var(--shadow-lg);"><img src="../assets/images/the-pulisan/club-room/club-room-bed3.webp"
+          <div class="section-img" style="box-shadow:var(--shadow-lg);"><img src="/assets/images/the-pulisan/club-room/club-room-bed3.webp"
               alt="Club Room Cozy Stay" class="img-cover" style="height:500px;"></div>
         </div>
       </div>
@@ -103,7 +103,7 @@ $navStyle = ""; ?>
 
   <?php include __DIR__ . '/../includes/footer.php'; ?>
   <?php include __DIR__ . '/../includes/lightbox.php'; ?>
-  <script src="../assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
+  <script src="/assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
 </body>
 
 </html>

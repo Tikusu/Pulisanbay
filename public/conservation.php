@@ -7,13 +7,13 @@ $navStyle = ""; ?>
 <head>
   <?php include __DIR__ . '/../includes/head.php'; ?>
   <link rel="stylesheet"
-    href="../assets/<?= $isProd ? 'dist/css/conservation-enhanced.min.css' : 'css/conservation-enhanced.css' ?>" />
+    href="/assets/<?= $isProd ? 'dist/css/conservation-enhanced.min.css' : 'css/conservation-enhanced.css' ?>" />
 </head>
 
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
   <?php
-  $heroImage = '../assets/images/conservation/conservation-hero.webp';
+  $heroImage = '/assets/images/conservation/conservation-hero.webp';
   $heroTitle = 'Conservation';
   $heroSubtitle = 'At Pulisanbay, conservation isn\'t a side project — it is the very foundation upon which everything is built.';
   include __DIR__ . '/../includes/hero.php';
@@ -42,13 +42,13 @@ $navStyle = ""; ?>
         <div class="reveal reveal-delay-2">
           <div class="overlap-gallery">
             <div class="overlap-img overlap-main">
-              <img src="../assets/images/conservation/WCL-rangers.webp" alt="WCL Rangers">
+              <img src="/assets/images/conservation/WCL-rangers.webp" alt="WCL Rangers">
             </div>
             <div class="overlap-img overlap-sub1">
-              <img src="../assets/images/conservation/hidden-camera.webp" alt="Tree Tagging">
+              <img src="/assets/images/conservation/hidden-camera.webp" alt="Tree Tagging">
             </div>
             <div class="overlap-img overlap-sub2">
-              <img src="../assets/images/conservation/tree-tagging.webp" alt="Hidden Camera">
+              <img src="/assets/images/conservation/tree-tagging.webp" alt="Hidden Camera">
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@ $navStyle = ""; ?>
               environmental footprint.</p>
           </div>
           <div class="cons-3r__card-img">
-            <img src="../assets/images/conservation/reduce.webp" alt="Reduce initiatives at Pulisanbay">
+            <img src="/assets/images/conservation/reduce.webp" alt="Reduce initiatives at Pulisanbay">
           </div>
         </div>
 
@@ -92,7 +92,7 @@ $navStyle = ""; ?>
               construction materials for community projects.</p>
           </div>
           <div class="cons-3r__card-img">
-            <img src="../assets/images/conservation/reuse.webp" alt="Reuse initiatives at Pulisanbay">
+            <img src="/assets/images/conservation/reuse.webp" alt="Reuse initiatives at Pulisanbay">
           </div>
         </div>
 
@@ -106,7 +106,7 @@ $navStyle = ""; ?>
               processed, and reintroduced into the supply chain.</p>
           </div>
           <div class="cons-3r__card-img">
-            <img src="../assets/images/conservation/recycle.webp" alt="Recycle initiatives at Pulisanbay">
+            <img src="/assets/images/conservation/recycle.webp" alt="Recycle initiatives at Pulisanbay">
           </div>
         </div>
       </div>
@@ -142,7 +142,7 @@ $navStyle = ""; ?>
 
       <!-- Image panel — right side -->
       <div class="cons-forest__img-panel reveal reveal-delay-1">
-        <img src="../assets/images/conservation/protected-forest.webp" alt="Protected forest at Pulisanbay">
+        <img src="/assets/images/conservation/protected-forest.webp" alt="Protected forest at Pulisanbay">
       </div>
     </div>
   </section>
@@ -161,7 +161,7 @@ $navStyle = ""; ?>
         <!-- Image 1 below text -->
         <div class="cons-unsrat__img-stack cons-unsrat__img-stack--left" style="margin-top: 3rem;">
           <div class="cons-unsrat__img-main">
-            <img src="../assets/images/conservation/research-activity.webp" style="aspect-ratio: 2/1;"
+            <img src="/assets/images/conservation/research-activity.webp" style="aspect-ratio: 2/1;"
               alt="Camera trap research at Pulisanbay">
           </div>
         </div>
@@ -169,7 +169,7 @@ $navStyle = ""; ?>
         <!-- Image 2 below image 1 -->
         <div class="cons-unsrat__img-stack cons-unsrat__img-stack--left" style="margin-top: 2rem;">
           <div class="cons-unsrat__img-main">
-            <img src="../assets/images/conservation/research-activity2.webp" style="aspect-ratio: 2/1;"
+            <img src="/assets/images/conservation/research-activity2.webp" style="aspect-ratio: 2/1;"
               alt="WCL Rangers in the field">
           </div>
         </div>
@@ -179,7 +179,7 @@ $navStyle = ""; ?>
       <div class="cons-unsrat__img-col reveal reveal-delay-2">
         <div class="cons-unsrat__img-stack cons-unsrat__img-stack--right">
           <div class="cons-unsrat__img-main">
-            <img src="../assets/images/conservation/tree-tagging.webp" alt="Field research with UNSRAT students">
+            <img src="/assets/images/conservation/tree-tagging.webp" alt="Field research with UNSRAT students">
           </div>
         </div>
         <p class="cons-unsrat__img-caption">Collaborative field research for biodiversity protection</p>
@@ -225,7 +225,7 @@ $navStyle = ""; ?>
   $ctaGradient = "linear-gradient(135deg,var(--forest-green),var(--deep-sea))";
   include __DIR__ . '/../includes/cta-banner.php'; ?>
   <?php include __DIR__ . '/../includes/footer.php'; ?>
-  <script src="../assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
+  <script src="/assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
 </body>
 
 </html>

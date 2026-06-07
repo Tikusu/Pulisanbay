@@ -8,14 +8,14 @@ $navStyle = ""; ?>
   <?php include __DIR__ . '/../includes/head.php'; ?>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <link rel="stylesheet"
-    href="../assets/<?= $isProd ? 'dist/css/gastronomy-enhanced.min.css' : 'css/gastronomy-enhanced.css' ?>" />
+    href="/assets/<?= $isProd ? 'dist/css/gastronomy-enhanced.min.css' : 'css/gastronomy-enhanced.css' ?>" />
 </head>
 
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
 
   <?php
-  $heroImage = '../assets/images/gastronomy/gastronomy-hero.webp';
+  $heroImage = '/assets/images/gastronomy/gastronomy-hero.webp';
   $heroTitle = 'Gastronomy';
   $heroSubtitle = 'Where the ocean\'s harvest meets the hands of local artisans — every plate tells a story of the land, the sea, and the people who call this place home.';
   include __DIR__ . '/../includes/hero.php';
@@ -38,17 +38,17 @@ $navStyle = ""; ?>
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="gast-culinary__slide-img">
-                  <img src="../assets/images/gastronomy/seafood-barbeque.webp" alt="Minahasa cuisine at Pulisanbay">
+                  <img src="/assets/images/gastronomy/seafood-barbeque.webp" alt="Minahasa cuisine at Pulisanbay">
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="gast-culinary__slide-img">
-                  <img src="../assets/images/gastronomy/local-food.webp" alt="Fresh ingredients from Pulisan Bay">
+                  <img src="/assets/images/gastronomy/local-food.webp" alt="Fresh ingredients from Pulisan Bay">
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="gast-culinary__slide-img">
-                  <img src="../assets/images/gastronomy/fish.webp" alt="North Sulawesi spices and flavors">
+                  <img src="/assets/images/gastronomy/fish.webp" alt="North Sulawesi spices and flavors">
                 </div>
               </div>
             </div>
@@ -62,7 +62,7 @@ $navStyle = ""; ?>
       <div class="gast-culinary__img-col reveal reveal-delay-2">
         <div class="gast-culinary__img-stack gast-culinary__img-stack--right">
           <div class="gast-culinary__img-main">
-            <img src="../assets/images/gastronomy/flavours-of-north-sulawesi.webp" alt="Flavours of North Sulawesi">
+            <img src="/assets/images/gastronomy/flavours-of-north-sulawesi.webp" alt="Flavours of North Sulawesi">
           </div>
         </div>
         <p class="gast-culinary__caption">A celebration of North Sulawesi's culinary heritage</p>
@@ -101,15 +101,15 @@ $navStyle = ""; ?>
 
       <!-- Image panel — right -->
       <div class="gast-philosophy__img-panel reveal reveal-delay-1">
-        <img src="../assets/images/gastronomy/sea-to-table.webp" alt="Sea-to-table dining at Pulisanbay">
+        <img src="/assets/images/gastronomy/sea-to-table.webp" alt="Sea-to-table dining at Pulisanbay">
       </div>
     </div>
   </section>
 
   <?php include __DIR__ . '/../includes/footer.php'; ?>
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-  <script src="../assets/<?= $isProd ? 'dist/js/carousel.min.js' : 'js/carousel.js' ?>"></script>
-  <script src="../assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
+  <script src="/assets/<?= $isProd ? 'dist/js/carousel.min.js' : 'js/carousel.js' ?>"></script>
+  <script src="/assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
 </body>
 
 </html>

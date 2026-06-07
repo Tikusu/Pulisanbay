@@ -12,7 +12,7 @@ $navStyle = ""; ?>
 <body>
   <?php include __DIR__ . '/../includes/navbar.php'; ?>
   <?php
-  $heroImage = '../assets/images/noma/noma-hero.webp';
+  $heroImage = '/assets/images/noma/noma-hero.webp';
   $heroTitle = 'NOMA';
   $heroSubtitle = 'Fall asleep to ocean waves and wake to golden sunrises. Where the thrill of the outdoors meets the comfort you deserve.';
   include __DIR__ . '/../includes/hero.php';
@@ -28,7 +28,7 @@ $navStyle = ""; ?>
       </div>
       <div class="swiper noma-tent-swiper reveal">
         <div class="swiper-wrapper">
-          <div class="swiper-slide noma-tent-slide" style="background-image: url('../assets/images/noma/rendezvous.webp');">
+          <div class="swiper-slide noma-tent-slide" style="background-image: url('/assets/images/noma/rendezvous.webp');">
             <div class="noma-tent-slide__body">
               <span class="section-label" style="font-size:0.7rem;">4-Person Capacity</span>
               <h3>Eiger Rendezvous</h3>
@@ -38,7 +38,7 @@ $navStyle = ""; ?>
                   class="fas fa-arrow-right"></i></a>
             </div>
           </div>
-          <div class="swiper-slide noma-tent-slide" style="background-image: url('../assets/images/noma/arpenaz.webp');">
+          <div class="swiper-slide noma-tent-slide" style="background-image: url('/assets/images/noma/arpenaz.webp');">
             <div class="noma-tent-slide__body">
               <span class="section-label" style="font-size:0.7rem;">5-Person Capacity</span>
               <h3>Decathlon Arpenaz</h3>
@@ -48,7 +48,7 @@ $navStyle = ""; ?>
                   class="fas fa-arrow-right"></i></a>
             </div>
           </div>
-          <div class="swiper-slide noma-tent-slide" style="background-image: url('../assets/images/noma/air-second.webp');">
+          <div class="swiper-slide noma-tent-slide" style="background-image: url('/assets/images/noma/air-second.webp');">
             <div class="noma-tent-slide__body">
               <span class="section-label" style="font-size:0.7rem;">6-Person Capacity</span>
               <h3>Decathlon Air Second</h3>
@@ -101,7 +101,7 @@ $navStyle = ""; ?>
         </div>
         <div class="reveal reveal-delay-2">
           <div class="section-img" style="box-shadow:var(--shadow-lg);"><img
-              src="../assets/images/noma/bring-own-tent.webp" alt="NOMA Campsite" class="img-cover"
+              src="/assets/images/noma/bring-own-tent.webp" alt="NOMA Campsite" class="img-cover"
               style="height:480px;"></div>
         </div>
       </div>
@@ -121,7 +121,7 @@ $navStyle = ""; ?>
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <a href="activities.php#land-adventures" class="acco-card reveal">
-              <img src="../assets/images/activities/eco-trail.webp" alt="Trekking" class="acco-card__img">
+              <img src="/assets/images/activities/eco-trail.webp" alt="Trekking" class="acco-card__img">
               <div class="acco-card__content" style="padding-bottom:1rem;">
                 <h3 class="acco-card__title">Trekking</h3>
               </div>
@@ -129,7 +129,7 @@ $navStyle = ""; ?>
           </div>
           <div class="swiper-slide">
             <a href="activities.php#land-adventures" class="acco-card reveal reveal-delay-1">
-              <img src="../assets/images/activities/savanna.webp" alt="Hiking" class="acco-card__img">
+              <img src="/assets/images/activities/savanna.webp" alt="Hiking" class="acco-card__img">
               <div class="acco-card__content" style="padding-bottom:1rem;">
                 <h3 class="acco-card__title">Hiking</h3>
               </div>
@@ -137,7 +137,7 @@ $navStyle = ""; ?>
           </div>
           <div class="swiper-slide">
             <a href="activities.php#wildlife-carousel" class="acco-card">
-              <img src="../assets/images/wildlife/Tarsius.webp" alt="Wildlife Encounter" class="acco-card__img">
+              <img src="/assets/images/wildlife/Tarsius.webp" alt="Wildlife Encounter" class="acco-card__img">
               <div class="acco-card__content" style="padding-bottom:1rem;">
                 <h3 class="acco-card__title">Wildlife Encounter</h3>
               </div>
@@ -156,8 +156,8 @@ $navStyle = ""; ?>
   include __DIR__ . '/../includes/cta-banner.php'; ?> -->
   <?php include __DIR__ . '/../includes/footer.php'; ?>
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-  <script src="../assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
-  <script src="../assets/<?= $isProd ? 'dist/js/carousel.min.js' : 'js/carousel.js' ?>"></script>
+  <script src="/assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
+  <script src="/assets/<?= $isProd ? 'dist/js/carousel.min.js' : 'js/carousel.js' ?>"></script>
 </body>
 
 </html>

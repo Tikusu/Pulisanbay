@@ -47,7 +47,7 @@ if (!empty($supabaseUrl) && !empty($supabaseKey)) {
 
 <head>
   <?php include __DIR__ . '/../includes/head.php'; ?>
-  <link rel="stylesheet" href="../assets/<?= $isProd ? 'dist/css/careers.min.css' : 'css/careers.css' ?>">
+  <link rel="stylesheet" href="/assets/<?= $isProd ? 'dist/css/careers.min.css' : 'css/careers.css' ?>">
 </head>
 
 <body>
@@ -292,8 +292,8 @@ if (!empty($supabaseUrl) && !empty($supabaseKey)) {
   <?php include __DIR__ . '/../includes/footer.php'; ?>
 
   <!-- Scripts -->
-  <script src="../assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
-  <script src="../assets/<?= $isProd ? 'dist/js/careers.min.js' : 'js/careers.js' ?>"></script>
+  <script src="/assets/<?= $isProd ? 'dist/js/main.min.js' : 'js/main.js' ?>"></script>
+  <script src="/assets/<?= $isProd ? 'dist/js/careers.min.js' : 'js/careers.js' ?>"></script>
 </body>
 
 </html>

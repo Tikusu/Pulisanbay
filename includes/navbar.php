@@ -10,8 +10,8 @@ $navClass = !empty($navStyle) ? "navbar $navStyle" : "navbar";
 ?>
 <nav class="<?= $navClass ?>" id="navbar">
   <a href="/" class="logo">
-    <img src="../assets/images/logo/pulisanbay-sez-logo-white.webp" alt="Pulisanbay Logo" class="logo-white">
-    <img src="../assets/images/logo/pulisanbay-sez-logo-dark.webp" alt="Pulisanbay Logo" class="logo-dark">
+    <img src="/assets/images/logo/pulisanbay-sez-logo-white.webp" alt="Pulisanbay Logo" class="logo-white">
+    <img src="/assets/images/logo/pulisanbay-sez-logo-dark.webp" alt="Pulisanbay Logo" class="logo-dark">
   </a>
   <button class="hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
