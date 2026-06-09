@@ -78,5 +78,5 @@ if ($cleanUri === '' || $cleanUri === '/') {
 } else {
     // 404
     http_response_code(404);
-    echo "<h1>404 Not Found</h1><p>The page <code>" . htmlspecialchars($uri) . "</code> was not found.</p>";
+    echo "<h1>404 Not Found</h1><p>The page <code><b><i>" . htmlspecialchars($uri) . "</b></i></code> was not found.</p>";
 }
