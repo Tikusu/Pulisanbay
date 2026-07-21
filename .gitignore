@@ -13,3 +13,7 @@ node_modules/
 
 # zip files
 *.zip
+
+# bundled css/js
+public/assets/dist/js/*.min.js
+public/assets/dist/css/*.min.css
