@@ -1,14 +1,11 @@
 /* =============================================
    NAVIGATION
    =============================================
-   Fixed navbar, nav links, dropdown menus,
+   Fixed navbar, semi-circular fan menu (center),
    hamburger toggle, and mobile slide-out panel.
    ============================================= */
 
-/* --- Fixed Navbar ---
-   Starts transparent over the hero, then gains a white
-   background + blur on scroll via the "scrolled" class
-   (toggled by JS in main.js). */
+/* --- Fixed Navbar --- */
 .navbar {
   position: fixed;
   top: 0;
@@ -34,6 +31,8 @@
   display: flex;
   align-items: center;
   text-decoration: none;
+  flex-shrink: 0;
+  z-index: 2;
 }
 .navbar .logo img {
   height: 48px;
@@ -54,75 +53,340 @@
   display: block;
 }
 
-/* --- Nav Links --- */
-.nav-links {
+/* --- Navbar Right (CTA + hamburger) --- */
+.navbar-right {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
-  list-style: none;
+  gap: 1rem;
+  flex-shrink: 0;
+  z-index: 2;
 }
-.nav-links li {
-  position: relative;
-}
-.nav-links a {
-  color: rgba(255, 255, 255, 0.9);
+
+/* =============================================
+   CTA Button
+   ============================================= */
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.4rem;
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  padding: 0.5rem 0.85rem;
-  transition: all 0.3s;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+.btn-cta:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #fff;
+}
+.navbar.scrolled .btn-cta {
+  border-color: var(--deep-sea);
+  color: var(--deep-sea) !important;
+}
+.navbar.scrolled .btn-cta:hover {
+  background: var(--deep-sea);
+  color: #fff !important;
+}
+
+/* =============================================
+   FAN MENU — Semi-circular (fan / kipas) dropdown
+   =============================================
+   The trigger is absolutely centred in the navbar.
+   On hover the 5 blades fan outward in a 180° arc
+   (bottom-half semicircle) so nothing clips at top.
+   ============================================= */
+
+/* --- Container: absolute centre in navbar --- */
+.fan-menu {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -0%);
+  z-index: 3;
+  transition: all 0.35s ease;
+}
+
+/* --- Trigger: icon image button --- */
+.fan-trigger {
   display: flex;
   align-items: center;
-  gap: 4px;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: rgba(255, 255, 255, 0);
+  border: 0px solid rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  padding-inline: 0.75rem;
+  outline: none;
+  position: relative;
+  z-index: 5;
 }
-.navbar.scrolled .nav-links a {
+.fan-trigger-icon {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  transition: all 0.35s ease;
+}
+.fan-menu.is-open .fan-trigger {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  transform: scale(1.1);
+}
+/* .fan-trigger:hover .fan-trigger-icon {
+  background: none;
+} */
+
+/* Scrolled state trigger */
+.navbar.scrolled .fan-menu {
+  transform: translate(-50%, -50%);
+}
+.navbar.scrolled .fan-trigger {
+  background: rgba(12, 74, 110, 0);
+  width: 50px;
+  height: 50px;
+}
+.navbar.scrolled .fan-trigger-icon {
+  filter: none;
+  width: 100%;
+  height: auto;
+}
+.navbar.scrolled .fan-trigger:hover,
+.navbar.scrolled .fan-menu.is-open .fan-trigger {
+  background: var(--deep-sea);
+  border-color: var(--deep-sea);
+}
+.navbar.scrolled .fan-trigger:hover .fan-trigger-icon,
+.navbar.scrolled .fan-menu.is-open .fan-trigger-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* --- Fan items hub ---
+   Zero-size hub at the trigger centre.
+   All blades are positioned absolutely from here. */
+.fan-items {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 4;
+}
+
+/* --- Individual fan blade --- */
+.fan-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  /* Collapsed: all blades sit at the hub centre */
+  transform: translate(-50%, -50%) scale(0.3);
+  transition:
+    opacity 0.35s ease,
+    transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* === EXPANDED STATE: explicit positions for 5 blades ===
+   Semi-circle arc opening downward, radius ~120px.
+   Angles (from positive X-axis, counter-clockwise):
+     Blade 0 → 180°  (far left)     : (-150,   0)
+     Blade 1 → 135°  (lower-left)   : ( -115,  115)
+     Blade 2 →  90°  (straight down): (   0, 150)
+     Blade 3 →  45°  (lower-right)  : (  115,  115)
+     Blade 4 →   0°  (far right)    : ( 150,   0)
+*/
+.fan-menu.is-open .fan-item {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.fan-menu.is-open .fan-item[data-index="0"] {
+  transform: translate(calc(-50% - 150px), calc(-50% + 0px)) scale(1);
+  transition-delay: 0.04s;
+}
+.fan-menu.is-open .fan-item[data-index="1"] {
+  transform: translate(calc(-50% - 115px), calc(-50% + 115px)) scale(1);
+  transition-delay: 0.08s;
+}
+.fan-menu.is-open .fan-item[data-index="2"] {
+  transform: translate(calc(-50% + 0px), calc(-50% + 150px)) scale(1);
+  transition-delay: 0.12s;
+}
+.fan-menu.is-open .fan-item[data-index="3"] {
+  transform: translate(calc(-50% + 115px), calc(-50% + 115px)) scale(1);
+  transition-delay: 0.08s;
+}
+.fan-menu.is-open .fan-item[data-index="4"] {
+  transform: translate(calc(-50% + 150px), calc(-50% + 0px)) scale(1);
+  transition-delay: 0.04s;
+}
+
+/* Collapse delays (reverse stagger when closing) */
+.fan-item[data-index="0"] {
+  transition-delay: 0.12s;
+}
+.fan-item[data-index="1"] {
+  transition-delay: 0.08s;
+}
+.fan-item[data-index="2"] {
+  transition-delay: 0.04s;
+}
+.fan-item[data-index="3"] {
+  transition-delay: 0.08s;
+}
+.fan-item[data-index="4"] {
+  transition-delay: 0.12s;
+}
+
+/* --- Fan link (the circular blade) --- */
+.fan-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  width: 68px;
+  height: 68px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+  white-space: nowrap;
+  padding: 0;
+  outline: none;
+  font-family: inherit;
+}
+.fan-link:hover {
+  background: rgba(255, 255, 255, 0.4);
+  border-color: #fff;
+  transform: scale(1.12);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+  color: #fff;
+}
+
+/* Scrolled state blades */
+.navbar.scrolled .fan-link {
+  background: rgba(12, 74, 110, 0.06);
+  border-color: var(--deep-sea);
+  color: var(--deep-sea);
+  backdrop-filter: blur(12px);
+}
+.navbar.scrolled .fan-link:hover {
+  background: var(--deep-sea);
+  color: #fff;
+  border-color: var(--deep-sea);
+}
+
+.fan-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+.fan-label {
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+}
+
+/* =============================================
+   Sub-dropdown (for blades with children)
+   ============================================= */
+.fan-item--has-sub {
+  /* position: absolute is inherited from .fan-item,
+     which already serves as containing block for the subdropdown */
+}
+
+.fan-subdropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  min-width: 160px;
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid rgba(12, 74, 110, 0.1);
+  border-radius: 12px;
+  padding: 0.4rem 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(14px);
+  white-space: nowrap;
+  z-index: 10;
+}
+
+/* Show sub-dropdown on hover (desktop) */
+.fan-item--has-sub:hover .fan-subdropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+/* Show sub-dropdown via JS (touch / keyboard) */
+.fan-item--has-sub.sub-open .fan-subdropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.fan-subdropdown a {
+  display: block;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.82rem;
+  font-weight: 500;
   color: var(--charcoal);
+  text-decoration: none;
+  transition: all 0.2s;
+  border-radius: 6px;
+  margin: 0 0.3rem;
 }
-.navbar.scrolled .nav-links a.btn-cta:hover {
-  color: var(--charcoal) !important;
-}
-.nav-links a:hover {
-  background: rgba(255, 255, 255, 0.15);
-}
-.navbar.scrolled .nav-links a:hover {
+.fan-subdropdown a:hover {
   background: var(--earthy-sand);
   color: var(--deep-sea);
 }
 
-/* --- Dropdown Menus --- */
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
+/* =============================================
+   Backdrop overlay (visible when fan is open)
+   ============================================= */
+.fan-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
   left: 0;
-  background: var(--white);
-  box-shadow: var(--shadow-lg);
-  padding: 0.5rem 0;
-  min-width: 200px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(8px);
-  transition: all 0.3s ease;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
 }
-.nav-links li:hover .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-.dropdown-menu a {
-  color: var(--charcoal) !important;
-  padding: 0.6rem 1.2rem;
-  font-size: 0.85rem;
-  border-radius: 0;
+.fan-menu.is-open ~ .fan-backdrop {
   display: block;
 }
-.dropdown-menu a:hover {
-  background: var(--earthy-sand) !important;
-  color: var(--deep-sea) !important;
-}
 
-/* ===== HAMBURGER BUTTON =====
-   Hidden on desktop, visible on mobile.
-   Animates into an X when "active" class is toggled by JS. */
+/* =============================================
+   HAMBURGER BUTTON
+   Hidden on desktop (>1024px).
+   ============================================= */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -154,47 +418,86 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ===== MOBILE NAV (≤1024px) =====
-   Nav links become a full-height slide-out panel from the right. */
+/* =============================================
+   MOBILE NAV SLIDE-OUT (≤1024px)
+   ============================================= */
+.nav-links {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100vh;
+  background: var(--white);
+  flex-direction: column;
+  align-items: stretch;
+  padding: 5rem 1.5rem 2rem;
+  gap: 0;
+  list-style: none;
+  box-shadow: var(--shadow-lg);
+  transition: right 0.4s ease;
+  z-index: 999;
+}
+.nav-links.open {
+  right: 0;
+}
+.nav-links a {
+  color: var(--charcoal) !important;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.nav-links a:hover {
+  background: var(--earthy-sand) !important;
+  color: var(--deep-sea) !important;
+}
+.nav-links .dropdown-menu {
+  position: static;
+  box-shadow: none;
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  padding-left: 1rem;
+  display: none;
+  background: transparent;
+}
+.nav-links li.dropdown-open .dropdown-menu {
+  display: block;
+}
+.nav-links .dropdown-menu a {
+  color: var(--charcoal) !important;
+  font-size: 0.85rem;
+}
+.nav-links .btn-cta {
+  display: inline-flex;
+  margin-top: 1rem;
+  background: var(--deep-sea) !important;
+  color: #fff !important;
+  border-radius: 50px;
+  justify-content: center;
+  border: none;
+}
+.nav-links .btn-cta:hover {
+  background: var(--deep-sea-dark) !important;
+}
+
 @media (max-width: 1024px) {
   .hamburger {
     display: flex;
   }
-  .nav-links {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 300px;
-    height: 100vh;
-    background: var(--white);
-    flex-direction: column;
-    align-items: stretch;
-    padding: 5rem 1.5rem 2rem;
-    gap: 0;
-    box-shadow: var(--shadow-lg);
-    transition: right 0.4s ease;
-  }
-  .nav-links.open {
-    right: 0;
-  }
-  .nav-links a {
-    color: var(--charcoal) !important;
-    padding: 0.75rem 1rem;
-  }
-  .nav-links a:hover {
-    background: var(--earthy-sand) !important;
-  }
-  .dropdown-menu {
-    position: static;
-    box-shadow: none;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    padding-left: 1rem;
+  .fan-menu {
     display: none;
   }
-  .nav-links li.dropdown-open .dropdown-menu {
-    display: block;
+  .navbar-right .btn-cta {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
   }
   .navbar {
     padding: 1rem 1.5rem;

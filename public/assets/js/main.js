@@ -3,13 +3,14 @@
 // =============================================
 // Core interactive behaviors shared across all pages:
 // navbar scroll effect, scroll-reveal animations,
-// mobile menu, dropdown toggles, lightbox, and toast.
+// mobile menu, fan menu sub-dropdowns, lightbox, and toast.
 // =============================================
 
 document.addEventListener("DOMContentLoaded", () => {
   initNavbar();
   initScrollReveal();
   initMobileMenu();
+  initFanMenu();
   initDropdowns();
   initLightbox();
   initInteractiveCards(".acco-card");
@@ -97,7 +98,99 @@ function initMobileMenu() {
   });
 }
 
-// --- DROPDOWNS (mobile tap) ---
+// --- FAN MENU (hover to open / close, sub-dropdown toggles) ---
+// Uses a JS-driven "is-open" class on .fan-menu for reliable
+// hover detection with a grace delay so the menu doesn't close
+// instantly when the cursor moves between blades.
+function initFanMenu() {
+  const fanMenu = document.getElementById("fanMenu");
+  if (!fanMenu) return;
+
+  let closeTimer = null;
+  const CLOSE_DELAY = 300; // ms grace period before closing
+
+  /** Open the fan */
+  function openFan() {
+    clearTimeout(closeTimer);
+    fanMenu.classList.add("is-open");
+    fanMenu.querySelector(".fan-trigger")?.setAttribute("aria-expanded", "true");
+  }
+
+  /** Close the fan (with delay) */
+  function scheduleFanClose() {
+    closeTimer = setTimeout(() => {
+      fanMenu.classList.remove("is-open");
+      fanMenu.querySelector(".fan-trigger")?.setAttribute("aria-expanded", "false");
+      // Also close any open sub-dropdowns
+      fanMenu.querySelectorAll(".fan-item--has-sub.sub-open").forEach((el) => {
+        el.classList.remove("sub-open");
+        el.querySelector(".fan-sub-toggle")?.setAttribute("aria-expanded", "false");
+      });
+    }, CLOSE_DELAY);
+  }
+
+  // Hover in → open, hover out → close (with delay)
+  fanMenu.addEventListener("mouseenter", openFan);
+  fanMenu.addEventListener("mouseleave", scheduleFanClose);
+
+  // Also toggle on click of the trigger (for touch)
+  const trigger = fanMenu.querySelector(".fan-trigger");
+  if (trigger) {
+    trigger.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (fanMenu.classList.contains("is-open")) {
+        clearTimeout(closeTimer);
+        fanMenu.classList.remove("is-open");
+        trigger.setAttribute("aria-expanded", "false");
+      } else {
+        openFan();
+      }
+    });
+  }
+
+  // Sub-dropdown toggles (for items with children)
+  fanMenu.querySelectorAll(".fan-sub-toggle").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const item = btn.closest(".fan-item--has-sub");
+      if (!item) return;
+      const isSubOpen = item.classList.contains("sub-open");
+      // Close all other sub-dropdowns
+      fanMenu.querySelectorAll(".fan-item--has-sub.sub-open").forEach((el) => {
+        el.classList.remove("sub-open");
+        el.querySelector(".fan-sub-toggle")?.setAttribute("aria-expanded", "false");
+      });
+      if (!isSubOpen) {
+        item.classList.add("sub-open");
+        btn.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+
+  // Close fan when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!fanMenu.contains(e.target)) {
+      clearTimeout(closeTimer);
+      fanMenu.classList.remove("is-open");
+      fanMenu.querySelector(".fan-trigger")?.setAttribute("aria-expanded", "false");
+      fanMenu.querySelectorAll(".fan-item--has-sub.sub-open").forEach((el) => {
+        el.classList.remove("sub-open");
+        el.querySelector(".fan-sub-toggle")?.setAttribute("aria-expanded", "false");
+      });
+    }
+  });
+
+  // Close fan on Escape
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && fanMenu.classList.contains("is-open")) {
+      clearTimeout(closeTimer);
+      fanMenu.classList.remove("is-open");
+      fanMenu.querySelector(".fan-trigger")?.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+
+// --- DROPDOWNS (mobile slide-out tap) ---
 // On mobile (≤1024px), dropdown toggles open on tap
 // instead of hover since there's no hover on touch devices.
 function initDropdowns() {
