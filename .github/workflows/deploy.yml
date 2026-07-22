@@ -32,9 +32,9 @@ jobs:
       - name: Deploy to cPanel
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          host: ${{ secrets.SFTP_HOST }}
+          server: ${{ secrets.SFTP_HOST }}
           username: ${{ secrets.SFTP_USERNAME }}
-          sshPrivateKey: ${{ secrets.SFTP_SSH_KEY }}
+          ssh_private_key: ${{ secrets.SFTP_SSH_KEY }}
           port: ${{ secrets.SFTP_PORT }}
-          remoteDir: "./ci_cd_test/"
-          deleteRemote: false
+          remote_path: "./ci_cd_test/"
+          delete_remote_files: false
