@@ -3,7 +3,9 @@ name: Deploy to cPanel via FTP
 on:
   push:
     branches:
-      - main # Workflow runs automatically when there's a push to main.
+      - main
+      - feature/1-implement-ci-cd
+  workflow_dispatch:
 
 jobs:
   web-deploy:
@@ -34,4 +36,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /public_html/
-          dry-run: false
+          dry-run: true
