@@ -12,7 +12,7 @@ jobs:
     name: Build & Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: Checkout Code
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -28,14 +28,13 @@ jobs:
       - name: Build Project
         run: npm run build
 
-      # Upload to cPanel Shared Hosting via FTP Sync
-      - name: Sync files to cPanel
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      # Upload to cPanel Shared Hosting via SFTP
+      - name: Deploy to cPanel
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          port: 21
-          server-dir: ../../public_html/ci_cd_test/
-          dry-run: false
+          host: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          sshPrivateKey: ${{ secrets.SFTP_SSH_KEY }}
+          port: ${{ secrets.SFTP_PORT }}
+          remoteDir: "./ci_cd_test/"
+          deleteRemote: false
