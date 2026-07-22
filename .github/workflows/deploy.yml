@@ -37,5 +37,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           port: 21
-          server-dir: ./ci_cd_test/
+          server-dir: ../../public_html/ci_cd_test/
           dry-run: false
