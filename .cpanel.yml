@@ -8,7 +8,6 @@ deployment:
     - /bin/cp -R public/* $DEPLOYPATH/
     - /bin/cp -R api $DEPLOYPATH/
     - /bin/cp -R config $DEPLOYPATH/
-    - /bin/cp -R db $DEPLOYPATH/
     - /bin/cp -R includes $DEPLOYPATH/
 
     # Root config files
