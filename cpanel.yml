@@ -1,0 +1,16 @@
+---
+deployment:
+  tasks:
+    # Destination path
+    - export DEPLOYPATH=/home/drvkbfjp/public_html/ci_cd_test
+
+    # Main project folders
+    - /bin/cp -R public/* $DEPLOYPATH/
+    - /bin/cp -R api $DEPLOYPATH/
+    - /bin/cp -R config $DEPLOYPATH/
+    - /bin/cp -R db $DEPLOYPATH/
+    - /bin/cp -R includes $DEPLOYPATH/
+
+    # Root config files
+    - /bin/cp .htaccess $DEPLOYPATH/
+    - /bin/cp router.php $DEPLOYPATH/
