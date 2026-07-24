@@ -1,9 +1,9 @@
 name: Deploy to cPanel via FTP
 
 on:
-  # push:
-  #   branches:
-  #     - main
+  push:
+    branches:
+      - main
   #     - feature/1-implement-ci-cd
   workflow_dispatch:
 
@@ -11,6 +11,7 @@ jobs:
   web-deploy:
     name: Build & Deploy
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v7
@@ -29,12 +30,10 @@ jobs:
         run: npm run build
 
       # Upload to cPanel Shared Hosting via SFTP
-      - name: Deploy to cPanel
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      - name: Trigger cPanel Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
-          server: ${{ secrets.SFTP_HOST }}
-          username: ${{ secrets.SFTP_USERNAME }}
-          ssh_private_key: ${{ secrets.SFTP_SSH_KEY }}
-          port: ${{ secrets.SFTP_PORT }}
-          remote_path: "./ci_cd_test/"
-          delete_remote_files: false
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: "../ci_cd_test_deploy/"
