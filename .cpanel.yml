@@ -5,7 +5,7 @@ deployment:
     - export DEPLOYPATH=/home/drvkbfjp/ci_cd_test
 
     # Main project folders
-    - /bin/cp -R public/* $DEPLOYPATH/
+    - /bin/cp -R public $DEPLOYPATH/
     - /bin/cp -R api $DEPLOYPATH/
     - /bin/cp -R config $DEPLOYPATH/
     - /bin/cp -R includes $DEPLOYPATH/
