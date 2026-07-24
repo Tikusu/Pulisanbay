@@ -1,10 +1,10 @@
 name: Deploy to cPanel via FTP
 
 on:
-  push:
-    branches:
-      - main
-      - feature/1-implement-ci-cd
+  # push:
+  #   branches:
+  #     - main
+  #     - feature/1-implement-ci-cd
   workflow_dispatch:
 
 jobs:
