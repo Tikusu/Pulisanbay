@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    # Setup and Build at Destination
+    # Setup and Build
     - npm ci
     - npm run build
 
