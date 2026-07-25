@@ -13,4 +13,3 @@ deployment:
     # Root config files
     - /bin/cp .htaccess $DEPLOYPATH/
     - /bin/cp router.php $DEPLOYPATH/
-    - /bin/cp .env.example $DEPLOYPATH/
