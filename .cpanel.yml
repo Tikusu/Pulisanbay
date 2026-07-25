@@ -1,6 +1,10 @@
 ---
 deployment:
   tasks:
+    # Setup and Build at Destination
+    - npm ci
+    - npm run build
+
     # Destination path
     - export DEPLOYPATH=/home/drvkbfjp/ci_cd_test
 
@@ -9,15 +13,8 @@ deployment:
     - /bin/cp -R api $DEPLOYPATH/
     - /bin/cp -R config $DEPLOYPATH/
     - /bin/cp -R includes $DEPLOYPATH/
+    - /bin/cp -R node_modules $DEPLOYPATH/
 
     # Root config files
     - /bin/cp .htaccess $DEPLOYPATH/
     - /bin/cp router.php $DEPLOYPATH/
-    - /bin/cp package.json $DEPLOYPATH/
-    - /bin/cp package-lock.json $DEPLOYPATH/
-    - /bin/cp build.mjs $DEPLOYPATH/
-
-    # Setup and Build at Destination
-    - cd /home/drvkbfjp/ci_cd_test
-    - npm ci
-    - npm run build
