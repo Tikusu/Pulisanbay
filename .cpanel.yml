@@ -9,7 +9,6 @@ deployment:
     - /bin/cp -R api $DEPLOYPATH/
     - /bin/cp -R config $DEPLOYPATH/
     - /bin/cp -R includes $DEPLOYPATH/
-    - /bin/cp -R node_modules
 
     # Root config files
     - /bin/cp .htaccess $DEPLOYPATH/
