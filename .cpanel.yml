@@ -13,3 +13,6 @@ deployment:
     # Root config files
     - /bin/cp .htaccess $DEPLOYPATH/
     - /bin/cp router.php $DEPLOYPATH/
+    - /bin/cp package.json $DEPLOYPATH/
+    - /bin/cp package-lock.json $DEPLOYPATH/
+    - /bin/cp build.mjs $DEPLOYPATH/
