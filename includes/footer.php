@@ -46,7 +46,7 @@
       <a href="/contact">Inquiry Form</a>
       <a href="/development">Development</a>
       <a href="/careers">Careers</a>
-      <a href="/terms-and-conditions">Terms & Conditions</a>
+      <a href="https://www.thepulisan.com/index.php/rates/">Terms & Conditions</a>
     </div>
 
   </div>
