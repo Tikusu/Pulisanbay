@@ -2,7 +2,7 @@
 deployment:
   tasks:
     # Destination path
-    - export DEPLOYPATH=/home/drvkbfjp/ci_cd_test
+    - export DEPLOYPATH=/home/drvkbfjp/public_html
 
     # Main project folders
     - /bin/cp -R public $DEPLOYPATH/
