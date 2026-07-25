@@ -18,6 +18,6 @@ deployment:
     - /bin/cp build.mjs $DEPLOYPATH/
 
     # Setup and Build at Destination
-    - cd $DEPLOYPATH
+    - cd /home/drvkbfjp/ci_cd_test
     - npm ci
     - npm run build
