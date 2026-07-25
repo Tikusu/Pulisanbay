@@ -13,11 +13,16 @@
       <p>A regenerative tourism sanctuary within KEK Likupang, North Sulawesi. Where nature, culture, and conscious
         travel come together.</p>
       <div class="footer-socials">
-        <a href="https://www.facebook.com/107105505295425" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/pulisanbay/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/minahasa-permai-resort-development/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.tiktok.com/@pulisan.bay" target="_blank" aria-label="Tiktok"><i class="fab fa-tiktok"></i></a>
-        <a href="http://www.youtube.com/@Pulisanbay" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.facebook.com/107105505295425" target="_blank" aria-label="Facebook"><i
+            class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/pulisanbay/" target="_blank" aria-label="Instagram"><i
+            class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/minahasa-permai-resort-development/" target="_blank"
+          aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.tiktok.com/@pulisan.bay" target="_blank" aria-label="Tiktok"><i
+            class="fab fa-tiktok"></i></a>
+        <a href="http://www.youtube.com/@Pulisanbay" target="_blank" aria-label="YouTube"><i
+            class="fab fa-youtube"></i></a>
       </div>
     </div>
     <div>
@@ -33,7 +38,8 @@
       <a href="/culture">Culture</a>
       <a href="/gastronomy">Gastronomy</a>
       <a href="/community">Community</a>
-      <a href="/offers">Offers</a>
+      <a
+        href="https://www.thepulisan.com/index.php/rates/#:~:text=RENT-,%2DA%2D,-RESORT%0A(EXCLUSIVE%20PRIVATE">Offers</a>
     </div>
     <div>
       <h4>Connect</h4>
