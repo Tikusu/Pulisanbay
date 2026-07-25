@@ -38,15 +38,15 @@
       <a href="/culture">Culture</a>
       <a href="/gastronomy">Gastronomy</a>
       <a href="/community">Community</a>
-      <a
-        href="https://www.thepulisan.com/index.php/rates/#:~:text=RENT-,%2DA%2D,-RESORT%0A(EXCLUSIVE%20PRIVATE">Offers</a>
+      <a href="https://www.thepulisan.com/index.php/rates/#:~:text=RENT-,%2DA%2D,-RESORT%0A(EXCLUSIVE%20PRIVATE"
+        target="_blank">Offers</a>
     </div>
     <div>
       <h4>Connect</h4>
       <a href="/contact">Inquiry Form</a>
       <a href="/development">Development</a>
       <a href="/careers">Careers</a>
-      <a href="https://www.thepulisan.com/index.php/rates/">Terms & Conditions</a>
+      <a href="https://www.thepulisan.com/index.php/rates/" target="_blank">Terms & Conditions</a>
     </div>
 
   </div>
